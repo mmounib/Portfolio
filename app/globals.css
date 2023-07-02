@@ -74,3 +74,10 @@ li:hover {
     padding: 13px 50px 13px;
   }
 }
+
+.image {
+	object-fit: cover;
+	z-index: -999;
+}
+
+

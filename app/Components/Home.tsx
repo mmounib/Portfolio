@@ -31,19 +31,22 @@ const Navbar = () => {
 			<h1 className={`text-3xl mx-auto ${patua_One.className}`}>Mouad Mounib</h1>
 
 			<div className="flex gap-4 items-center">
-				<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/">
-					<BsLinkedin size={30}/>	  
-				</Link>
 				  
+				<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/">
+					<BsLinkedin size={30} className=' '/>	  
+				</Link>
 				
 				<Link href="https://github.com/mmounib">
-					<BsGithub size={30}/>	  
+					<BsGithub size={30} className=' '/>	  
 				</Link>
+				  
 			</div>  
 		</div>	  
 	</nav>
   )
 }
+
+import Image from 'next/image';
 
 const Home = () => {
 
@@ -52,16 +55,19 @@ const Home = () => {
 			<div className="flex flex-col w-[1100px] min-h-[800px] mx-auto">
 				<Navbar />
 
-				<div className="flex h-full my-auto">
+				<div className="flex h-full my-auto items-center gap-12">
+					
 					<div className="text-white">
 						<h1 className="text-4xl text-[#E7B10A]">Hi There, I&rsquo;m Mouad,</h1>
 						<h2 className='text-6xl leading-relaxed'>A FRONTEND DEVELOPER</h2>
 						<p className="text-xl text-gray-400 mt-4 w-[400px]">I&rsquo;m a self-taught developer based in Morocco, I love to build things for the web.</p>
 						
-						<a href="#" className=' btn'>Resume</a>
-						{/* <span className='border-2 border-white'></span> */}
-
-						
+						<a href="#" className=' btn uppercase'>Resume</a>	
+					</div>
+					
+					<div className="relative">
+						<div className='border-4 z-10 border-[#E7B10A] border-collapse h-[400px] w-[400px] absolute -top-12 -right-7'></div>
+						<Image src="/my_image.jpg" alt="Portfolio Image" width={400} height={400} className='image'/>
 					</div>
 				</div>
 			</div>
