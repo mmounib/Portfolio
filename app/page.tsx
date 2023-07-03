@@ -2,6 +2,7 @@
 import Home from "./Components/Home"
 import About from "./Components/About"
 import Skills from "./Components/Skills"
+import Projects from "./Components/Projects"
 
 const page = () => {
   return (
@@ -9,6 +10,7 @@ const page = () => {
 		<Home />
 		<About />
 		<Skills />
+		<Projects />  
 	</div>
   )
 }

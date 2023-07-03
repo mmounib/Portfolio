@@ -30,14 +30,14 @@ const Navbar = () => {
 
 			<h1 className={`text-4xl mx-auto ${patua_One.className}`}>Mouad Mounib</h1>
 
-			<div className="flex gap-4 items-center">
+			<div className="flex gap-6 items-center">
 				  
 				<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/">
-					<BsLinkedin size={25} className=' '/>	  
+					<BsLinkedin size={25} className=' hover:text-[#E7B10A] hover:scale-110 transition-all'/>	  
 				</Link>
 				
 				<Link href="https://github.com/mmounib">
-					<BsGithub size={25} className=' '/>	  
+					<BsGithub size={25} className=' hover:text-[#E7B10A] hover:scale-110 transition-all'/>	  
 				</Link>
 				  
 			</div>  

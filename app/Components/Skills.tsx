@@ -1,11 +1,67 @@
 
+import Image from 'next/image';
+
+interface SkillDivProps {
+	image: string;
+	alt: string;
+	skillName: string;
+}
+
+const skillLists: Object = [
+	{
+		image: '/react.svg',
+		name: 'React',
+	},
+	{
+		image: '/typescript.svg',
+		name: 'Typescript',
+	},
+	{
+		image: '/javascript.svg',
+		name: 'Javascript',
+	},
+	{
+		image: '/cpp.svg',
+		name: 'C++',
+	},
+	{
+		image: '/tailwindcss.svg',
+		name: 'Tailwindcss',
+	},
+	{
+		image: '/postgresql.svg',
+		name: 'Postgresql',
+	},
+];
+
+const SkillDiv = ({ image, alt, skillName }: SkillDivProps) => {
+	return (
+		<div className="flex flex-col items-center cursor-pointer hover:scale-125 transition-all duration-500">
+			<Image src={image} alt={alt} width={100} height={100} />
+			<p className="text-white text-lg">{skillName}</p>
+		</div>
+	);
+};
+
 const Skills = () => {
   	
 	
 	return (
 	  	<div className="bg-black">
-			<div className="flex mt-20 w-[1100px] mx-auto min-h-[200px]">
+			<div className="flex flex-col mt-20 w-[1100px] mx-auto min-h-[200px]">
 				<h1 className="text-4xl text-[#E7B10A] tracking-wider">&lt;Skills /&gt;</h1>
+
+				<div className="flex justify-between my-14">
+					{skillLists.map((skill) => (
+						<SkillDiv
+							key={skill.name}
+							image={skill.image}
+							alt={skill.name}
+							skillName={skill.name}
+						/>
+					))
+					}
+				</div>
 			</div>
 		</div>
   	)
