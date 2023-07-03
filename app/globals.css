@@ -78,6 +78,13 @@ li:hover {
 .image {
 	object-fit: cover;
 	z-index: -999;
+	
+}
+
+p {
+	font-size: 1.25rem/* 20px */;
+    line-height: 2rem;
+	color: rgb(209 213 219 / 1);
 }
 
 

@@ -28,16 +28,16 @@ const Navbar = () => {
 				</li>
 			</ul>
 
-			<h1 className={`text-3xl mx-auto ${patua_One.className}`}>Mouad Mounib</h1>
+			<h1 className={`text-4xl mx-auto ${patua_One.className}`}>Mouad Mounib</h1>
 
 			<div className="flex gap-4 items-center">
 				  
 				<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/">
-					<BsLinkedin size={30} className=' '/>	  
+					<BsLinkedin size={25} className=' '/>	  
 				</Link>
 				
 				<Link href="https://github.com/mmounib">
-					<BsGithub size={30} className=' '/>	  
+					<BsGithub size={25} className=' '/>	  
 				</Link>
 				  
 			</div>  
@@ -58,7 +58,7 @@ const Home = () => {
 				<div className="flex h-full my-auto items-center gap-12">
 					
 					<div className="text-white">
-						<h1 className="text-4xl text-[#E7B10A]">Hi There, I&rsquo;m Mouad,</h1>
+						<h1 className="text-3xl text-[#E7B10A]">Hi There, I&rsquo;m Mouad,</h1>
 						<h2 className='text-6xl leading-relaxed'>A FRONTEND DEVELOPER</h2>
 						<p className="text-xl text-gray-400 mt-4 w-[400px]">I&rsquo;m a self-taught developer based in Morocco, I love to build things for the web.</p>
 						

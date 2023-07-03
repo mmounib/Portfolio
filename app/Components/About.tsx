@@ -1,0 +1,28 @@
+
+import Image from 'next/image';
+
+const About = () => {
+
+	return (
+		<div className="bg-gray-950">
+			<div className="my-24 flex w-[1100px] min-h-[600px] text-white gap-28 mx-auto max-sm:flex-col max-sm:gap-14 max-sm:my-16">
+
+				<div className="relative">
+					<div className='border-4 z-10 border-gray-600 border-collapse h-[400px] w-[350px] absolute -top-12 -right-7'></div>
+					<Image src="/image.jpg" alt="Portfolio Image" width={1000} height={1000} className=' object-cover saturate-50 opacity-70' />
+				</div>
+
+				<div className="flex flex-col">
+					<h1 className="text-4xl text-[#E7B10A]">&lt;About Me /&gt;</h1>
+					<p className=" mt-20 ">An aspiring front-end developer <strong> [Soon To Become a FullStack Web Developer] </strong> passionate about creating an engaging and user-friendly web experiences.</p>
+					<p className=" mt-8 ">I have always been fascinated by how the design can be intercepted and with various technologies, therefore front-end development provides the perfect platform for me to express my creativity and problem-solving skills. I enjoy the process of transforming designs into functional and visually appealing websites, constantly seeking to improve my skills and stay up to date with the latest industry trends and best practices.</p>
+
+					<p className='mt-8'>As a self-motivated individual, I take pride in delivering high-quality work and meeting deadlines. I am eager to apply my existing skills and learn new ones while working on real-world projects that challenge and push me to become a better front-end developer.</p>
+				</div>
+
+			</div>
+		</div>
+  	)
+}
+
+export default About
