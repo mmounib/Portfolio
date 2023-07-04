@@ -1,25 +1,39 @@
 
+import { BsArrowRightShort } from 'react-icons/bs';
+
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Project {
 	name: string;
 	paragraph: string;
 	image: string;
+	repo: string;
+	website: string;
 }
 
-const ProjectList = ({ name, paragraph, image }: Project) => { 
+const ProjectList = ({ name, paragraph, image, repo, website }: Project) => { 
 
 	return (
 		<div className="flex flex-col-reverse box w-[350px] pb-4">
 			<div className="flex flex-col mt-4 px-2">
 				<h1 className="text-2xl text-[#E7B10A]">{name}</h1>
-				<p className="text-xl text-gray-300 my-6">{paragraph}</p>
-				<div className="flex justify-between w-full text-white px-2">
-					<button type="button">See Github</button>
-					<button type="button">See Website</button>
+				<p className=" text-base text-gray-300 my-6">{paragraph}</p>
+				<div className="flex justify-between w-full text-white">
+					<div className="flex cursor-pointer">
+						<Link href={repo} className='flex translate-x-0'>
+							See Github
+							<BsArrowRightShort className='text-2xl ml-1  hover:translate-x-2 transition-all'/>
+						</Link>
+						
+					</div>
+					<div className="flex cursor-pointer">
+						<Link href={website}>See Website</Link>
+						{/* <BsArrowRightShort className='text-2xl ml-1 translate-x-0'/> */}
+					</div>
 				</div>
 			</div>
-			<Image src={image} alt="Portfolio Image" width={400} height={250} className='image'/>
+			<Image src={image} alt="Portfolio Image" width={300} height={150} className='image h-[150px]'/>
 		</div>
 	)
 }
@@ -32,16 +46,16 @@ const Projects = () => {
 
 				<h1 className="text-5xl text-[#E7B10A] text-right">&lt;My Creative Work /&gt;</h1>
 				
-				<div className="flex gap-12 mx-auto mt-12">
+				<div className="flex gap-12 mx-auto mt-14">
 					<ProjectList name='FT_TRANSCENDENCE' paragraph="It's a full stack project written with typescript and its frameworks is (ReactJs,
 					NestJs, PostgreSQL and Docker), It is an online ping pong game with a realtime chat
-					and games where i have done the Front-End of it with ReactJs." image='/ping_pong_1.jpg' />
-					<ProjectList name='FT_TRANSCENDENCE' paragraph="It's a full stack project written with typescript and its frameworks is (ReactJs,
+					and games where i have done the Front-End of it with ReactJs." image='/ping_pong_1.jpg' repo='https://github.com/mmounib/ft_transendence' website='' />
+					<ProjectList name='WEBSERV' paragraph="It's a full stack project written with typescript and its frameworks is (ReactJs,
 					NestJs, PostgreSQL and Docker), It is an online ping pong game with a realtime chat
-					and games where i have done the Front-End of it with ReactJs." image='/ping_pong_1.jpg' />
-					<ProjectList name='FT_TRANSCENDENCE' paragraph="It's a full stack project written with typescript and its frameworks is (ReactJs,
+					and games where i have done the Front-End of it with ReactJs." image='/ping_pong_1.jpg' repo='' website=''/>
+					<ProjectList name='WhatGPT3' paragraph="It's a full stack project written with typescript and its frameworks is (ReactJs,
 					NestJs, PostgreSQL and Docker), It is an online ping pong game with a realtime chat
-					and games where i have done the Front-End of it with ReactJs." image='/ping_pong_1.jpg'/>
+					and games where i have done the Front-End of it with ReactJs." image='/screenshot.png' repo='https://github.com/mmounib/react-landingPage-project' website='https://whatgpt3.vercel.app/'/>
 				</div>
 				
 			</div>
