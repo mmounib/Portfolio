@@ -3,6 +3,7 @@ import Home from "./Components/Home"
 import About from "./Components/About"
 import Skills from "./Components/Skills"
 import Projects from "./Components/Projects"
+import Contact from "./Components/Contact"
 
 const page = () => {
   return (
@@ -10,7 +11,8 @@ const page = () => {
 		<Home />
 		<About />
 		<Skills />
-		<Projects />  
+		<Projects />
+		<Contact />
 	</div>
   )
 }

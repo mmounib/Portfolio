@@ -92,6 +92,14 @@ p {
 	/* font-family: 'Rubik', sans-serif; */
 }
 
+input {
+	color: black;
+	padding: 5px 0;
+	width: 100px;
+	border-radius: 5px;
+	outline: none;
+}
+
 .box {
 	border-radius: 15px;
 	/* background: rgb(3 7 18 / .7);; */

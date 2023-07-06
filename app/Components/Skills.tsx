@@ -36,7 +36,7 @@ const skillLists = [
 
 const SkillDiv = ({ image, alt, skillName }: SkillDivProps) => {
 	return (
-		<div className="flex flex-col items-center cursor-pointer hover:scale-125 transition-all duration-500">
+		<div className="flex flex-col items-center hover:scale-105 transition-all duration-500">
 			<Image src={image} alt={alt} width={100} height={100} />
 			<p className="text-white text-lg">{skillName}</p>
 		</div>
