@@ -18,16 +18,16 @@ const ProjectList = ({ name, paragraph, image, repo, website }: Project) => {
 		<div className="flex flex-col-reverse box w-[350px] pb-4">
 			<div className="flex flex-col mt-4 px-2">
 				<h1 className="text-2xl text-[#E7B10A]">{name}</h1>
-				<p className=" text-base text-gray-300 my-6">{paragraph}</p>
+				<p className=" text-lg text-gray-300 my-6">{paragraph}</p>
 				<div className="flex justify-between w-full text-white">
-					<div className="flex cursor-pointer">
+					<div className="flex cursor-pointer ">
 						<Link href={repo} className='flex translate-x-0'>
 							See Github
 							<BsArrowRightShort className='text-2xl ml-1  hover:translate-x-2 transition-all'/>
 						</Link>
 						
 					</div>
-					<div className="flex cursor-pointer">
+					<div className="flex cursor-pointer ">
 						<Link href={website}>See Website</Link>
 						{/* <BsArrowRightShort className='text-2xl ml-1 translate-x-0'/> */}
 					</div>

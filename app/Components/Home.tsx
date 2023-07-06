@@ -15,7 +15,7 @@ const Navbar = () => {
 		<div className="flex text-white text-lg items-center justify-between mt-6">
 			<ul className='flex gap-8'>
 				<li>
-					<a href="/">Home</a>
+					<a  href="/">Home</a>
 				</li>
 				<li>
 					<a href="/About">About</a>
