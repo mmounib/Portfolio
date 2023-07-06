@@ -7,7 +7,7 @@ interface SkillDivProps {
 	skillName: string;
 }
 
-const skillLists: Object = [
+const skillLists = [
 	{
 		image: '/react.svg',
 		name: 'React',
