@@ -48,7 +48,7 @@ const Skills = () => {
 	
 	return (
 	  	<div className="bg-black">
-			<div className="flex flex-col mt-20 w-[1100px] mx-auto min-h-[200px]">
+			<div className="flex flex-col mt-20 w-[60%] mx-auto min-h-[200px]">
 				<h1 className="text-4xl text-[#E7B10A] tracking-wider">&lt;Skills /&gt;</h1>
 
 				<div className="flex justify-between my-14">

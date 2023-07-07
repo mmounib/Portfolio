@@ -13,7 +13,7 @@ const Contact = () => {
 
 	return (
 	  	<div className="bg-black">
-			<div className="flex w-[1100px] mx-auto min-h-[400px] mt-12">
+			<div className="flex w-[60%] mx-auto min-h-[400px] mt-12">
 				<h1 className="text-7xl leading-12 text-white">Let&rsquo;s Work Together</h1>
 				<div className="flex flex-col w-full h-full">
 					<form className="w-[500px] mx-auto ">

@@ -42,7 +42,7 @@ const Projects = () => {
 	
 	return (
 		<div className='bg-gray-950'>
-			<div className="flex flex-col w-[1100px] min-h-[800px] mx-auto mt-24">
+			<div className="flex flex-col w-[60%] min-h-[800px] mx-auto mt-24">
 
 				<h1 className="text-5xl text-[#E7B10A] text-right">&lt;My Creative Work /&gt;</h1>
 				

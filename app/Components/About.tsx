@@ -6,7 +6,7 @@ const About = () => {
 
 	return (
 		<div className="bg-gray-950">
-			<div className="my-24 flex w-[1100px] min-h-[600px] text-white gap-28 mx-auto max-sm:flex-col max-sm:gap-14 max-sm:my-16">
+			<div className="my-24 flex w-[60%] min-h-[600px] text-white gap-28 mx-auto max-sm:flex-col max-sm:gap-14 max-sm:my-16">
 
 				<div className="relative">
 					<div className='border-4 z-10 border-gray-600 border-collapse h-[400px] w-[350px] absolute -top-12 -right-7'></div>

@@ -7,7 +7,7 @@ import Contact from "./Components/Contact"
 
 const page = () => {
   return (
-	<div className="flex flex-col mx-auto flex-wrap">
+	<div className="flex flex-col mx-auto overflow-hidden">
 		<Home />
 		<About />
 		<Skills />
