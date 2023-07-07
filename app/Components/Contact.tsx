@@ -11,7 +11,7 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs'
 const Contact = () => {
 	return (
 	  	<div className="bg-black">
-			<div className="flex w-[1100px] mx-auto min-h-[400px] ">
+			<div className="flex w-[1100px] mx-auto min-h-[400px] mt-12">
 				<h1 className="text-7xl leading-12 text-white">Let&rsquo;s Work Together</h1>
 				<div className="flex flex-col w-full h-full">
 					<form className="w-[500px] mx-auto ">
@@ -36,7 +36,7 @@ const Contact = () => {
 			</div>
 			
 			<div className="flex flex-col mx-auto w-[1100px] items-center min-h-[90px] my-8">
-				<h3 className='text-white text-2xl'>Or Contact Through</h3>
+				<h3 className='text-white text-2xl'>Or Contact Me Through</h3>
 				<div className="flex gap-4 mt-8 justify-center items-center w-full">
 					<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/" className='text-white flex gap-2 bg-[#E7B10A] py-2 px-6 items-center'>
 						<BsLinkedin size={20} className='text-white transition-all' />
