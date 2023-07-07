@@ -92,13 +92,13 @@ p {
 	/* font-family: 'Rubik', sans-serif; */
 }
 
-input {
-	color: black;
+/* input {
+	color: white;
 	padding: 5px 0;
 	width: 100px;
 	border-radius: 5px;
 	outline: none;
-}
+} */
 
 .box {
 	border-radius: 15px;
