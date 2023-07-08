@@ -10,7 +10,8 @@ module.exports = {
   theme: {
 	  extend: {
 		  	screens: {
-				  'custom': '1015px',
+			  'custom': '1015px',
+			  'custom-layout': '850px',
 		  	},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
