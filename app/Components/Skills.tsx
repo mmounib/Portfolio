@@ -47,11 +47,11 @@ const Skills = () => {
   	
 	
 	return (
-	  	<div className="bg-black">
-			<div className="flex flex-col mt-20 w-[60%] mx-auto min-h-[200px]">
+	  	<div className="bg-black ">
+			<div className="flex flex-col mt-20 w-[60%] max-sm:w-full max-sm:px-6 mx-auto min-h-[200px]">
 				<h1 className="text-4xl text-[#E7B10A] tracking-wider">&lt;Skills /&gt;</h1>
 
-				<div className="flex justify-between my-14">
+				<div className="flex justify-between flex-wrap my-14">
 					{skillLists.map((skill) => (
 						<SkillDiv
 							key={skill.name}

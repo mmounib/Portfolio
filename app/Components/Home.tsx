@@ -53,7 +53,7 @@ const Home = () => {
 
 	return (
 		<div className="bg-black">
-			<div className="flex max-md:gap-16 flex-col w-[60%] max-md:w-full min-h-[800px] mx-auto">
+			<div className="flex max-md:gap-16 flex-col w-[60%] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]">
 				<Navbar />
 
 				<div className="flex max-md:flex-col h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6">
