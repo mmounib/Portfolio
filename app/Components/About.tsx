@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 const About = () => {
 
 	return (
-		<div className="bg-gray-950">
+		<div className="bg-gray-950" id='About'>
 			<motion.div className="my-24 flex w-[60%] max-md:w-full min-h-[600px] text-white gap-28 mx-auto max-custom-layout:flex-col max-sm:gap-14 max-sm:my-16 max-custom:w-[80%] max-sm:px-6" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
 
 				<div className="relative h-full">

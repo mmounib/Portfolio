@@ -44,7 +44,7 @@ const Projects = () => {
 	
 	
 	return (
-		<div className='bg-gray-950'>
+		<div className='bg-gray-950' id='projects'>
 			<div className="flex flex-col w-[60%] max-md:w-full max-sm:px-6 min-h-[800px] mx-auto mt-24 max-custom:w-[80%] max-sm:mb-5">
 
 				<h1 className="text-5xl text-[#E7B10A] text-right max-custom-layout:text-left ">&lt;My Creative Work /&gt;</h1>

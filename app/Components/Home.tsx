@@ -1,5 +1,5 @@
 'use client'
-import Link from 'next/link'
+import { Link , animateScroll as scroll } from "react-scroll";
 
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import {RxHamburgerMenu as Hamburger} from 'react-icons/rx'
@@ -25,16 +25,41 @@ const Navbar = () => {
 			<div className="flex text-white text-lg items-center justify-between mt-6 max-md:mx-4">
 				<ul className='flex gap-8 max-md:hidden'>
 					<li>
-						<a  href="/">Home</a>
+						<Link
+							to=""
+							smooth={true}
+    						offset={-70}
+							duration={500}
+							className="cursor-pointer"
+						>Home</Link>
 					</li>
 					<li>
-						<a href="/About">About</a>
+						<Link
+							to="About"
+							smooth={true}
+    						offset={-70}
+							duration={500} className="cursor-pointer"
+						>About</Link>
 					</li>
 					<li>
-						<a href="/Projects">Projects</a>
+						<Link
+							to="projects"
+							spy={true}
+							smooth={true}
+    						offset={-70}
+							duration={500}
+							className="cursor-pointer"
+						>Projects</Link>
 					</li>
 					<li>
-						<a href="/Contact">Contact</a>
+						<Link
+							to="Contact"
+							spy={true}
+							smooth={true}
+    						offset={-70}
+							duration={500}
+							className="cursor-pointer"
+						>Contact</Link>
 					</li>
 				</ul>
 
@@ -42,33 +67,33 @@ const Navbar = () => {
 
 				<div className="flex gap-6 max-md:gap-4 items-center max-sm:hidden">
 					
-					<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/">
+					<Link to="https://www.linkedin.com/in/mouad-mounib-954418193/">
 						<BsLinkedin size={25} className=' hover:text-[#E7B10A] hover:scale-110 transition-all'/>	  
 					</Link>
 					
-					<Link href="https://github.com/mmounib">
+					<Link to="https://github.com/mmounib">
 						<BsGithub size={25} className=' hover:text-[#E7B10A] hover:scale-110 transition-all'/>	  
 					</Link>
 					
 				</div>
 
 				<div className="flex" onClick={toggleMenu}>
-					<Hamburger size={30} className=' hidden max-sm:block max-md:ml-4 cursor-pointer'/>
+					<Hamburger size={30} className=' hidden max-sm:block max-md:ml-4 cursor-pointer '/>
 				</div>  
 			</div>
-			<div ref={menuRef} className="hidden max-md:hidden max-sm:bg-[#E7B10A] max-sm:text-white max-sm:w-screen max-sm:justify-center max-sm:items-center max-sm:h-full max-sm:flex max-sm:text-xl max-sm:py-4">
+			<div ref={menuRef} className="hidden menu_ref max-md:hidden max-sm:bg-[#E7B10A] max-sm:text-white max-sm:w-screen max-sm:justify-center max-sm:items-center max-sm:h-full max-sm:flex max-sm:text-xl max-sm:py-4">
 				<ul className="flex flex-col items-center gap-6 text-center">
 					<li>
-						<a href="/">Home</a>
+						<Link to="">Home</Link>
 					</li>
 					<li>
-						<a href="/About">About</a>
+						<Link to="About">About</Link>
 					</li>
 					<li>
-						<a href="/Projects">Projects</a>
+						<Link to="projects">Projects</Link>
 					</li>
 					<li>
-						<a href="/Contact">Contact</a>
+						<Link to="Contact">Contact</Link>
 					</li>
 					<li>
 						<a href="https://github.com/mmounib" className='flex items-center gap-2 mt-2'> <BsGithub size={20}/> Github</a>
