@@ -15,7 +15,7 @@ interface Project {
 const ProjectList = ({ name, paragraph, image, repo, website }: Project) => { 
 
 	return (
-		<div className="flex flex-col-reverse box w-[350px] pb-4  max-custom-layout:w-[70%] max-sm:w-[90%] ">
+		<div className="flex flex-col-reverse box w-[350px] pb-4 max-custom-layout:w-[70%] max-sm:w-[90%] ">
 			<div className="flex flex-col mt-4 px-2">
 				<h1 className="text-2xl text-[#E7B10A]">{name}</h1>
 				<p className=" text-lg text-gray-300 my-6">{paragraph}</p>
@@ -46,7 +46,7 @@ const Projects = () => {
 
 				<h1 className="text-5xl text-[#E7B10A] text-right max-custom-layout:text-left ">&lt;My Creative Work /&gt;</h1>
 				
-				<div className="flex gap-[2vw] max-sm:gap-4 mx-auto flex-wrap mt-14">
+				<div className="flex gap-[2vw] max-sm:gap-4 mx-auto justify-between flex-wrap mt-14">
 					<ProjectList name='FT_TRANSCENDENCE' paragraph="It's a full stack project written with typescript and its frameworks is (ReactJs,
 					NestJs, PostgreSQL and Docker), It is an online ping pong game with a realtime chat
 					and games where i have done the Front-End of it with ReactJs." image='/ping_pong_1.jpg' repo='https://github.com/mmounib/ft_transendence' website='' />
