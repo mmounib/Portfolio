@@ -1,8 +1,11 @@
-
+'use client'
 import { BsArrowRightShort } from 'react-icons/bs';
 
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { motion } from "framer-motion"
+
 
 interface Project {
 	name: string;
@@ -15,7 +18,7 @@ interface Project {
 const ProjectList = ({ name, paragraph, image, repo, website }: Project) => { 
 
 	return (
-		<div className="flex flex-col-reverse box w-[350px] hover:-translate-y-[20px] transition-all duration-500 pb-4 max-custom-layout:w-[70%] max-sm:w-[90%]">
+		<motion.div className="flex flex-col-reverse box w-[350px] hover:-translate-y-[20px] transition-all duration-500 pb-4 max-custom-layout:w-[70%] max-sm:w-[90%]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
 			<div className="flex flex-col mt-4 px-2">
 				<h1 className="text-2xl text-[#E7B10A]">{name}</h1>
 				<p className=" text-lg text-gray-300 my-6">{paragraph}</p>
@@ -34,7 +37,7 @@ const ProjectList = ({ name, paragraph, image, repo, website }: Project) => {
 				</div>
 			</div>
 			<Image src={image} alt="Portfolio Image" width={300} height={150} className='image h-[150px] max-custom-layout:w-full max-custom-layout:h-[200px] max-sm:h-[150px]'/>
-		</div>
+		</motion.div>
 	)
 }
 const Projects = () => {

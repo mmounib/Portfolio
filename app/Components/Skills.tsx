@@ -1,5 +1,7 @@
+'use client'
 
 import Image from 'next/image';
+import { motion } from "framer-motion"
 
 interface SkillDivProps {
 	image: string;
@@ -48,7 +50,7 @@ const Skills = () => {
 	
 	return (
 	  	<div className="bg-black ">
-			<div className="flex flex-col mt-20 w-[60%] max-custom:w-[80%] max-md:w-full max-sm:px-6 mx-auto min-h-[200px]">
+			<motion.div className="flex flex-col mt-20 w-[60%] max-custom:w-[80%] max-md:w-full max-sm:px-6 mx-auto min-h-[200px]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
 				<h1 className="text-4xl text-[#E7B10A] tracking-wider">&lt;Skills /&gt;</h1>
 
 				<div className="flex justify-between flex-wrap my-14">
@@ -62,7 +64,7 @@ const Skills = () => {
 					))
 					}
 				</div>
-			</div>
+			</motion.div>
 		</div>
   	)
 }

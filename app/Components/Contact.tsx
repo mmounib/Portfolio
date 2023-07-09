@@ -1,14 +1,16 @@
+'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { motion } from "framer-motion"
+
 
 
 const Contact = () => {
 
 	return (
 	  	<div className="bg-black">
-			<div className="flex w-[60%] max-custom-layout:flex-col max-custom-layout:gap-6 max-custom:w-[80%] mx-auto min-h-[400px] mt-12">
+			<motion.div className="flex w-[60%] max-custom-layout:flex-col max-custom-layout:gap-6 max-custom:w-[80%] mx-auto min-h-[400px] mt-12" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
 				<h1 className="text-7xl max-custom-layout:text-5xl max-custom-layout:text-center leading-12 text-white">Let&rsquo;s Work Together</h1>
 				<div className="flex flex-col w-full h-full">
 					<form className="w-[500px] max-sm:w-[320px] mx-auto ">
@@ -30,7 +32,7 @@ const Contact = () => {
 					</form>
 				</div>
 
-			</div>
+			</motion.div>
 			
 			<div className="flex flex-col mx-auto w-[1100px] max-custom-layout:w-[80%] items-center min-h-[90px] my-8">
 				<h3 className='text-white text-2xl'>Or Contact Me Through</h3>

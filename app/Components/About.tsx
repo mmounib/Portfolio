@@ -1,12 +1,14 @@
-
+'use client'
 import Image from 'next/image';
+import { motion } from "framer-motion"
+
 
 
 const About = () => {
 
 	return (
 		<div className="bg-gray-950">
-			<div className="my-24 flex w-[60%] max-md:w-full min-h-[600px] text-white gap-28 mx-auto max-custom-layout:flex-col max-sm:gap-14 max-sm:my-16 max-custom:w-[80%] max-sm:px-6">
+			<motion.div className="my-24 flex w-[60%] max-md:w-full min-h-[600px] text-white gap-28 mx-auto max-custom-layout:flex-col max-sm:gap-14 max-sm:my-16 max-custom:w-[80%] max-sm:px-6" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
 
 				<div className="relative h-full">
 					<div className='border-4 z-10 border-gray-600 border-collapse h-[400px] w-full absolute -top-12 -right-7'></div>
@@ -23,7 +25,7 @@ const About = () => {
 					</div> 
 				</div>
 
-			</div>
+			</motion.div>
 		</div>
   	)
 }
