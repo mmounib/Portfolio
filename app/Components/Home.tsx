@@ -92,7 +92,7 @@ const Home = () => {
 			<div className="flex max-md:gap-16 flex-col w-[60%] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]">
 				<Navbar />
 
-				<div className="flex max-md:flex-col h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6">
+				<div className="flex max-md:flex-col justify-between h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6">
 					
 					<div className="text-white max-sm:ml-6">
 						<h1 className="text-3xl max-sm:text-xl text-[#E7B10A]">Hi There, I&rsquo;m Mouad,</h1>

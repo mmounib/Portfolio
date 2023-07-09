@@ -15,7 +15,7 @@ const About = () => {
 
 				<div className="flex flex-col">
 					<h1 className="text-4xl text-[#E7B10A]">&lt;About Me /&gt;</h1>
-					<div className="flex flex-col mt-20 max-sm:mt-12">
+					<div className="flex flex-col mt-20 max-sm:mt-12 max-w-[1600px]">
 						<p className="">An aspiring front-end developer <strong> [Soon To Become a FullStack Web Developer] </strong> passionate about creating an engaging and user-friendly web experiences.</p>
 						<p className=" mt-8 ">I have always been fascinated by how the design can be intercepted and with various technologies, therefore front-end development provides the perfect platform for me to express my creativity and problem-solving skills. I enjoy the process of transforming designs into functional and visually appealing websites, constantly seeking to improve my skills and stay up to date with the latest industry trends and best practices.</p>
 
