@@ -4,11 +4,6 @@ import { useState } from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 
-// const IconLists = [
-// 	{
-// 		icon: ''
-// 	}
-// ]
 const Contact = () => {
 
 	return (
