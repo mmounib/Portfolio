@@ -30,7 +30,7 @@ const Contact = () => {
 							<textarea id="message" name="message" required className="bg-gray-500 opacity-70 rounded px-3 py-2 w-full h-32 resize-none focus:outline-none text-white "></textarea>
 						</div>
 						<div className="">
-							<button type="submit" className="bg-[#E7B10A] text-white py-2 px-4 rounded ">Send Message</button>
+							<button type="submit" className="bg-[#E7B10A] text-white py-2 px-4 rounded">Send Message</button>
 						</div>
 					</form>
 				</div>
