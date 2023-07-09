@@ -35,11 +35,11 @@ const Contact = () => {
 			<div className="flex flex-col mx-auto w-[1100px] max-custom-layout:w-[80%] items-center min-h-[90px] my-8">
 				<h3 className='text-white text-2xl'>Or Contact Me Through</h3>
 				<div className="flex gap-4 mt-8 justify-center items-center w-full">
-					<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/" className='text-white flex gap-2 bg-[#E7B10A] py-2 px-6 items-center shadow-inner'>
+					<Link href="https://www.linkedin.com/in/mouad-mounib-954418193/" className='text-white flex gap-2 bg-[#E7B10A] py-2 px-6 items-center shadow-inner hover:scale-x-105 transition-all'>
 						<BsLinkedin size={20} className='text-white transition-all' />
 						<span>LinkedIn</span>
 					</Link>
-					<Link href="https://github.com/mmounib" className='text-white flex gap-2 bg-[#E7B10A] py-2 px-8 items-center shadow-inner'>
+					<Link href="https://github.com/mmounib" className='text-white flex gap-2 bg-[#E7B10A] py-2 px-8 items-center shadow-inner hover:scale-x-105 transition-all'>
 						<BsGithub size={20} className=' ' />
 						<span>Github</span>
 					</Link>

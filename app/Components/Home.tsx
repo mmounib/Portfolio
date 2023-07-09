@@ -38,7 +38,7 @@ const Navbar = () => {
 					</li>
 				</ul>
 
-				<h1 className={`text-4xl mx-auto max-md:ml-2 max-sm:text-3xl max-md:mr-0  ${patua_One.className}`}>Mouad Mounib</h1>
+				<h1 className={` text-animate text-4xl mx-auto max-md:ml-2 max-sm:text-3xl max-md:mr-0  ${patua_One.className}`}>Mouad Mounib</h1>
 
 				<div className="flex gap-6 max-md:gap-4 items-center max-sm:hidden">
 					
