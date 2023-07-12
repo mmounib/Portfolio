@@ -21,6 +21,7 @@
     "emailjs-com": "^3.2.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.7",
+    "locomotive-scroll": "^4.1.4",
     "next": "13.4.7",
     "postcss": "8.4.24",
     "react": "18.2.0",
@@ -28,10 +29,12 @@
     "react-icons": "^4.10.1",
     "react-scroll": "^1.8.9",
     "react-tabs": "^6.0.1",
+    "sass": "^1.63.6",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/locomotive-scroll": "^4.1.0",
     "@types/react-scroll": "^1.8.7"
   }
 }

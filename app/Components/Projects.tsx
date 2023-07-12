@@ -18,7 +18,7 @@ interface Project {
 const ProjectList = ({ name, paragraph, image, repo, website }: Project) => { 
 
 	return (
-		<motion.div className="flex flex-col-reverse box w-[350px] hover:-translate-y-[20px] transition-all duration-500 pb-4 max-custom-layout:w-[70%] max-sm:w-[90%]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+		<motion.div className="flex flex-col-reverse box w-[350px] hover:-translate-y-[20px] transition-all duration-500 pb-4 max-custom-layout:w-[70%] max-sm:w-[90%]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} >
 			<div className="flex flex-col mt-4 px-2">
 				<h1 className="text-2xl text-[#E7B10A]">{name}</h1>
 				<p className=" text-lg text-gray-300 my-6">{paragraph}</p>
