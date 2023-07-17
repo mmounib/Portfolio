@@ -18,21 +18,20 @@ interface Project {
 const ProjectList = ({ name, paragraph, image, repo, website }: Project) => { 
 
 	return (
-		<motion.div className="flex flex-col-reverse box w-[350px] hover:-translate-y-[20px] transition-all duration-500 pb-4 max-custom-layout:w-[70%] max-sm:w-[90%]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} >
+		<motion.div className="flex flex-col-reverse box w-[350px] hover:-translate-y-[20px] transition-all duration-500 pb-4 max-custom-layout:w-[70%] max-sm:w-[90%] max-w-[1700px]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration: .5}}>
 			<div className="flex flex-col mt-4 px-2">
 				<h1 className="text-2xl text-[#E7B10A]">{name}</h1>
 				<p className=" text-lg text-gray-300 my-6">{paragraph}</p>
 				<div className="flex div_animate justify-between w-full text-white">
-					<div className="flex cursor-pointer ">
+					<div className="flex cursor-pointer">
 						<Link href={repo} className='flex translate-x-0'>
 							See Github
-							<BsArrowRightShort className='text-2xl ml-1  hover:translate-x-2 transition-all'/>
+							<BsArrowRightShort className='text-2xl ml-1 hover:translate-x-2 transition-all'/>
 						</Link>
 						
 					</div>
 					<div className="flex cursor-pointer ">
 						<Link href={website}>See Website</Link>
-						{/* <BsArrowRightShort className='text-2xl ml-1 translate-x-0'/> */}
 					</div>
 				</div>
 			</div>
@@ -45,7 +44,7 @@ const Projects = () => {
 	
 	return (
 		<div className='bg-gray-950' id='projects'>
-			<div className="flex flex-col w-[60%] max-md:w-full max-sm:px-6 min-h-[800px] mx-auto mt-24 max-custom:w-[80%] max-sm:mb-5">
+			<div className="flex flex-col w-[65%] max-md:w-full max-sm:px-6 min-h-[800px] mx-auto mt-24 max-custom:w-[80%] max-sm:mb-5">
 
 				<h1 className="text-5xl text-[#E7B10A] text-right max-custom-layout:text-left ">&lt;My Creative Work /&gt;</h1>
 				

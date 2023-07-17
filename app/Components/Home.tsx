@@ -115,26 +115,29 @@ import { useRef } from 'react'
 const Home = () => {
 
 	return (
-		<section className="bg-black">
-			<div className="flex max-md:gap-16 flex-col w-[60%] max-w-[1500px] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]">
+		<section className="bg-black" >
+			<motion.div className="flex max-md:gap-16 flex-col w-[60%] max-w-[1700px] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]" variants={{
+					hidden: { opacity: 0, y: 75 },
+					visible: { opacity: 1, y: 0 },
+			}} initial="hidden" animate="visible" transition={{ duration: 1 }}>
 				<Navbar />
 
 				<div className="flex max-md:flex-col justify-between h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6">
 					
-					<motion.div className="text-white max-sm:ml-6" >
+					<div className="text-white max-sm:ml-6" >
 						<h1 className="text-3xl max-sm:text-xl text-[#E7B10A]">Hi There, I&rsquo;m Mouad,</h1>
 						<h2 className='text-6xl max-sm:text-5xl max-sm:mt-2 leading-relaxed'>A FRONTEND DEVELOPER</h2>
 						<p className="text-xl text-gray-400 mt-4 w-[400px]">I&rsquo;m a self-taught developer based in Morocco, I love to build things for the web.</p>
 						
 						<a href="/home/mmounib/Desktop/Resume.pdf" className=' btn uppercase max-sm:after:hidden max-sm:bg-[#E7B10A] max-sm:border-0 max-sm:w-[40%] max-sm:text-center max-sm:inline-block '>Resume</a>	
-					</motion.div>
+					</div>
 					
 					<div className="relative h-full">
 						<div className='border-4 z-10 border-[#E7B10A] border-collapse h-[400px] w-full absolute -top-12 -right-7'></div>
 						<Image src="/my_image.jpg" alt="Portfolio Image" width={400} height={400} className='image w-[400px] h-[400px]'/>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	)
 }
