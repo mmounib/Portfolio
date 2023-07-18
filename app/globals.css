@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -24,6 +25,10 @@ body {
   min-height: 100vh;
   max-width: 100vw;
   /* width: 100%; */
+}
+
+h1 {
+	font-family: 'Lilita One', cursive;
 }
 
 li {
@@ -87,9 +92,17 @@ li:hover {
 
 
 .image {
-	object-fit: cover;
+	image-rendering: auto;
+	/* object-fit: cover; */
 	/* z-index: -999; */
 	
+}
+
+.success_div {
+	display: block;
+	transform: translateY(200%);
+	animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+
 }
 
 p {
@@ -113,6 +126,15 @@ p {
 	animation: slideDown 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 }
 
+.shadow_text {
+	text-shadow: -3px 0px 0px #E7B10A,
+		1px 0px 0px #E7B10A,
+		0px -1px 0px #E7B10A,
+		0px 1px 0px #E7B10A;
+	letter-spacing: .4ch;
+}
+
+
 @media (min-width: 768px) {
   .btn {
 	padding: 13px 50px 13px;
@@ -131,3 +153,8 @@ p {
 	}
 }
 
+@keyframes reveal {
+  to {
+	transform: translateY(0);
+  }
+}

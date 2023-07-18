@@ -12,7 +12,7 @@ const patua_One = Patua_One({
 	subsets: ['latin'],
 	weight: '400'
 })
-
+import NextLink from "next/link";
 const Navbar = () => {
 
 	const menuRef = useRef<HTMLDivElement>(null);
@@ -69,13 +69,13 @@ const Navbar = () => {
 
 				<div className="flex gap-6 max-md:gap-4 items-center max-sm:hidden">
 					
-					<Link to="https://www.linkedin.com/in/mouad-mounib-954418193/">
+					<NextLink href="https://www.linkedin.com/in/mouad-mounib-954418193/" target="_blank" className="cursor-pointer">
 						<BsLinkedin size={25} className=' hover:text-[#E7B10A] hover:scale-110 transition-all'/>	  
-					</Link>
+					</NextLink>
 					
-					<Link to="https://github.com/mmounib">
+					<NextLink href="https://github.com/mmounib" target="_blank" className="cursor-pointer">
 						<BsGithub size={25} className=' hover:text-[#E7B10A] hover:scale-110 transition-all'/>	  
-					</Link>
+					</NextLink>
 					
 				</div>
 
@@ -116,7 +116,7 @@ const Home = () => {
 
 	return (
 		<section className="bg-black" >
-			<motion.div className="flex max-md:gap-16 flex-col w-[60%] max-w-[1700px] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]" variants={{
+			<motion.div className="flex max-md:gap-16 flex-col w-[60%] max-w-[1600px] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]" variants={{
 					hidden: { opacity: 0, y: 75 },
 					visible: { opacity: 1, y: 0 },
 			}} initial="hidden" animate="visible" transition={{ duration: 1 }}>
@@ -132,9 +132,9 @@ const Home = () => {
 						<a href="/home/mmounib/Desktop/Resume.pdf" className=' btn uppercase max-sm:after:hidden max-sm:bg-[#E7B10A] max-sm:border-0 max-sm:w-[40%] max-sm:text-center max-sm:inline-block '>Resume</a>	
 					</div>
 					
-					<div className="relative h-full">
+					<div className="relative h-full hover:rotate-6 transition-all duration-500">
 						<div className='border-4 z-10 border-[#E7B10A] border-collapse h-[400px] w-full absolute -top-12 -right-7'></div>
-						<Image src="/my_image.jpg" alt="Portfolio Image" width={400} height={400} className='image w-[400px] h-[400px]'/>
+						<Image src="/my_image.jpg" alt="Portfolio Image" width={400} height={400} className='image w-[400px] h-[400px]   '/>
 					</div>
 				</div>
 			</motion.div>

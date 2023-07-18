@@ -38,7 +38,7 @@ const skillLists = [
 
 const SkillDiv = ({ image, alt, skillName }: SkillDivProps) => {
 	return (
-		<div className="flex flex-col items-center hover:scale-105 transition-all duration-500">
+		<div className="flex flex-col items-center hover:rotate-6 transition-all duration-300">
 			<Image src={image} alt={alt} width={100} height={100} />
 			<p className="text-white text-lg">{skillName}</p>
 		</div>
@@ -50,7 +50,7 @@ const Skills = () => {
 	
 	return (
 	  	<section className="bg-black " >
-			<div className="flex flex-col mt-20 w-[60%] max-w-[1700px] max-custom:w-[80%] max-md:w-full max-sm:px-6 mx-auto min-h-[200px]">
+			<div className="flex flex-col mt-20 w-[60%] max-w-[1600px] max-custom:w-[80%] max-md:w-full max-sm:px-6 mx-auto min-h-[200px]">
 				<h1 className="text-4xl text-[#E7B10A] tracking-wider">&lt;Skills /&gt;</h1>
 
 				<motion.div className="flex justify-between flex-wrap my-14" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration: 1}}>
