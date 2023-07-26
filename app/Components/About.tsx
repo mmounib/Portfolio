@@ -1,10 +1,9 @@
 'use client'
 import Image from 'next/image';
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 
-import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from "gsap/all";
+import { gsap, ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from 'react';
-import Lenis from '@studio-freight/lenis';
 
 
 
@@ -20,7 +19,7 @@ const About = () => {
 			gsap.fromTo(
 			  app.current,
 			  { opacity: 0, y: 100 },
-			  { opacity: 1, y: 0, duration: 1, delay: 0.3, scrollTrigger: {
+			  { opacity: 1, y: 0, duration: 1, delay: 0.1, scrollTrigger: {
 				trigger: app.current,
 				start: "top 50%",
 			  } }
