@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -18,9 +18,7 @@
   }
 }
 
-
 /* Lenis Smooth Scrolling */
-
 
 html.lenis {
   height: auto;
@@ -39,12 +37,11 @@ html.lenis {
 }
 
 .lenis.lenis-scrolling iframe {
-   pointer-events: none;
-} 
-
+  pointer-events: none;
+}
 
 html {
-	/* scroll-behavior: smooth; */
+  /* scroll-behavior: smooth; */
 }
 body {
   color: rgb(var(--foreground-rgb));
@@ -54,46 +51,46 @@ body {
 }
 
 h1 {
-	font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
 }
 
 li {
-	transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 li:hover {
-	transform: scale3d(1.05, 1.05, 1);
+  transform: scale3d(1.05, 1.05, 1);
 }
 
 /* CSS */
 .btn {
-	display: inline-block;
-	margin-top: 3rem;
-  	font-size: 16px;
-  	font-weight: 200;
-  	letter-spacing: 1px;
-  	padding: 13px 20px 13px;
-  	outline: 0;
-  	border: 1px solid white;
-  	cursor: pointer;
-  	position: relative;
-  	background-color: rgba(0, 0, 0, 0);
-  	user-select: none;
-  	-webkit-user-select: none;
-  	touch-action: manipulation;
-	z-index: 1;
-	font-weight: 900;
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 1;
+  font-weight: 900;
 }
 
 .text-animate {
 }
 
 .btn:hover {
-	border: none;
+  border: none;
 }
 
 .btn::after {
   content: "";
-  background-color: #E7B10A;
+  background-color: #e7b10a;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -104,82 +101,89 @@ li:hover {
 }
 
 .menu_ref {
-	transform: translateX(-100%);
-	animation: slideRight 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+  transform: translateX(-100%);
+  animation: slideRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
-
 
 .btn:hover::after {
   top: 0px;
   left: 0px;
 }
 
-
 .image {
-	image-rendering: auto;
-	/* object-fit: cover; */
-	/* z-index: -999; */
-	
+  image-rendering: auto;
+  /* object-fit: cover; */
+  /* z-index: -999; */
 }
 
 .success_div {
-	display: block;
-	transform: translateY(200%);
-	animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-
+  display: block;
+  transform: translateY(200%);
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 p {
-	font-size: 1.25rem/* 20px */;
-    line-height: 2rem;
-	color: rgb(209 213 219 / 1);
-	
-	/* font-family: 'Rubik', sans-serif; */
+  font-size: 1.25rem /* 20px */;
+  line-height: 2rem;
+  color: rgb(209 213 219 / 1);
+
+  /* font-family: 'Rubik', sans-serif; */
 }
 
-
 .box {
-	border-radius: 15px;
-	/* background: rgb(3 7 18 / .7);; */
-	/* box-shadow: 3px 3px 5px #252525, */
-	/* -2px -2px 10px #252525; */
+  border-radius: 15px;
+  /* background: rgb(3 7 18 / .7);; */
+  /* box-shadow: 3px 3px 5px #252525, */
+  /* -2px -2px 10px #252525; */
 }
 
 .loader {
-	transform: translateY(-100%);
-	animation: slideDown 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
-	animation-delay: 40s;
+  transform: translateY(-100%);
+  animation: slideDown 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 40s;
 }
 
 .shadow_text {
-	text-shadow: -3px 0px 0px #E7B10A,
-		1px 0px 0px #E7B10A,
-		0px -1px 0px #E7B10A,
-		0px 1px 0px #E7B10A;
-	letter-spacing: .4ch;
+  text-shadow: -3px 0px 0px #e7b10a, 1px 0px 0px #e7b10a, 0px -1px 0px #e7b10a,
+    0px 1px 0px #e7b10a;
+  letter-spacing: 0.4ch;
+  color: rgb(3 7 18 / 1);
 }
-
 
 @media (min-width: 768px) {
   .btn {
-	padding: 13px 50px 13px;
+    padding: 13px 50px 13px;
   }
 }
 
 @keyframes slideDown {
-	to {
-		transform: translateY(0);
-	}
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideRight {
-	to {
-		transform: translateX(0);
-	}
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes reveal {
   to {
-	transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* animated-gradient background home Section */
+
+.animate-gradient {
+	transform: translateY(-100%);
+  animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+	transform: translateY(0%);
+    background-position: 0% 50%;
   }
 }

@@ -32,7 +32,7 @@ const Navbar = () => {
   
     return (
       <nav>
-        <div className="flex text-white text-lg items-center justify-between mt-6 max-md:mx-4">
+        <div className="flex text-white text-lg items-center justify-between mt-6 max-md:mx-4 z-[999]">
           <ul className="flex gap-8 max-md:hidden">
             <li>
               <Link

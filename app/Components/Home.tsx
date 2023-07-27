@@ -2,63 +2,88 @@
 
 import Navbar from "./Navbar";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { use, useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "gsap/all";
 
 import { Patua_One } from "next/font/google";
-
 
 const patua_One = Patua_One({
   subsets: ["latin"],
   weight: "400",
 });
 
-
-
-
 const Home = () => {
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const whiteBgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (whiteBgRef.current) {
+      const tl = gsap.timeline({ repeat: -1, yoyo: true });
+      tl.to(whiteBgRef.current, {
+        width: "50%",
+        duration: 4,
+        ease: "power2.inOut",
+        onComplete: () => {
+          tl.reverse();
+        },
+      }).to(whiteBgRef.current, {
+        width: 0,
+        duration: 5,
+        ease: "power2.inOut",
+        onComplete: () => {
+          tl.kill();
+        },
+      });
+    }
+  }, []);
 
   useEffect(() => {
     if (textRef.current && imageRef.current) {
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.fromTo(
-        textRef.current,
-        { x: -1300, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 2.5,
-          delay: 0.5,
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 80%",
-          },
-        }
-      );
+      if (window.innerWidth > 768) {
+        gsap.fromTo(
+          textRef.current,
+          { x: -1000, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 2.5,
+            delay: 2.5,
+            scrollTrigger: {
+              trigger: textRef.current,
+              start: "top 80%",
+            },
+          }
+        );
 
-      gsap.fromTo(
-        imageRef.current,
-        { y: 500, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1.5,
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: "top 100%",
-          },
-        }
-      );
+        gsap.fromTo(
+          imageRef.current,
+          { y: 500, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.5,
+            scrollTrigger: {
+              trigger: imageRef.current,
+              start: "top 100%",
+            },
+          }
+        );
+      }
     }
   }, []);
 
   return (
-    <section className="bg-black">
+    <section className="bg-black relative">
       <div className="flex max-md:gap-16 flex-col w-[60%] max-w-[1600px] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]">
         <Navbar />
+
+        <div
+          ref={whiteBgRef}
+          className="max-sm:hidden bg-gray-950 h-full w-0 absolute left-0 top-0"
+        ></div>
 
         <div className="flex max-md:flex-col justify-between h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6">
           <div ref={textRef} className="text-white max-sm:ml-6">
@@ -98,4 +123,3 @@ const Home = () => {
 };
 
 export default Home;
-
