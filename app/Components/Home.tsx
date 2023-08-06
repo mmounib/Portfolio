@@ -78,6 +78,8 @@ const Home = () => {
   return (
     <section className="bg-black relative">
       <div className="flex max-md:gap-16 flex-col w-[60%] max-w-[1600px] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]">
+        <div className="el_effect"></div>
+        <div className="el_effect1"></div>
         <Navbar />
 
         <div
@@ -85,7 +87,7 @@ const Home = () => {
           className="max-sm:hidden bg-gray-950 h-full w-0 absolute left-0 top-0"
         ></div>
 
-        <div className="flex max-md:flex-col justify-between h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6">
+        <div className="flex max-md:flex-col justify-between h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6 ">
           <div ref={textRef} className="text-white max-sm:ml-6">
             <h1 className="text-3xl max-sm:text-xl text-[#E7B10A]">
               Hi There, I&rsquo;m Mouad,

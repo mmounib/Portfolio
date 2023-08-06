@@ -8,7 +8,8 @@ import Contact from "./Components/Contact"
 
 import Lenis from '@studio-freight/lenis'
 
-// import gsap from "gsap"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 import { Crimson_Text } from 'next/font/google'
@@ -36,7 +37,24 @@ const Page = () => {
 		}
 	
 		requestAnimationFrame(raf)
+
+		gsap.registerPlugin(ScrollTrigger);
+
+		const textElements = gsap.utils.toArray('.h1-animate');
+		
+		textElements.forEach((text) => gsap.to(text, {
+			backgroundSize: '100%',
+			ease: 'none',
+			scrollTrigger: {
+				trigger: text,
+				start: 'center 80%',
+				end: 'center 20%',
+				scrub: true,
+			},
+		}));
 	}, []);
+
+	
 			
 	return (
 		<>

@@ -32,7 +32,7 @@ const Navbar = () => {
   
     return (
       <nav>
-        <div className="flex text-white text-lg items-center justify-between mt-6 max-md:mx-4 z-[999]">
+        <div className="flex text-white text-2xl items-center justify-between mt-6 max-md:mx-4 z-[999]">
           <ul className="flex gap-8 max-md:hidden">
             <li>
               <Link
@@ -44,6 +44,7 @@ const Navbar = () => {
               >
                 Home
               </Link>
+              <span className="link_span">Home</span>
             </li>
             <li>
               <Link
@@ -55,6 +56,7 @@ const Navbar = () => {
               >
                 About
               </Link>
+              <span className="link_span">About</span>
             </li>
             <li>
               <Link
@@ -67,6 +69,7 @@ const Navbar = () => {
               >
                 Projects
               </Link>
+              <span className="link_span">Projects</span>
             </li>
             <li>
               <Link
@@ -79,6 +82,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
+              <span className="link_span">Contact</span>
             </li>
           </ul>
   
@@ -95,7 +99,7 @@ const Navbar = () => {
               className="cursor-pointer"
             >
               <BsLinkedin
-                size={25}
+                size={35}
                 className=" hover:text-[#E7B10A] hover:scale-110 transition-all"
               />
             </NextLink>
@@ -106,7 +110,7 @@ const Navbar = () => {
               className="cursor-pointer"
             >
               <BsGithub
-                size={25}
+                size={35}
                 className=" hover:text-[#E7B10A] hover:scale-110 transition-all"
               />
             </NextLink>

@@ -4,13 +4,11 @@ import Link from 'next/link'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { motion } from "framer-motion"
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import emailjs from 'emailjs-com';
 
 import { Player } from '@lottiefiles/react-lottie-player';
-
-// import image from "animation_1.json"
 
 
 const Contact = () => {
@@ -50,7 +48,7 @@ const Contact = () => {
 			<motion.div className="flex justify-between w-[65%] max-w-[1600px] max-custom-layout:flex-col max-custom-layout:gap-6 max-custom:w-[80%] mx-auto min-h-[400px] mt-12" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration: 1.5}}>
 				
 				<div className="flex flex-col gap-12 items-center">
-					<h1 className="text-7xl max-custom-layout:text-5xl max-custom-layout:text-center leading-12 text-white">Let&rsquo;s Work Together</h1>
+					<h1 className=" text-7xl max-custom-layout:text-5xl max-custom-layout:text-center leading-12 text-white">Let&rsquo;s Work Together</h1>
 					<Player
 						src='/animation_1.json'
 						className=" w-[300px] h-[300px] max-sm:w-[200px] max-sm:h-[200px]"
