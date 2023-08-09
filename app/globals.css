@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Passion+One:wght@700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -57,6 +58,11 @@ li {
   width: 100%;
 
 }
+.para_font {
+  font-family: 'Passion One', cursive;
+
+}
+
 .link_span {
   position: absolute;
   width: 100%;

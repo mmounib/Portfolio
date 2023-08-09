@@ -89,7 +89,7 @@ const Navbar = () => {
           <h1
             className={` text-animate text-4xl mx-auto max-md:ml-2 max-sm:text-3xl max-md:mr-0  ${patua_One.className}`}
           >
-            Mouad Mounib
+            MOUAD.MOUNIB
           </h1>
   
           <div className="flex gap-6 max-md:gap-4 items-center max-sm:hidden">
@@ -99,7 +99,7 @@ const Navbar = () => {
               className="cursor-pointer"
             >
               <BsLinkedin
-                size={35}
+                size={28}
                 className=" hover:text-[#E7B10A] hover:scale-110 transition-all"
               />
             </NextLink>
@@ -110,7 +110,7 @@ const Navbar = () => {
               className="cursor-pointer"
             >
               <BsGithub
-                size={35}
+                size={28}
                 className=" hover:text-[#E7B10A] hover:scale-110 transition-all"
               />
             </NextLink>

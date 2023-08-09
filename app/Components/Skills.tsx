@@ -39,8 +39,8 @@ const skillLists = [
 const SkillDiv = ({ image, alt, skillName }: SkillDivProps) => {
 	return (
 		<div className="flex flex-col items-center hover:rotate-6 transition-all duration-300">
-			<Image src={image} alt={alt} width={100} height={100} />
-			<p className="text-white text-lg">{skillName}</p>
+			<Image src={image} alt={alt} width={150} height={150} />
+			<p className="text-white text-2xl para_font">{skillName}</p>
 		</div>
 	);
 };
