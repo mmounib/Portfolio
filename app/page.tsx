@@ -8,66 +8,66 @@ import Contact from "./Components/Contact"
 
 import Lenis from '@studio-freight/lenis'
 
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {gsap} from "gsap"
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import TweenTarget from 'gsap';
 
 
-import { Crimson_Text } from 'next/font/google'
-import { useEffect } from "react"
+import {Crimson_Text} from 'next/font/google'
+import {useEffect, useRef} from "react"
+import DOMTarget = gsap.DOMTarget;
 
 const crimson_Text = Crimson_Text({
-	subsets: ['latin'],
-	weight: ['400', '600', '700'],
-  	style: ['normal', 'italic'],
-}) 
+    subsets: ['latin'],
+    weight: ['400', '600', '700'],
+    style: ['normal', 'italic'],
+})
 
 const Page = () => {
 
-	useEffect(() => {
-		const lenis = new Lenis();
+    useEffect(() => {
+        const lenis = new Lenis();
 
-		lenis.on('scroll', () => {
-			// console.log(e)
-		})
+        lenis.on('scroll', () => {
+            // console.log(e)
+        })
 
-		function raf(time: any) {
-			lenis.raf(time)
-			requestAnimationFrame(raf)
-		}
+        function raf(time: any) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
 
-		requestAnimationFrame(raf)
+        requestAnimationFrame(raf)
 
-		gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger);
 
-		const textElements = gsap.utils.toArray('.h1-animate');
+        let textElements = gsap.utils.toArray('.h1-animate');
 
-		textElements.forEach((text: unknown) => gsap.to(text!, {
-			backgroundSize: '100%',
-			ease: 'none',
-			scrollTrigger: {
-				trigger : text,
-				start: 'center 80%',
-				end: 'center 20%',
-				scrub: true,
-			},
-		}));
-	}, []);
+        textElements.forEach((text) => gsap.to(text as any, {
+            backgroundSize: '100%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: text as DOMTarget,
+                start: 'center 80%',
+                end: 'center 20%',
+                scrub: true,
+            },
+        }));
+    }, []);
 
 
-	
-			
-	return (
-		<>
-			<div className="flex flex-col mx-auto overflow-hidden" >
-				<Home />
-				<About />
-				<Skills />
-				<Projects />
-				<Contact />
-			</div >
-		</>
-	
-  )
+    return (
+        <>
+            <div className="flex flex-col mx-auto overflow-hidden">
+                <Home/>
+                <About/>
+                <Skills/>
+                <Projects/>
+                <Contact/>
+            </div>
+        </>
+
+    )
 }
 export default Page
 
