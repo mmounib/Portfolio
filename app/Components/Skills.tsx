@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import { motion } from "framer-motion"
+import { gsap, ScrollTrigger } from "gsap/all";
+import { useEffect, useRef } from 'react';
 
 interface SkillDivProps {
 	image: string;
@@ -46,11 +48,26 @@ const SkillDiv = ({ image, alt, skillName }: SkillDivProps) => {
 };
 
 const Skills = () => {
-  	
+	const app = useRef<HTMLDivElement>(null);
 	
+	useEffect(() => {
+		if (app.current) {
+			gsap.registerPlugin(ScrollTrigger);
+	  
+			gsap.fromTo(
+			  app.current,
+			  { opacity: 0, y: 100 },
+			  { opacity: 1, y: 0, duration: 1, delay: 0.1, scrollTrigger: {
+				trigger: app.current,
+				start: "top 50%",
+			  } }
+			);
+		}
+	  }, []);
+	  
 	return (
 	  	<section className="bg-black " >
-			<div className="flex flex-col mt-20 w-[60%] max-w-[1600px] max-custom:w-[80%] max-md:w-full max-sm:px-6 mx-auto min-h-[200px]">
+			<div ref={app} className="flex flex-col mt-20 w-[60%] max-w-[1600px] max-custom:w-[80%] max-md:w-full max-sm:px-6 mx-auto min-h-[200px]">
 				<h1 className=" h1-animate text-7xl max-sm:text-2xl text-[#E7B10A] tracking-wider">&lt;Skills /&gt;<span className='span-animate'>Check Out My Skills</span></h1>
 
 				<motion.div className="flex justify-between flex-wrap my-14" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration: 1}}>

@@ -1,10 +1,12 @@
 import { Link } from "react-scroll";
-import { useEffect, useRef } from "react";
-import baffle from "baffle";
+import { useEffect, useRef, useState } from "react";
+const baffle = require('baffle');
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { RxHamburgerMenu as Hamburger } from "react-icons/rx";
 import NextLink from "next/link";
 import { Patua_One } from "next/font/google";
+
+import { AiOutlineContacts } from "react-icons/ai";
 
 
 const patua_One = Patua_One({
@@ -14,6 +16,7 @@ const patua_One = Patua_One({
 
 const Navbar = () => {
     const menuRef = useRef<HTMLDivElement>(null);
+    const [menu, setMenu] = useState(false);
   
     useEffect(() => {
       const text = baffle(".text-animate");
@@ -26,13 +29,9 @@ const Navbar = () => {
       text.reveal(5000);
     }, []);
   
-    const toggleMenu = () => {
-      if (menuRef.current) menuRef.current.classList.toggle("max-sm:hidden");
-    };
-  
     return (
       <nav>
-        <div className="flex text-white text-2xl items-center justify-between mt-6 max-md:mx-4 z-[999]">
+        <div className="flex text-white text-xl items-center justify-between mt-6 max-md:mx-4 z-[999]">
           <ul className="flex gap-8 max-md:hidden">
             <li>
               <Link
@@ -78,11 +77,11 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="cursor-pointer"
+                className="cursor-pointer flex gap-2 items-center"
               >
-                Contact
+                <AiOutlineContacts size={25} className=" text-white" />
+                Get In Touch
               </Link>
-              <span className="link_span">Contact</span>
             </li>
           </ul>
   
@@ -116,50 +115,45 @@ const Navbar = () => {
             </NextLink>
           </div>
   
-          <div className="flex" onClick={toggleMenu}>
+          <div className="flex" onClick={() => setMenu(!menu)}>
             <Hamburger
               size={30}
               className=" hidden max-sm:block max-md:ml-4 cursor-pointer "
             />
           </div>
         </div>
-        <div
-          ref={menuRef}
-          className="hidden menu_ref max-md:hidden max-sm:bg-[#E7B10A] max-sm:text-white max-sm:w-screen max-sm:justify-center max-sm:items-center max-sm:h-full max-sm:flex max-sm:text-xl max-sm:py-4"
-        >
-          <ul className="flex flex-col items-center gap-6 text-center">
-            <li>
-              <Link to="">Home</Link>
-            </li>
-            <li>
-              <Link to="About">About</Link>
-            </li>
-            <li>
-              <Link to="projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="Contact">Contact</Link>
-            </li>
-            <li>
-              <a
-                href="https://github.com/mmounib"
-                className="flex items-center gap-2 mt-2"
-              >
-                {" "}
-                <BsGithub size={20} /> Github
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/mouad-mounib-954418193/"
-                className="flex items-center gap-2"
-              >
-                {" "}
-                <BsLinkedin size={20} /> LinkedIn
-              </a>
-            </li>
-          </ul>
-        </div>
+        {menu && (
+            <div
+            className="hidden menu_ref max-md:hidden max-sm:bg-[#E7B10A] max-sm:text-white max-sm:w-screen max-sm:justify-center max-sm:items-center max-sm:h-full max-sm:flex max-sm:text-xl max-sm:py-4"
+          >
+            <ul className="flex flex-col items-center gap-6 text-center">
+              <li>
+                <Link to="">Home</Link>
+              </li>
+              <li>
+                <Link to="About">About</Link>
+              </li>
+              <li>
+                <Link to="projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="Contact">Contact</Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/mmounib"
+                  className="flex justify-center items-center gap-2 mt-2"
+                >
+                  {" "}
+                  <BsGithub size={20} /> Github / <a href="https://www.linkedin.com/in/mouad-mounib-954418193/" className="flex items-center gap-2">
+                  <BsLinkedin size={20} /> LinkedIn
+                </a>
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+        
       </nav>
     );
   };

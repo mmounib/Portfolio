@@ -24,35 +24,35 @@ const crimson_Text = Crimson_Text({
 const Page = () => {
 
 	useEffect(() => {
-
 		const lenis = new Lenis();
-	
-		lenis.on('scroll', (e: any) => {
-		// console.log(e)
+
+		lenis.on('scroll', () => {
+			// console.log(e)
 		})
-	
+
 		function raf(time: any) {
-		lenis.raf(time)
-		requestAnimationFrame(raf)
+			lenis.raf(time)
+			requestAnimationFrame(raf)
 		}
-	
+
 		requestAnimationFrame(raf)
 
 		gsap.registerPlugin(ScrollTrigger);
 
 		const textElements = gsap.utils.toArray('.h1-animate');
-		
-		textElements.forEach((text) => gsap.to(text, {
+
+		textElements.forEach((text: unknown) => gsap.to(text!, {
 			backgroundSize: '100%',
 			ease: 'none',
 			scrollTrigger: {
-				trigger: text,
+				trigger : text,
 				start: 'center 80%',
 				end: 'center 20%',
 				scrub: true,
 			},
 		}));
 	}, []);
+
 
 	
 			

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Passion+One:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -52,10 +53,10 @@ h1 {
 }
 
 li {
-  font-family: "Lilita One", cursive;
+  font-family: 'Bricolage Grotesque', sans-serif;
   position: relative;
   transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
-  width: 100%;
+  /* width: 100%; */
 
 }
 .para_font {
@@ -125,7 +126,7 @@ li:hover > .link_span {
 }
 
 .menu_ref {
-  transform: translateX(-100%);
+  transform: translateX(100%);
   animation: slideRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 

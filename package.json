@@ -2,6 +2,8 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "main": "app/page",
+  "types": "app/page",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,7 +23,6 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
-    "baffle": "^0.3.6",
     "emailjs-com": "^3.2.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.7",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@types/gsap": "^3.0.0",
     "@types/locomotive-scroll": "^4.1.0",
-    "@types/react-scroll": "^1.8.7"
+    "@types/react-scroll": "^1.8.7",
+    "baffle": "^0.3.6"
   }
 }
