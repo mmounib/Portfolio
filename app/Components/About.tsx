@@ -29,7 +29,7 @@ const About = () => {
 
 	
 	return (
-		<section className="bg-gray-950" id='About'>
+		<section className="" id='About'>
 			<div ref={app} className="my-24 flex w-[60%] max-w-[1600px] max-md:w-full min-h-[600px] text-white gap-28 mx-auto max-custom-layout:flex-col max-sm:gap-14 max-sm:my-16 max-custom:w-[80%] max-sm:px-6 square">
 
 				<div className="relative h-full hover:-rotate-6 transition-all duration-500">

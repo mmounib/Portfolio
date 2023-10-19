@@ -44,7 +44,7 @@ const Contact = () => {
 	};
 
 	return (
-	  	<section className="bg-black" id='Contact'>
+	  	<section className="" id='Contact'>
 			<motion.div className="flex justify-between w-[65%] max-w-[1600px] max-custom-layout:flex-col max-custom-layout:gap-6 max-custom:w-[80%] mx-auto min-h-[400px] mt-12" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration: 1.5}}>
 				
 				<div className="flex flex-col gap-12 items-center">

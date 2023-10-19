@@ -1,123 +1,45 @@
 "use client";
 
-import Navbar from "./Navbar";
 import Image from "next/image";
-import { use, useEffect, useRef } from "react";
-import { gsap, ScrollTrigger } from "gsap/all";
 
-import { Patua_One } from "next/font/google";
+import { Outfit } from "next/font/google";
 
-const patua_One = Patua_One({
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: "400",
+  weight: "600",
 });
 
 const Home = () => {
-  const textRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
-  const whiteBgRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (whiteBgRef.current) {
-      const tl = gsap.timeline({ repeat: -1, yoyo: true });
-      tl.to(whiteBgRef.current, {
-        width: "50%",
-        duration: 4,
-        ease: "power2.inOut",
-        onComplete: () => {
-          tl.reverse();
-        },
-      }).to(whiteBgRef.current, {
-        width: 0,
-        duration: 5,
-        ease: "power2.inOut",
-        onComplete: () => {
-          tl.kill();
-        },
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    if (textRef.current && imageRef.current) {
-      gsap.registerPlugin(ScrollTrigger);
-
-      if (window.innerWidth > 768) {
-        gsap.fromTo(
-          textRef.current,
-          { x: -1000, opacity: 0 },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 2.5,
-            delay: 2.5,
-            scrollTrigger: {
-              trigger: textRef.current,
-              start: "top 80%",
-            },
-          }
-        );
-
-        gsap.fromTo(
-          imageRef.current,
-          { y: 500, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.5,
-            scrollTrigger: {
-              trigger: imageRef.current,
-              start: "top 100%",
-            },
-          }
-        );
-      }
-    }
-  }, []);
-
   return (
-    <section className="bg-black relative">
-      <div className="flex max-md:gap-16 flex-col w-[60%] max-w-[1600px] max-md:w-full min-h-[800px] mx-auto max-custom:w-[80%]">
-        <div className="el_effect"></div>
-        <div className="el_effect1"></div>
-        <Navbar />
-
-        <div
-          ref={whiteBgRef}
-          className="max-sm:hidden bg-gray-950 h-full w-0 absolute left-0 top-0"
-        ></div>
-
-        <div className="flex max-md:flex-col justify-between h-full my-auto items-center gap-12 max-md:gap-24 max-md:mb-4 max-sm:px-6 ">
-          <div ref={textRef} className="text-white max-sm:ml-6">
-            <h1 className="text-3xl max-sm:text-xl text-[#E7B10A]">
-              Hi There, I&rsquo;m Mouad,
-            </h1>
-            <h2 className="text-6xl max-sm:text-5xl max-sm:mt-2 leading-relaxed">
-              A FRONTEND DEVELOPER
-            </h2>
-            <p className="text-xl text-gray-400 mt-4 w-[400px]">
-              I&rsquo;m a self-taught developer based in Morocco, I love to
-              build things for the web.
-            </p>
-
-            <a
-              href="/home/mmounib/Desktop/Resume.pdf"
-              className=" btn uppercase max-sm:after:hidden text-black max-sm:bg-[#E7B10A] max-sm:border-0 max-sm:w-[40%] max-sm:text-center max-sm:inline-block "
-            >
-              Resume
-            </a>
-          </div>
-
-          <div ref={imageRef} className="relative h-full hover:rotate-6 ">
-            <div className="border-4 z-10 border-[#E7B10A] border-collapse h-[400px] w-full absolute -top-12 -right-7"></div>
+    <section className={` mt-32 ${outfit}`}>
+      <div className="mx-auto text-black max-w-[900px]">
+        <h3 className="capitalize text-xl">Hello, I&apos;m Mouad Mounib</h3>
+        <div className="flex flex-col gap-2">
+          <div className="flex gap-8 mt-8 text-black">
+            <h1 className=" mt-4">Software</h1>
             <Image
-              src="/my_image.jpg"
-              alt="Portfolio Image"
-              width={400}
-              height={400}
-              className="image w-[400px] h-[400px]"
+              src="/resume-image.jpg"
+              alt="Image"
+              width={250}
+              height={100}
+              className="rounded-full w-[110px] h-[110px] object-cover"
             />
           </div>
+          <h1> - Developer </h1>
+        </div>
+        <div className="flex flex-col mt-16 max-sm:mt-8 ml-36 max-sm:ml-0 max-sm:leading-6 max-sm:text-sm gap-8 text-xl">
+          <p className="max-w-[400px] max-sm:max-w-[90%] leading-8">
+            Turning ideas into functional, user-friendly applications.
+            Proficient in both front-end and back-end technologies, I&apos;m
+            ready to bring your projects to life
+          </p>
+          <button
+            type="submit"
+            className="mr-auto  relative rounded-md px-6 py-2 text-black"
+          >
+            See Resume
+            <span className="btn-line"></span>
+          </button>
         </div>
       </div>
     </section>

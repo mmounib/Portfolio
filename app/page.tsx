@@ -16,6 +16,7 @@ import TweenTarget from 'gsap';
 import {Crimson_Text} from 'next/font/google'
 import {useEffect, useRef} from "react"
 import DOMTarget = gsap.DOMTarget;
+import Navbar from "./Components/Navbar"
 
 const crimson_Text = Crimson_Text({
     subsets: ['latin'],
@@ -57,15 +58,17 @@ const Page = () => {
 
 
     return (
-        <>
-            <div className="flex flex-col mx-auto overflow-hidden">
+        <div className=" bg-primary">
+            <div className="flex max-w-[1300px] h-screen flex-col mx-auto overflow-hidden">
+                <Navbar />
                 <Home/>
-                <About/>
-                <Skills/>
-                <Projects/>
-                <Contact/>
+                {/* <About/> */}
+                {/* <Skills/> */}
+                
+                {/* <Projects/> */}
+                {/* <Contact/> */}
             </div>
-        </>
+        </div>
 
     )
 }
