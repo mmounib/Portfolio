@@ -76,7 +76,7 @@ const Navbar = () => {
               className="cursor-pointer flex gap-2 items-center relative"
             >
               Get In Touch
-              <BsArrowRightShort size={20} className=" text-black bg-blue-600 rounded-[10px]"/>
+              <BsArrowRightShort size={20} className=" text-black bg-secondary rounded-[10px]"/>
             </Link>
           </li>
         </ul>
@@ -89,7 +89,7 @@ const Navbar = () => {
           >
             <BsLinkedin
               size={28}
-              className=" hover:text-blue-600 hover:scale-110 transition-all"
+              className=" hover:text-secondary hover:scale-110 transition-all"
             />
           </NextLink>
 
@@ -100,7 +100,7 @@ const Navbar = () => {
           >
             <BsGithub
               size={28}
-              className=" hover:text-blue-600 hover:scale-110 transition-all"
+              className=" hover:text-secondary hover:scale-110 transition-all"
             />
           </NextLink>
         </div>

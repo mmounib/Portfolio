@@ -62,6 +62,7 @@ const Page = () => {
             <div className="flex max-w-[1300px] h-screen flex-col mx-auto overflow-hidden">
                 <Navbar />
                 <Home/>
+                {/* Will Have to Include 2 Buttons. 1 for projects and the other for about me section */}
                 {/* <About/> */}
                 {/* <Skills/> */}
                 

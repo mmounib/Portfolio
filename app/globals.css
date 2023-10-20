@@ -50,19 +50,20 @@ body {
   max-width: 100vw;
 }
 
-h2 {
+h2, h4 {
   font-family: 'Lobster', sans-serif;
   letter-spacing: 3px;
 }
 h1 {
   @apply text-8xl font-extrabold;
 }
-h1 {
+h1{
   letter-spacing: 4px;
   font-family: 'Outfit', sans-serif;
 }
 
 li {
+  text-transform: uppercase;
   font-family: 'Noto Sans Osmanya', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -156,7 +157,7 @@ p {
   font-family: 'Outfit', sans-serif;
 }
 button {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 999;
 }
 
@@ -167,14 +168,14 @@ button {
   width: 100%;
   height: 2px;
   z-index: -1;
-  background-color: rgb(37 99 235);
-  transition: background-color 0.3s ease-in-out;
+  background-color:#71C9CE;
+  transition: background-color 0.5s ease-in-out;
 }
 
 button:hover .btn-line {
-  background-color: rgb(37 99 235); /* Change to your desired blue color */
+  background-color:#71C9CE; /* Change to your desired blue color */
   height: 100%;
-  transition: all .5s ease;
+  transition: all .5s ease-in-out;
 }
 .box {
   border-radius: 15px;
