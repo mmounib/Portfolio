@@ -5,7 +5,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { RxHamburgerMenu as Hamburger } from "react-icons/rx";
 import NextLink from "next/link";
 import { Outfit } from "next/font/google";
-import {BsArrowRightShort} from 'react-icons/bs'
+import { BsArrowRightShort } from "react-icons/bs";
 
 import { AiOutlineContacts } from "react-icons/ai";
 
@@ -21,12 +21,9 @@ const Navbar = () => {
   return (
     <nav className={`${outfit}`}>
       <div className="flex text-black items-center justify-around mt-6 max-md:mx-4 z-[999]">
-        <h2
-          className={`text-base`}
-        >
-          MOUAD 
-          <br></br>
-          - MOUNIB
+        <h2 className={`text-base`}>
+          MOUAD
+          <br></br>- MOUNIB
         </h2>
         <ul className="flex gap-8 max-md:hidden ml-auto mr-16">
           <li>
@@ -76,35 +73,13 @@ const Navbar = () => {
               className="cursor-pointer flex gap-2 items-center relative"
             >
               Get In Touch
-              <BsArrowRightShort size={20} className=" text-black bg-secondary rounded-[10px]"/>
+              <BsArrowRightShort
+                size={20}
+                className=" text-black bg-secondary rounded-[10px]"
+              />
             </Link>
           </li>
         </ul>
-
-        <div className="flex gap-6 max-md:gap-4 items-center max-sm:hidden">
-          <NextLink
-            href="https://www.linkedin.com/in/mouad-mounib-954418193/"
-            target="_blank"
-            className="cursor-pointer"
-          >
-            <BsLinkedin
-              size={28}
-              className=" hover:text-secondary hover:scale-110 transition-all"
-            />
-          </NextLink>
-
-          <NextLink
-            href="https://github.com/mmounib"
-            target="_blank"
-            className="cursor-pointer"
-          >
-            <BsGithub
-              size={28}
-              className=" hover:text-secondary hover:scale-110 transition-all"
-            />
-          </NextLink>
-        </div>
-
         <div className="hidden max-sm:flex" onClick={() => setMenu(!menu)}>
           <Hamburger
             size={30}
