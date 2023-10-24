@@ -7,7 +7,7 @@ const acme = Acme({
 })
 
 export const metadata = {
-  title: 'My Portfolio',
+  title: 'Mouad Mounib',
 }
 
 export default function RootLayout({

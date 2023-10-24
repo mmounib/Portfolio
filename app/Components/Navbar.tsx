@@ -73,10 +73,10 @@ const Navbar = () => {
               className="cursor-pointer flex gap-2 items-center relative"
             >
               Get In Touch
-              <BsArrowRightShort
-                size={20}
-                className=" text-black bg-secondary rounded-[10px]"
-              />
+              <svg width="13px" height="10px" viewBox="0 0 13 10" className="bg-secondary rounded-full w-[20px] p-1 h-[20px]">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg>
             </Link>
           </li>
         </ul>

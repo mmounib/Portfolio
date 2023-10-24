@@ -1,9 +1,9 @@
 "use client";
 
 import { BsArrowRightShort, BsArrowDown } from "react-icons/bs";
-import Image from "next/image";
 import { Outfit } from "next/font/google";
 import { useRef } from "react";
+import ImageHelper from "./Helpers/ImageHelper";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -25,18 +25,19 @@ const Home = () => {
           Hello, I&apos;m Mouad Mounib
         </h3>
 
-        <div className="flex flex-col gap-2">
-          <div className="flex gap-8 mt-8 text-black">
-            <h1 className=" mt-4">Software</h1>
-            <Image
+        <div className="flex flex-col">
+          <div className="flex gap-4 mt-4 text-black">
+            <h1 className="mt-6">&lt;Software</h1>
+            <ImageHelper />
+            {/* <Image
               src="/resume-image.jpg"
               alt="Image"
               width={250}
               height={100}
               className="rounded-full w-[150px] h-[150px] object-cover"
-            />
+            /> */}
           </div>
-          <h1> - Developer </h1>
+          <h1 className=" -mt-16"> - Developer /&gt;</h1>
         </div>
 
         <div className="flex mt-16">
@@ -57,9 +58,18 @@ const Home = () => {
             </p>
             <button
               type="submit"
-              className="mr-auto text-2xl relative flex items-center rounded-md px-4 py-2 text-black"
+              className="mr-auto mt-4 text-2xl relative flex items-center rounded-md px-4 py-2 text-black"
             >
-              See Resume <BsArrowRightShort size={30} />
+              <span>See Resume</span>
+              <svg
+                width="13px"
+                height="12px"
+                viewBox="0 0 13 10"
+                className="ml-4"
+              >
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg>
               <span className="btn-line"></span>
             </button>
           </div>

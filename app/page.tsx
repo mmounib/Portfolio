@@ -63,7 +63,6 @@ const Page = () => {
         <Navbar />
         <Home />
         <Section />
-        {/* Will Have to Include 2 Buttons. 1 for projects and the other for about me section */}
         {/* <About/> */}
         {/* <Skills/> */}
 
