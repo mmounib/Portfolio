@@ -178,8 +178,8 @@ button {
     var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
-  outline-offset: .2em;
-  padding: 12px 18px;
+  outline-offset: .7em;
+  padding: 18px 22px;
 }
 .btn-animate:hover,
 .btn-animate:focus-visible{
@@ -287,13 +287,13 @@ button:hover .btn-line {
 .cta::before {
   content: "";
   position: absolute;
-  top: -4px;
+  top: -10px;
   left: 0;
   display: block;
-  border-radius: 30px;
+  border-radius: 50px;
   background: rgb(113, 201, 206, 0.8);
-  width: 55px;
-  height: 55px;
+  width: 75px;
+  height: 75px;
   transition: all 0.3s ease;
 }
 .cta:hover > svg {
@@ -314,22 +314,23 @@ button:hover .btn-line {
 .bg {
   /* background: url(https://9to5mac.com/wp-content/uploads/sites/6/2019/07/apple_champs_elysees_boardroom.jpg?quality=82&strip=all&w=1600); */
   width: 100vw;
-  height: 80vh;
+  height: 100%;
+  margin-top: 15px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   perspective: 1000px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 }
 
 .card {
   width: 700px;
-  padding: 20px;
   height: 550px;
+  padding: 10px;
   /* margin: 20px 0; */
-  background: rgb(113, 201, 206, 0.5);
+  background: rgb(113, 201, 206, 0.3);
   box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
     0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e,
     0 2.288533303243457px 2.288533303243457px -2.5px #00000029,
@@ -344,7 +345,7 @@ button:hover .btn-line {
   padding: 20px;
   height: 550px;
   /* margin: 20px 0; */
-  background: rgb(113, 201, 206, 0.5);
+  background: rgb(113, 201, 206, 0.3);
   box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
     0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e,
     0 2.288533303243457px 2.288533303243457px -2.5px #00000029,
@@ -357,9 +358,9 @@ button:hover .btn-line {
 .card-2 {
   width: 300px;
   padding: 20px;
-  height: 550px;
+  height: 500px;
   /* margin: 20px 0; */
-  background: rgb(113, 201, 206, 0.5);
+  background: rgb(113, 201, 206, 0.3);
   box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
     0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e,
     0 2.288533303243457px 2.288533303243457px -2.5px #00000029,
@@ -422,7 +423,6 @@ button:hover .btn-line {
 
 
 .card-small {
-
   width: 200px;
   padding: 20px;
   height: 100%;
@@ -434,12 +434,24 @@ button:hover .btn-line {
   backdrop-filter: blur(40px);
   border-radius: 30px;
   position: relative;
-  background: red;
+}
+.card-min {
+  width: 320px;
+  height: 100px;
+
+  box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
+    0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e,
+    0 2.288533303243457px 2.288533303243457px -2.5px #00000029,
+    0 10px 10px -3.75px #00000010;
+  backdrop-filter: blur(40px);
+  border-radius: 30px;
+  position: relative;
+  background: rgb(113, 201, 206, 0.3);
 }
 
 .small {
   width: 350px;
-  background: rgb(113, 201, 206, 0.5);
+  background: rgb(113, 201, 206, 0.3);
   height: 250px;
 }
 
@@ -476,7 +488,6 @@ label {
 
 .right-side {
   display: flex;
-  align-items: ;
   /* width: 200px; */
   /* height: 400px; */
 }

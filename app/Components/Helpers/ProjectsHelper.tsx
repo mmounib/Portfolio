@@ -8,30 +8,80 @@ interface project {
 
 const ProjectsHelper = () => {
   return (
-    <div className="bg">
-      <div className="side left-side">
-        <div className="card-2"></div>
-        {/* <div className="row">
-          <div className="card small">
-            <label>2022</label>
-            <img src="https://t3.ftcdn.net/jpg/04/85/60/70/360_F_485607028_2JW8GkFoJjdZFS4RcRwPuRBSBLpNMwzK.jpg" />
+    <>
+      <div className="bg">
+        <div className="side left-side">
+          <div className="card-2">
+            <h3 className="text-3xl text-center">FT_TRANSCENDENCE</h3>
+            <p className="max-w-[370px] text-xl leading-[2.3rem] mt-6">
+              A Full Stack Web Application based on the Mighty Pong Game, with
+              social media features and a leaderboard. The web application is
+              built using Typescript and React for the frontend, and NestJS for
+              the backend. The database is a PostgreSQL database, and the
+              application is deployed on using Docker.
+            </p>
           </div>
-          <div className="card small">
-            <label>2023</label>
-            <img src="https://images.unsplash.com/photo-1615118265620-d8decf628275?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww&w=1000&q=80" />
-          </div>
-        </div> */}
-      </div>
-      <div className="side center-side">
-        <div className="card">
-          
-          <button className="button">View</button>
         </div>
-      </div>
-      <div className="side right-side">
-        {/* <div className="card-1"></div> */}
-        <div className="card-small small"></div>
-        <div className=""></div>
+        <div className="side center-side">
+          <div className="card">
+            <Image
+              src="/screenshot-transcendence.png"
+              alt="ProjectImage"
+              width={700}
+              height={700}
+              className=" bg-cover object-cover h-full w-full"
+            />
+          </div>
+        </div>
+        <div className="side right-side">
+          <div className="card-small small">
+            <div className="flex gap-6 mt-4 max-sm:mt-0 flex-wrap">
+              <div className=" bg-secondary bg-opacity-50 rounded-[5px] py-2 px-5">
+                <span className="capitalize text-xl font-light">
+                  Typescript
+                </span>
+              </div>
+              <div className="bg-secondary bg-opacity-50 rounded-[5px] py-2 px-5">
+                <span className="capitalize text-xl font-light">
+                  Javascript
+                </span>
+              </div>
+              <div className="bg-secondary bg-opacity-50 rounded-[5px] py-2 px-5">
+                <span className="capitalize text-xl font-light">ReactJs</span>
+              </div>
+              <div className="bg-secondary bg-opacity-50 rounded-[5px] py-2 px-5">
+                <span className="capitalize text-xl font-light">NestJs</span>
+              </div>
+              <div className="bg-secondary bg-opacity-50 rounded-[5px] py-2 px-5">
+                <span className="capitalize text-xl font-light">
+                  PostgreSQL
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center mt-8 gap-4">
+            <div className="">
+              <button
+                type="submit"
+                className="capitalize btn-animate text-secondary rounded-[5px] py-2 px-2 text-3xl"
+              >
+                <span className="">read more about it</span>
+              </button>
+            </div>
+            <div className="">
+              <a
+                href="#"
+                className="cta capitalize border-4 mt-6 max-sm:mt-0 border-secondary relative transition-all duration-300 rounded-[5px] py-2 px-6 text-3xl flex items-center gap-2"
+              >
+                <span>see repository </span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       {/* <div className="flex">
         <Image
@@ -91,7 +141,7 @@ const ProjectsHelper = () => {
           </div>
         </div>
       </div> */}
-    </div>
+    </>
   );
 };
 
