@@ -165,31 +165,58 @@ button {
   z-index: 999;
   font-family: "Tilt Neon", sans-serif;
 }
-.btn-animate {
-  --b: 3px;   /* border thickness */
-  --s: .25em; /* size of the corner */
-  --c: #71c9ce;
-  
-  padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-  color: black;
-  --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: .7em;
-  padding: 18px 22px;
+.btn-animate {		
+	position: relative;
+	color: black;
+	text-transform: uppercase;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
 }
-.btn-animate:hover,
-.btn-animate:focus-visible{
-  --_p: 0px;
-  outline-color: var(--c);
-  outline-offset: .05em;
+
+.btn-animate:before, .btn-animate:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
 }
-.btn-animate:active {
-  background: var(--c);
-  color: #fff;
+
+.btn-animate:hover {
+	color: black;
+	transition-delay: .5s;
+}
+
+.btn-animate:hover:before {
+	transition-delay: 0s;
+}
+
+.btn-animate:hover:after {
+	background: #71c9ce94;
+	transition-delay: .35s;
+}
+
+.from-top:before, 
+.from-top:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from-top:before {
+	bottom: 0;	
+	border: 1px solid #71c9ce94;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from-top:after {
+	top: 0;
+	height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+	height: 100%;
 }
 
 svg {
@@ -321,14 +348,13 @@ button:hover .btn-line {
   background-repeat: no-repeat;
   perspective: 1000px;
   display: flex;
-  justify-content: start;
   align-items: start;
 }
 
 .card {
   width: 700px;
   height: 550px;
-  padding: 10px;
+  /* padding: 10px; */
   /* margin: 20px 0; */
   background: rgb(113, 201, 206, 0.3);
   box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
@@ -403,14 +429,16 @@ button:hover .btn-line {
 .left-side {
   transform: rotateY(45deg) translateX(-1000px);
   animation: animate-left 1s forwards;
+  margin-top: 15px;
 }
 .right-side {
   transform: rotateY(-45deg) translateX(1000px);
   animation: animate-right 1s forwards;
+  margin-top: 15px;
 }
 
 .center-side {
-  transform: rotateX(0deg) scale(0.9) translateY(-1000px);
+  /* transform: rotateX(0deg) scale(0.9) translateY(-1000px); */
   animation: animate-center 0.7s forwards;
 }
 
@@ -426,7 +454,6 @@ button:hover .btn-line {
   width: 200px;
   padding: 20px;
   height: 100%;
-  /* margin: 20px 0; */
   box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
     0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e,
     0 2.288533303243457px 2.288533303243457px -2.5px #00000029,
@@ -451,7 +478,7 @@ button:hover .btn-line {
 
 .small {
   width: 350px;
-  background: rgb(113, 201, 206, 0.3);
+  background: rgb(113, 201, 206, 0.2);
   height: 250px;
 }
 

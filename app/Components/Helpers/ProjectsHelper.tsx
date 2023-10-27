@@ -11,7 +11,7 @@ const ProjectsHelper = () => {
     <>
       <div className="bg">
         <div className="side left-side">
-          <div className="card-2">
+          <div className="card-2 ">
             <h3 className="text-3xl text-center">FT_TRANSCENDENCE</h3>
             <p className="max-w-[370px] text-xl leading-[2.3rem] mt-6">
               A Full Stack Web Application based on the Mighty Pong Game, with
@@ -59,11 +59,11 @@ const ProjectsHelper = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center mt-8 gap-4">
+          <div className="flex flex-col items-center mt-16 max-sm:mt-6 gap-6">
             <div className="">
               <button
                 type="submit"
-                className="capitalize btn-animate text-secondary rounded-[5px] py-2 px-2 text-3xl"
+                className="capitalize btn-animate from-top text-secondary rounded-[5px] py-4 px-3 text-3xl"
               >
                 <span className="">read more about it</span>
               </button>

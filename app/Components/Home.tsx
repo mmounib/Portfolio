@@ -4,6 +4,7 @@ import { BsArrowRightShort, BsArrowDown } from "react-icons/bs";
 import { Outfit } from "next/font/google";
 import { useRef } from "react";
 import ImageHelper from "./Helpers/ImageHelper";
+import Link from "next/link";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -60,7 +61,7 @@ const Home = () => {
               type="submit"
               className="mr-auto mt-4 text-2xl relative flex items-center rounded-md px-4 py-2 text-black"
             >
-              <span>See Resume</span>
+              <Link href="https://drive.google.com/file/d/1P9cTRbOLPQeAc7uAAiNdF1g65jokE_oc/view?usp=sharing">See Resume</Link>
               <svg
                 width="13px"
                 height="12px"
