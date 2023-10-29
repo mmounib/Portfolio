@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Projects from "./Projects/Projects";
+import About from "./About/About";
 
 const Section = () => {
   const [open, setOpen] = useState(true);
@@ -45,7 +46,7 @@ const Section = () => {
         </div>
       </div>
       {open && selectedButton === "Projects" && <Projects />}
-      {/* {open && selectedButton === "About Me" && <AboutMeComponent />} */}
+      {open && selectedButton === "About Me" && <About />}
     </section>
   );
 };

@@ -227,7 +227,7 @@ svg {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
-  stroke: black;
+  stroke: rgb(0, 0, 0);
   transform: translateX(-5px);
   transition: all 0.3s ease;
 }
@@ -334,12 +334,16 @@ button:hover .btn-line {
   position: relative;
 }
 
-
-
-
+.bg-animate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
 .bg {
-  /* background: url(https://9to5mac.com/wp-content/uploads/sites/6/2019/07/apple_champs_elysees_boardroom.jpg?quality=82&strip=all&w=1600); */
   width: 100vw;
   height: 100%;
   margin-top: 15px;
@@ -348,14 +352,12 @@ button:hover .btn-line {
   background-repeat: no-repeat;
   perspective: 1000px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .card {
   width: 700px;
   height: 550px;
-  /* padding: 10px; */
-  /* margin: 20px 0; */
   background: rgb(113, 201, 206, 0.3);
   box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
     0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e,
