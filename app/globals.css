@@ -344,7 +344,6 @@ button:hover .btn-line {
 }
 
 .bg {
-  width: 100vw;
   height: 100%;
   margin-top: 15px;
   background-size: cover;
@@ -454,7 +453,7 @@ button:hover .btn-line {
 
 .card-small {
   width: 200px;
-  padding: 20px;
+  padding: 15px;
   height: 100%;
   box-shadow: inset 1px 1.5px 2px #fff9, inset 1px -0.5px 2px #ffffff4d,
     0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e,
@@ -479,7 +478,7 @@ button:hover .btn-line {
 }
 
 .small {
-  width: 350px;
+  width: 370px;
   background: rgb(113, 201, 206, 0.2);
   height: 250px;
 }
