@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 interface Project {
@@ -7,6 +8,7 @@ interface Project {
   image: string;
   technologies: string[];
   repositoryUrl: string;
+  pageUrl: string;
 }
 
 interface Props {
@@ -57,7 +59,7 @@ const ProjectsHelper = ({ projects }: Props) => {
                   type="submit"
                   className="capitalize btn-animate from-top text-secondary rounded-[5px] py-4 px-3 text-3xl"
                 >
-                  <span className="">read more about it</span>
+                  <Link href={projects.pageUrl}><span className="">read more about it</span></Link>
                 </button>
               </div>
               <div className="">

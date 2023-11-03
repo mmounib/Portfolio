@@ -25,18 +25,17 @@ const Navbar = () => {
           MOUAD
           <br></br>- MOUNIB
         </h2>
-        <ul className="flex gap-8 max-md:hidden ml-auto mr-16">
+        <ul className="flex gap-10 max-md:hidden ml-auto mr-16">
           <li>
             <Link
               to=""
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-gray-600 transition-all duration-300"
             >
               Home
             </Link>
-            <span className="link_span">Home</span>
           </li>
           <li>
             <Link
@@ -44,11 +43,10 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-gray-600 transition-all duration-300"
             >
               About
             </Link>
-            <span className="link_span">About</span>
           </li>
           <li>
             <Link
@@ -57,11 +55,10 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-gray-600 transition-all duration-300"
             >
               Projects
             </Link>
-            <span className="link_span">Projects</span>
           </li>
           <li>
             <Link

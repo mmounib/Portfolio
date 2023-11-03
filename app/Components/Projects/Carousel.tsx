@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import gsap from "gsap";
 import ProjectsHelper from "../Helpers/ProjectsHelper";
 
 interface CarouselProps {

@@ -49,7 +49,7 @@ const Home = () => {
             <h4 className="text-2xl text-center">
               Contact <br /> Me
             </h4>
-            <BsArrowDown size={25} />
+            <BsArrowDown size={25}/>
           </div>
           <div className="flex flex-col max-sm:mt-8 ml-14 max-sm:ml-0 max-sm:leading-6 max-sm:text-sm gap-8 text-xl">
             <p className="max-w-[500px] max-sm:max-w-[90%] leading-10 text-2xl">

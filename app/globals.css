@@ -8,20 +8,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 /* Lenis Smooth Scrolling */
 
 html.lenis {
@@ -42,12 +28,6 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  min-height: 100vh;
-  max-width: 100vw;
 }
 
 h2,
@@ -74,35 +54,11 @@ li {
   font-size: 18px;
   position: relative;
   transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
-  /* width: 100%; */
 }
 span {
   font-family: "Tilt Neon", sans-serif;
 }
 
-.link_span {
-  position: absolute;
-  width: 100%;
-  inset: 0;
-  height: 100%;
-  background-color: #e7b10a;
-  color: #0d0d0d;
-
-  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
-  transform-origin: center;
-  transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
-
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  justify-content: center;
-}
-
-li:hover > .link_span {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-/* CSS */
 .btn {
   display: inline-block;
   margin-top: 3rem;
@@ -165,58 +121,59 @@ button {
   z-index: 999;
   font-family: "Tilt Neon", sans-serif;
 }
-.btn-animate {		
-	position: relative;
-	color: black;
-	text-transform: uppercase;
-	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
-	cursor: pointer;
-	user-select: none;
+.btn-animate {
+  position: relative;
+  color: black;
+  text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
 }
 
-.btn-animate:before, .btn-animate:after {
-	content: '';
-	position: absolute;	
-	transition: inherit;
-	z-index: -1;
+.btn-animate:before,
+.btn-animate:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
 }
 
 .btn-animate:hover {
-	color: black;
-	transition-delay: .5s;
+  color: black;
+  transition-delay: 0.5s;
 }
 
 .btn-animate:hover:before {
-	transition-delay: 0s;
+  transition-delay: 0s;
 }
 
 .btn-animate:hover:after {
-	background: #71c9ce94;
-	transition-delay: .35s;
+  background: #71c9ce94;
+  transition-delay: 0.35s;
 }
 
-.from-top:before, 
+.from-top:before,
 .from-top:after {
-	left: 0;
-	height: 0;
-	width: 100%;
+  left: 0;
+  height: 0;
+  width: 100%;
 }
 
 .from-top:before {
-	bottom: 0;	
-	border: 1px solid #71c9ce94;
-	border-top: 0;
-	border-bottom: 0;
+  bottom: 0;
+  border: 1px solid #71c9ce94;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .from-top:after {
-	top: 0;
-	height: 0;
+  top: 0;
+  height: 0;
 }
 
 .from-top:hover:before,
 .from-top:hover:after {
-	height: 100%;
+  height: 100%;
 }
 
 svg {
@@ -450,7 +407,6 @@ button:hover .btn-line {
   width: 100%;
 }
 
-
 .card-small {
   width: 200px;
   padding: 15px;
@@ -536,4 +492,18 @@ label {
   100% {
     transform: rotateX(0deg) scale(0.9) translateY(0px);
   }
+}
+
+.section-image {
+  position: relative;
+  background-position: right;
+}
+.section-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
 }

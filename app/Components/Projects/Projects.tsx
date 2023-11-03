@@ -1,15 +1,7 @@
 "use client";
 
-import ProjectsHelper from "../Helpers/ProjectsHelper";
 import Carousel from "./Carousel";
 
-interface Project {
-  header: string;
-  text: string;
-  image: string;
-  technologies: string[];
-  repositoryUrl: string;
-}
 const Projects = () => {
   const projects = [
     {
@@ -25,14 +17,16 @@ const Projects = () => {
         "NestJs",
         "PostgreSQL",
       ],
-      repositoryUrl: "https://github.com/example/project1",
+      repositoryUrl: "https://github.com/mmounib/ft_transendence",
+      pageUrl: "/projects/ft_transcendence",
     },
     {
       header: "car hub",
       text: "A web application for showcasing cars, built with Typescript and NextAuth.js by using Next, Tailwind CSS, Headless UI, and integrated with an existing Cars API.",
       image: "/car-screenshot.png",
       technologies: ["TypeScript", "NextJs", "NextAuth.js", "TailwindCSS"],
-      repositoryUrl: "https://github.com/example/project2",
+      repositoryUrl: "https://github.com/mmounib/Car-Showcasing-App",
+      pageUrl: "/projects/carhub",
     },
     {
       header: "market hub",
@@ -47,6 +41,7 @@ const Projects = () => {
         "TailwindCSS",
       ],
       repositoryUrl: "https://github.com/example/project3",
+      pageUrl: "/projects/carhub",
     },
   ];
 
