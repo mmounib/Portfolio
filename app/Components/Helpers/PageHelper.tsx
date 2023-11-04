@@ -16,7 +16,7 @@ interface Project {
 
 const PageHelper = ({ projects }: { projects: Project }) => {
   return (
-    <section className=" bg-image bg-blend-multiply bg-gray-600 bg-cover bg-no-repeat h-full w-screen flex flex-col py-14 gap-4">
+    <section className=" bg-image bg-blend-multiply bg-gray-600 bg-cover bg-no-repeat h-full w-screen flex flex-col py-14 gap-4 text-white">
       <div className="flex gap-4 items-center justify-center px-8">
         <Link
           href="/"

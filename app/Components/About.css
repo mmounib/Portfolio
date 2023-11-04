@@ -1,7 +1,7 @@
 .window {
   width: 80%;
   margin: 0 auto 2rem;
-  box-shadow: 0 0.25rem 0.5rem #12181e;
+  box-shadow: 0 0.25rem 0.5rem gray;
   border-radius: 0 0 0.1rem 0.1rem;
 }
 
@@ -50,6 +50,7 @@
   -webkit-animation: pulse 1s ease-in-out infinite;
   -moz-animation: pulse 1s ease-in-out infinite;
   animation: pulse 1s ease-in-out infinite;
+  color: white;
 }
 
 @-webkit-keyframes pulse {
@@ -90,7 +91,7 @@
 }
 
 .comment {
-  opacity: 0.5;
+ color: gray; 
 }
 
 strong, span {

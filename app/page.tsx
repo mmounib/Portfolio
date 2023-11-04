@@ -5,6 +5,7 @@ import DOMTarget = gsap.DOMTarget;
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
 import Skills from "./Components/Skills/Skills";
+import Contact from "./Components/Contact/Contact";
 
 const Page = () => {
   return (
@@ -14,9 +15,7 @@ const Page = () => {
         <Home />
         <Section />
         <Skills/>
-
-        {/* <Projects/> */}
-        {/* <Contact/> */}
+        <Contact/>
       </div>
     </div>
   );

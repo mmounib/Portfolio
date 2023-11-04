@@ -55,6 +55,7 @@ li {
   position: relative;
   transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
 }
+
 span {
   font-family: "Tilt Neon", sans-serif;
 }
@@ -215,30 +216,6 @@ button:hover .btn-line {
   animation-delay: 40s;
 }
 
-@media (min-width: 768px) {
-  .btn {
-    padding: 13px 50px 13px;
-  }
-}
-
-@keyframes slideDown {
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideRight {
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes reveal {
-  to {
-    transform: translateY(0);
-  }
-}
-
 /* animated-gradient background home Section */
 
 .animate-gradient {
@@ -396,7 +373,6 @@ button:hover .btn-line {
 }
 
 .center-side {
-  /* transform: rotateX(0deg) scale(0.9) translateY(-1000px); */
   animation: animate-center 0.7s forwards;
 }
 
@@ -506,4 +482,89 @@ label {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.span-skill {
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #71c9ce ;
+}
+.span-skill:before,
+.span-skill:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-color: #71c9ce;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.4s ease-in-out;
+}
+.span-skill:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+  z-index: 5;
+}
+.span-skill:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+.span-skill:hover:before,
+.span-skill:hover:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #71c9ce;
+}
+.span-skill:hover {
+  color: #000;
+  background-color: #71c9ce;
+  border-color: #71c9ce;
+}
+
+.h1-skill {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid black ;
+  padding: 10px;
+}
+.h1-skill:before,
+.h1-skill:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-color: black;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.h1-skill:before {
+  top: -6px;
+  left: -6px;
+  border-width: 4px 0 0 4px;
+  z-index: 5;
+}
+.h1-skill:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 4px 4px 0;
+}
+.h1-skill:hover:before,
+.h1-skill:hover:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: black;
+}
+.h1-skill:hover {
+  color: #71c9ce;
+  background-color: black;
+  border-color: black;
+}
+
+.link-mail {
+  clip-path: circle(50px);
 }
