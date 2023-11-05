@@ -25,7 +25,7 @@ const Navbar = () => {
           MOUAD
           <br></br>- MOUNIB
         </h2>
-        <ul className="flex gap-10 max-md:hidden ml-auto mr-16">
+        <ul className="flex gap-10 items-center max-md:hidden ml-auto mr-16">
           <li>
             <Link
               to=""
@@ -67,10 +67,10 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer flex gap-2 items-center relative"
+              className="cursor-pointer capitalize text-xl link bg-black rounded-[5px] text-secondary flex gap-2 items-center relative py-2 px-4"
             >
               Get In Touch
-              <svg width="13px" height="10px" viewBox="0 0 13 10" className="bg-secondary rounded-full w-[20px] p-1 h-[20px]">
+              <svg width="13px" height="10px" viewBox="0 0 13 10" className=" w-[20px] stroke-secondary p-1 h-[20px]">
                 <path d="M1,5 L11,5"></path>
                 <polyline points="8 1 12 5 8 9"></polyline>
               </svg>

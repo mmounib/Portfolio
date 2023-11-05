@@ -487,7 +487,7 @@ label {
 .span-skill {
   position: relative;
   transition: all 0.4s ease-in-out;
-  border: 2px solid #71c9ce ;
+  border: 2px solid #71c9ce;
 }
 .span-skill:before,
 .span-skill:after {
@@ -527,8 +527,8 @@ label {
 .h1-skill {
   position: relative;
   transition: all 0.3s ease-in-out;
-  border: 2px solid black ;
-  padding: 10px;
+  border: 2px solid black;
+  padding: 10px 25px;
 }
 .h1-skill:before,
 .h1-skill:after {
@@ -567,4 +567,60 @@ label {
 
 .link-mail {
   clip-path: circle(50px);
+}
+
+.link {
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+.link:after {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  top: 0;
+  z-index: -10;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+.link:hover {
+  color: #000;
+}
+
+.link:hover svg {
+  stroke: #000;
+}
+
+.link:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.padding-animate {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.padding-animate:hover {
+  @apply px-10;
+}
+.h1-hide {
+  display: block;
+}
+.h1-image {
+  display: none;
+  opacity: 0;
+}
+/* .padding-animate:hover .h1-hide {
+  display: none;
+} */
+.padding-animate:hover .h1-image {
+  display: flex;
+  opacity: 10;
 }

@@ -4,7 +4,7 @@ import { Space_Grotesk } from "next/font/google";
 
 import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
-import {PiLinkedinLogo} from 'react-icons/pi'
+import { AiFillLinkedin } from "react-icons/ai";
 
 const Space = Space_Grotesk({
   subsets: ["latin"],
@@ -13,39 +13,40 @@ const Space = Space_Grotesk({
 
 const Contact = (): JSX.Element => {
   return (
-    <section className="my-16">
-      <div className="flex max-sm:flex-col max-sm:gap-6 gap-14">
-        <div className="max-w-[65%]">
-          <p className={`${Space.className} text-8xl `}>
-            Have A Project In Mind Or want a Motivated Developer ! <br />{" "}
+    <footer className="mt-16 max-sm:mt-8 h-full">
+      <div className="flex max-sm:flex-col max-sm:gap-6 gap-16">
+        <div className="max-w-[55%] max-sm:max-w-full">
+          <p
+            className={`${Space.className} text-6xl leading-[4.5rem] max-sm:text-2xl`}
+          >
+            Have A Project In Mind, Want a Motivated Developer To Work With You
+            ! <br />{" "}
             <span
               className={`${Space.className} italic font-bold bg-black text-secondary py-6 px-4 mt-4 inline-block`}
             >
-              Let&apos;s Connect By
+              Let&apos;s Work Together By
             </span>
           </p>
         </div>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-14 max-sm:gap-6">
           <div className="flex flex-col gap-2 items-center">
-            <span className="italic text-3xl max-w-[150px]">
+            <span className="italic text-3xl max-w-[170px]">
               Sending Me an Email
             </span>
             <Link
               href="mailto:mouadmounib00@gmail.com"
-              className="mt-3 text-3xl link-mail bg-secondary p-12 -rotate-[15deg]"
+              className="mt-1 text-3xl link-mail bg-secondary p-12 -rotate-[15deg]"
             >
               Here
             </Link>
           </div>
           <div className="flex flex-col gap-2 items-center">
-            <span className="italic text-3xl max-w-[150px]">
-            
-              
-              Or Check My Projects 
+            <span className="italic text-3xl max-w-[170px]">
+              Checking My Projects On
             </span>
             <Link
-              href="mailto:mouadmounib00@gmail.com"
-              className="mt-3 text-3xl py-2 px-4 border-secondary border-4 flex gap-2"
+              href="https://github.com/mmounib"
+              className="mt-3 text-3xl py-2 px-4 border-secondary hover:rotate-3 translate-all duration-300 border-4 flex gap-1"
             >
               {" "}
               <FiGithub size={30} /> Github
@@ -53,19 +54,25 @@ const Contact = (): JSX.Element => {
           </div>
         </div>
         <div className="flex flex-col h-full mt-24 ml-auto">
-          <span className="italic text-3xl max-w-[150px]">
-            Or Connect With Me On
+          <span className="italic text-3xl max-w-[200px]">
+            Connecting With Me On
           </span>
           <Link
-            href="mailto:mouadmounib00@gmail.com"
-            className="mt-3 text-3xl py-2 px-4 flex gap-2"
+            href="https://www.linkedin.com/in/mouad-mounib-954418193/"
+            className="mt-4 text-3xl py-2 px-4 flex gap-1 bg-black -rotate-3 hover:rotate-0 translate-all duration-300 rounded-full text-secondary items-center"
           >
             {" "}
-            <PiLinkedinLogo size={30} className="text-secondary"/> Linkedin
+            <AiFillLinkedin size={30} className=" fill-secondary" /> Linkedin
           </Link>
         </div>
       </div>
-    </section>
+      <div className="flex justify-center items-center mt-28 text-gray-700 mb-6">
+        <span className="mr-auto text-2xl flex gap-3">
+          Designed and Developed by <h2>Mouad Mounib</h2>
+        </span>
+        <span className="text-2xl">Copyright &copy; 2023</span>
+      </div>
+    </footer>
   );
 };
 

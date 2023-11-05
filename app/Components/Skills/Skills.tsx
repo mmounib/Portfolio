@@ -19,7 +19,7 @@ const Skills = () => {
     "TailwindCSS",
   ];
   return (
-    <section className="my-24">
+    <section className="my-32">
       <h1 className="w-full flex items-center justify-center h1-skill text-6xl">
         My Skillset
       </h1>

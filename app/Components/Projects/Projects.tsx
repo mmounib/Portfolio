@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Carousel from "./Carousel";
+import Link from "next/link";
 
 const Projects = () => {
   const projects = [
@@ -46,8 +48,34 @@ const Projects = () => {
   ];
 
   return (
-    <section className="text-black mt-14">
-      <Carousel projects={projects} />
+    <section className="text-black mt-24 w-full">
+      <div className="flex flex-col w-full h-full">
+        <Link href="/projects/ft_transcendence" className="flex relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700">
+          <h1 className="uppercase text-5xl font-extralight">
+            ft_transcendence
+          </h1>
+          <h1 className="text-3xl font-extralight text-gray-600 h1-hide">
+            Ping Pong Website
+          </h1>
+        </Link>
+        <Link href="/projects/carhub" className="flex relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700">
+          <h1 className="uppercase text-5xl font-extralight">
+            carhub
+          </h1>
+          <h1 className="text-3xl font-extralight text-gray-600 h1-hide">
+            Car Showcasing Website
+          </h1>
+        </Link>
+        <Link href='/projects/bookme' className="flex relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700">
+          <h1 className="uppercase text-5xl font-extralight">
+            BookMe
+          </h1>
+          <h1 className="text-3xl font-extralight text-gray-600 h1-hide">
+            Booking Application
+          </h1>
+        </Link>
+      </div>
+      {/* <Carousel projects={projects} /> */}
     </section>
   );
 };

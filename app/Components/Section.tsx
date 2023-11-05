@@ -4,41 +4,32 @@ import About from "./About/About";
 
 const Section = () => {
   const [open, setOpen] = useState(true);
-  const [selectedButton, setSelectedButton] = useState("Projects");
+  const [selectedButton, setSelectedButton] = useState<string>("Projects");
 
   const changeColor = (buttonName: string) => {
-    setOpen(true);
     setSelectedButton(buttonName);
   };
 
   return (
     <section className="w-full flex flex-col items-center justify-center mt-36">
-      <div className="flex border-2 border-secondary rounded-lg p-1">
-        <div
-          className={`${
-            selectedButton === "Projects"
-              ? "bg-secondary transition-bg"
-              : "bg-transparent"
-          } rounded-[5px] py-2 px-6`}
-        >
+      <div className="flex w-full items-center justify-center gap-8">
+        <div className="px-8">
           <button
             type="submit"
-            className="text-black text-2xl font-semibold tracking-widest"
+            className={`h1-skill ${
+              selectedButton === "Projects" ? "text-5xl" : "text-2xl"
+            }`}
             onClick={() => changeColor("Projects")}
           >
             Projects
           </button>
         </div>
-        <div
-          className={`${
-            selectedButton === "About Me"
-              ? "bg-secondary transition-bg"
-              : "bg-transparent"
-          } ml-2 rounded-[5px] py-2 px-6`}
-        >
+        <div className="">
           <button
             type="submit"
-            className="text-black text-2xl font-semibold tracking-widest"
+            className={`px-8 py-4 span-skill ${
+              selectedButton === "About Me" ? "text-4xl" : "text-2xl"
+            }`}
             onClick={() => changeColor("About Me")}
           >
             About Me
