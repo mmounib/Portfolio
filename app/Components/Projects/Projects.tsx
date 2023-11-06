@@ -1,82 +1,71 @@
 "use client";
 
-import Image from "next/image";
-import Carousel from "./Carousel";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 
+const cardVariants: Variants = {
+  offscreen: {
+    y: 600,
+  },
+  onscreen: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.5,
+      duration: 0.8,
+    },
+  },
+};
 const Projects = () => {
-  const projects = [
-    {
-      header: "ft_transcendence",
-      text: "A Full Stack Web Application based on the Mighty Pong Game, with social media features and a leaderboard. The web application is built using Typescript and React for the frontend, and NestJS for the backend. The database is a PostgreSQL database, and the application is deployed on using Docker.",
-      image: "/screenshot-transcendence.png",
-      technologies: [
-        "JavaScript",
-        "Typescript",
-        "ThreeJs",
-        "ReactJs",
-        "NodeJs",
-        "NestJs",
-        "PostgreSQL",
-      ],
-      repositoryUrl: "https://github.com/mmounib/ft_transendence",
-      pageUrl: "/projects/ft_transcendence",
-    },
-    {
-      header: "car hub",
-      text: "A web application for showcasing cars, built with Typescript and NextAuth.js by using Next, Tailwind CSS, Headless UI, and integrated with an existing Cars API.",
-      image: "/car-screenshot.png",
-      technologies: ["TypeScript", "NextJs", "NextAuth.js", "TailwindCSS"],
-      repositoryUrl: "https://github.com/mmounib/Car-Showcasing-App",
-      pageUrl: "/projects/carhub",
-    },
-    {
-      header: "market hub",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: "/project3.jpg",
-      technologies: [
-        "Typescript",
-        "ReactJs",
-        "NestJs",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-      ],
-      repositoryUrl: "https://github.com/example/project3",
-      pageUrl: "/projects/carhub",
-    },
-  ];
-
   return (
-    <section className="text-black mt-24 w-full">
-      <div className="flex flex-col w-full h-full">
-        <Link href="/projects/ft_transcendence" className="flex relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700">
-          <h1 className="uppercase text-5xl font-extralight">
+    <motion.section
+      className="text-black mt-24 w-full"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="flex flex-col w-full h-full"
+        variants={cardVariants}
+      >
+        <motiLink
+          href="/projects/ft_transcendence"
+          className="flex project-section relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
+        >
+          <h1 className="uppercase text-5xl js-title font-extralight">
+            <sup className=" text-base flex">01</sup>
             ft_transcendence
           </h1>
-          <h1 className="text-3xl font-extralight text-gray-600 h1-hide">
+          <h1 className="text-3xl font-extralight js-title text-gray-600 h1-hide">
             Ping Pong Website
           </h1>
-        </Link>
-        <Link href="/projects/carhub" className="flex relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700">
-          <h1 className="uppercase text-5xl font-extralight">
+        </motionLink>
+        <Link
+          href="/projects/carhub"
+          className="flex relative project-section padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
+        >
+          <h1 className="uppercase text-5xl js-title font-extralight">
+            <sup className=" text-base flex">02</sup>
             carhub
           </h1>
-          <h1 className="text-3xl font-extralight text-gray-600 h1-hide">
+          <h1 className="text-3xl font-extralight js-title text-gray-600 h1-hide">
             Car Showcasing Website
           </h1>
         </Link>
-        <Link href='/projects/bookme' className="flex relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700">
-          <h1 className="uppercase text-5xl font-extralight">
+        <Link
+          href="/projects/bookme"
+          className="flex relative project-section padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
+        >
+          <h1 className="uppercase text-5xl js-title font-extralight">
+            <sup className=" text-base flex">03</sup>
             BookMe
           </h1>
-          <h1 className="text-3xl font-extralight text-gray-600 h1-hide">
+          <h1 className="text-3xl font-extralight js-title text-gray-600 h1-hide">
             Booking Application
           </h1>
         </Link>
-      </div>
-      {/* <Carousel projects={projects} /> */}
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

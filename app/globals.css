@@ -10,6 +10,11 @@
 
 /* Lenis Smooth Scrolling */
 
+body {
+  cursor: none;
+  z-index: 0;
+}
+
 html.lenis {
   height: auto;
 }
@@ -35,6 +40,9 @@ h4 {
   font-family: "Lobster", sans-serif;
   letter-spacing: 3px;
 }
+sup {
+  color: rgb(90, 90, 90)
+}
 h1 {
   @apply text-9xl font-extrabold;
 }
@@ -49,7 +57,7 @@ h1 {
 
 li {
   text-transform: uppercase;
-  font-family: "Noto Sans Osmanya", sans-serif;
+  /* font-family: "Noto Sans Osmanya", sans-serif; */
   font-weight: 700;
   font-size: 18px;
   position: relative;
@@ -584,7 +592,7 @@ label {
   z-index: -10;
   height: 490%;
   width: 140%;
-  background: #78c7d2;
+  background: rgb(121, 200, 210);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);

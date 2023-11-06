@@ -17,7 +17,7 @@ const Contact = (): JSX.Element => {
       <div className="flex max-sm:flex-col max-sm:gap-6 gap-16">
         <div className="max-w-[55%] max-sm:max-w-full">
           <p
-            className={`${Space.className} text-6xl leading-[4.5rem] max-sm:text-2xl`}
+            className={`${Space.className} text-6xl js-splittext-lines leading-[4.5rem] max-sm:text-2xl`}
           >
             Have A Project In Mind, Want a Motivated Developer To Work With You
             ! <br />{" "}
@@ -66,7 +66,7 @@ const Contact = (): JSX.Element => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-28 text-gray-700 mb-6">
+      <div className="flex justify-center items-center mt-44 text-gray-700 mb-6">
         <span className="mr-auto text-2xl flex gap-3">
           Designed and Developed by <h2>Mouad Mounib</h2>
         </span>
