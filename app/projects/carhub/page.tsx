@@ -1,3 +1,4 @@
+import AnimatedCursor from "@/app/Components/AnimatedCursor";
 import PageHelper from "@/app/Components/Helpers/PageHelper";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +14,12 @@ const page = () => {
     technologies: ["TypeScript", "NextJs", "NextAuth.js", "TailwindCSS"],
     repositoryUrl: "https://github.com/mmounib/Car-Showcasing-App",
   };
-  return <PageHelper projects={projects} />;
+  return (
+    <>
+      <AnimatedCursor />
+      <PageHelper projects={projects} />
+    </>
+  );
 };
 
 export default page;

@@ -1,3 +1,4 @@
+import AnimatedCursor from "@/app/Components/AnimatedCursor";
 import PageHelper from "@/app/Components/Helpers/PageHelper";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +22,12 @@ const page = () => {
     ],
     repositoryUrl: "https://github.com/mmounib/ft_transendence",
   };
-  return <PageHelper projects={projects} />;
+  return (
+    <>
+      <AnimatedCursor />
+      <PageHelper projects={projects} />
+    </>
+  );
 };
 
 export default page;
