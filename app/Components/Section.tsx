@@ -13,22 +13,22 @@ const Section = () => {
   return (
     <section className="w-full flex flex-col items-center justify-center mt-36">
       <div className="flex w-full items-center justify-center gap-8">
-        <div className="px-8">
+        <div className=" max-sm:w-full">
           <button
             type="submit"
             className={`h1-skill ${
-              selectedButton === "Projects" ? "text-5xl" : "text-2xl"
+              selectedButton === "Projects" ? "text-5xl max-sm:text-2xl" : "text-2xl"
             }`}
             onClick={() => changeColor("Projects")}
           >
             Projects
           </button>
         </div>
-        <div className="">
+        <div className="max-sm:w-full">
           <button
             type="submit"
-            className={`px-8 py-4 span-skill ${
-              selectedButton === "About Me" ? "text-4xl" : "text-2xl"
+            className={`px-8 py-4 max-sm:py-3 max-sm:px-6 span-skill ${
+              selectedButton === "About Me" ? "text-4xl max-sm:text-2xl" : "text-2xl"
             }`}
             onClick={() => changeColor("About Me")}
           >

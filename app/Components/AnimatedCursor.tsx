@@ -226,8 +226,8 @@ function AnimatedCursor({
 
   return (
     <React.Fragment>
-      <div ref={cursorOuterRef} style={styles.cursorOuter}></div>
-      <div ref={cursorInnerRef} style={styles.cursorInner}></div>
+      <div ref={cursorOuterRef} style={styles.cursorOuter} className="max-sm:hidden"></div>
+      <div ref={cursorInnerRef} style={styles.cursorInner} className="max-sm:hidden"></div>
     </React.Fragment>
   );
 }

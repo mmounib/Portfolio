@@ -20,13 +20,13 @@ const Skills = () => {
   ];
   return (
     <section className="my-32">
-      <h1 className="w-full flex items-center justify-center h1-skill text-6xl">
+      <h1 className="w-full flex items-center justify-center h1-skill text-6xl max-sm:text-4xl max-sm:w-[95%] max-sm:mx-auto">
         My Skillset
       </h1>
-      <div className="flex flex-wrap gap-[1.75rem] w-full mt-24">
+      <div className="flex flex-wrap gap-[1.75rem] max-sm:justify-center max-sm:gap-8 w-full mt-24">
         {technologies.map((technology, index) => (
           <span
-            className=" span-skill py-5 px-9 text-4xl capitalize"
+            className=" span-skill py-5 px-9 max-sm:px-6 max-sm:py-3 text-4xl max-sm:text-2xl capitalize"
             key={index}
           >
             {technology}

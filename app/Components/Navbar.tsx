@@ -14,8 +14,8 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className="flex text-black items-center justify-around mt-6 max-md:mx-4 z-[999]">
-        <h2 className={`text-base`}>
+      <div className="flex text-black items-center justify-around mt-6 z-[999]">
+        <h2 className={`text-base max-sm:text-xl`}>
           MOUAD
           <br></br>- MOUNIB
         </h2>
@@ -79,28 +79,37 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="hidden max-sm:flex" onClick={() => setMenu(!menu)}>
-          <Hamburger
-            size={30}
-            className=" hidden max-sm:block max-md:ml-4 cursor-pointer "
-          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="w-12 h-12"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+            />
+          </svg>
         </div>
       </div>
       {menu && (
-        <div className="hidden menu_ref max-md:hidden max-sm:bg-secondary max-sm:text-white max-sm:w-screen max-sm:justify-center max-sm:items-center max-sm:h-screen max-sm:flex max-sm:text-xl max-sm:py-4">
-          <ul className="flex flex-col items-center gap-6 text-center">
-            <li>
+        <div className="hidden menu_ref max-md:hidden max-sm:bg-secondary max-sm:text-black max-sm:w-full max-sm:justify-center max-sm:items-center max-sm:h-screen max-sm:flex max-sm:text-xl">
+          <ul className="flex flex-col items-center gap-16 text-center">
+            <li className="text-4xl">
               <Link to="">Home</Link>
             </li>
-            <li>
+            <li className="text-4xl">
               <Link to="About">About</Link>
             </li>
-            <li>
+            <li className="text-4xl">
               <Link to="projects">Projects</Link>
             </li>
-            <li>
+            <li className="text-4xl">
               <Link to="Contact">Contact</Link>
             </li>
-            <li></li>
           </ul>
         </div>
       )}

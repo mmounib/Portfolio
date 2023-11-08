@@ -103,11 +103,6 @@ span {
   transition: 0.2s;
 }
 
-.menu_ref {
-  transform: translateX(100%);
-  animation: slideRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
 .btn:hover::after {
   top: 0px;
   left: 0px;

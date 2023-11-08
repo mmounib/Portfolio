@@ -4,9 +4,9 @@ import Image from "next/image";
 const ImageHelper = () => {
   return (
     <>
-      <div className="left-light"></div>
+      <div className="left-light max-sm:hidden"></div>
 
-      <div className="guy-image-container z-10">
+      <div className="guy-image-container z-10 max-sm:mt-12">
         <div className="background-square-frame"></div>
         <div className="invisible-holder">
           <div className="square-frame">

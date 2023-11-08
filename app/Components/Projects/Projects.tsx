@@ -95,13 +95,13 @@ const Projects = () => {
         >
           <Link
             href="/projects/ft_transcendence"
-            className="flex project-section relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
+            className="flex max-sm:flex-col project-section relative padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
           >
-            <h1 className="uppercase text-5xl js-title font-extralight">
+            <h1 className="uppercase text-5xl max-sm:text-4xl js-title font-extralight">
               <sup className=" text-base flex">01</sup>
               ft_transcendence
             </h1>
-            <h1 className="text-3xl font-extralight js-title text-gray-600 h1-hide">
+            <h1 className="text-3xl max-sm:text-xl max-sm:mt-2 font-extralight js-title text-gray-600 h1-hide">
               Ping Pong Website
             </h1>
           </Link>
@@ -113,13 +113,13 @@ const Projects = () => {
         >
           <Link
             href="/projects/carhub"
-            className="flex relative project-section padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
+            className="flex max-sm:flex-col relative project-section padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
           >
             <h1 className="uppercase text-5xl js-title font-extralight">
               <sup className=" text-base flex">02</sup>
               carhub
             </h1>
-            <h1 className="text-3xl font-extralight js-title text-gray-600 h1-hide">
+            <h1 className="text-3xl max-sm:text-xl max-sm:mt-2 font-extralight js-title text-gray-600 h1-hide">
               Car Showcasing Website
             </h1>
           </Link>
@@ -131,13 +131,13 @@ const Projects = () => {
         >
           <Link
             href="/projects/bookme"
-            className="flex relative project-section padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
+            className="flex max-sm:flex-col relative project-section padding-animate justify-between items-center w-full py-14 px-6 border-b-[1px] border-b-gray-700"
           >
             <h1 className="uppercase text-5xl js-title font-extralight">
               <sup className=" text-base flex">03</sup>
               BookMe
             </h1>
-            <h1 className="text-3xl font-extralight js-title text-gray-600 h1-hide">
+            <h1 className="text-3xl max-sm:mt-2 max-sm:text-xl font-extralight js-title text-gray-600 h1-hide">
               Booking Application
             </h1>
           </Link>

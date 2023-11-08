@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
 	  <html lang="en">
-		  <body className={acme.className}>
+		  <body className={`${acme.className} max-sm:cursor-default`}>
 			  {children}
 		  </body>
     </html>
