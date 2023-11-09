@@ -6,7 +6,7 @@ const ImageHelper = () => {
     <>
       <div className="left-light max-sm:hidden"></div>
 
-      <div className="guy-image-container z-10 max-sm:mt-12">
+      <div className="guy-image-container max-sm:mt-12">
         <div className="background-square-frame"></div>
         <div className="invisible-holder">
           <div className="square-frame">

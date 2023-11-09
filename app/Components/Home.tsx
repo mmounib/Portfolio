@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <section className={` mt-32 ${outfit}`}>
       <div className="mx-auto text-black max-w-[900px] max-sm:px-4">
-        <h3 className="capitalize text-2xl max-sm:text-center max-sm:w-full max-sm:border-r border-[3px] p-2 pl-6 border-r-0 w-fit border-[#71C9CE]">
+        <h3 className="capitalize text-2xl max-sm:text-center max-sm:w-full max-sm:border-r-[3px] border-[3px] p-2 pl-6 border-r-0 w-fit border-[#71C9CE]">
           Hello, I&apos;m Mouad Mounib
         </h3>
 

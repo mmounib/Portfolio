@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className="flex text-black items-center justify-around mt-6 z-[999]">
+      <div className="flex text-black items-center justify-around max-sm:justify-between max-sm:mx-3 mt-6 z-[999]">
         <h2 className={`text-base max-sm:text-xl`}>
           MOUAD
           <br></br>- MOUNIB
@@ -85,7 +85,7 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="w-12 h-12"
+            className="w-12 h-12 m-0"
           >
             <path
               stroke-linecap="round"
@@ -96,8 +96,10 @@ const Navbar = () => {
         </div>
       </div>
       {menu && (
-        <div className="hidden menu_ref max-md:hidden max-sm:bg-secondary max-sm:text-black max-sm:w-full max-sm:justify-center max-sm:items-center max-sm:h-screen max-sm:flex max-sm:text-xl">
-          <ul className="flex flex-col items-center gap-16 text-center">
+        <div className="hidden menu_ref absolute z-[999] max-md:hidden max-sm:bg-secondary max-sm:text-black max-sm:w-full max-sm:justify-center max-sm:items-center max-sm:h-screen max-sm:flex max-sm:text-xl">
+          <ul
+            className={` ${outfit.className} flex flex-col items-center gap-16 text-center`}
+          >
             <li className="text-4xl">
               <Link to="">Home</Link>
             </li>
@@ -108,7 +110,7 @@ const Navbar = () => {
               <Link to="projects">Projects</Link>
             </li>
             <li className="text-4xl">
-              <Link to="Contact">Contact</Link>
+              <Link to="Contact">Get In Touch</Link>
             </li>
           </ul>
         </div>
