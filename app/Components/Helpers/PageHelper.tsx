@@ -20,7 +20,7 @@ const PageHelper = ({ projects }: { projects: Project }) => {
       <div className="flex gap-4 items-center justify-center px-8">
         <Link
           href="/"
-          className="flex items-center mr-auto gap-2 hover:text-gray-400 cursor-pointer text-white transition-all duration-300"
+          className="flex items-center hover-link mr-auto gap-2 cursor-pointer text-white transition-all duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const PageHelper = ({ projects }: { projects: Project }) => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-5 h-5 stroke-white hover:stroke-gray-400 max-sm:bg-secondary max-sm:rounded-full max-sm:stroke-black max-sm:p-2 max-sm:h-7 max-sm:w-7"
+            className="w-5 h-5 stroke-white max-sm:bg-secondary max-sm:rounded-full max-sm:stroke-black max-sm:p-2 max-sm:h-7 max-sm:w-7"
           >
             <path
               strokeLinecap="round"

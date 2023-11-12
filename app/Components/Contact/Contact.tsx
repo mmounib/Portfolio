@@ -1,43 +1,88 @@
 "use client";
 
 import { Space_Grotesk } from "next/font/google";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
 import { AiFillLinkedin } from "react-icons/ai";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { useInView } from "react-intersection-observer";
 
 const Space = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "600"],
 });
 
-gsap.registerPlugin(ScrollTrigger);
+const cardVariants = {
+  offscreen: {
+    y: 200,
+    opacity: 0,
+    transition: {
+      type: "spring",
+      duration: 1.2,
+    },
+  },
+  onscreen: {
+    y: 0,
+    opacity: 100,
+    transition: {
+      type: "spring",
+      duration: 1.2,
+    },
+  },
+};
+
+const cardVariants2 = {
+  offscreen: {
+    x: 100,
+    opacity: 0,
+    transition: {
+      type: "spring",
+      duration: 1.2,
+    },
+  },
+  onscreen: {
+    x: 0,
+    opacity: 100,
+    transition: {
+      type: "spring",
+      duration: 1.2,
+      delay: 0.5,
+    },
+  },
+};
+
+const cardVariants3 = {
+  offscreen: {
+    x: -200,
+    opacity: 0,
+    transition: {
+      type: "spring",
+      duration: 1.2,
+    },
+  },
+  onscreen: {
+    x: 0,
+    opacity: 100,
+    transition: {
+      type: "spring",
+      duration: 1.2,
+      delay: 0.6,
+    },
+  },
+};
+
 
 const Contact = (): JSX.Element => {
-
-  // const gsapAnimation = () => {
-  //   let tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: '.animated-element',
-  //       start: 'top center',
-  //       end: 'botton center',
-  //       scrub: true,
-  //       markers: false,
-  //     }
-  //   })
-
-  //   tl.to('.animated-element', {
-  //     x: 800
-  //   })
-  // }
-
-  // useEffect(() => {
-  //   gsapAnimation();
-  // }, [])
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+  });
   return (
     <footer className="mt-16 max-sm:mt-8 h-full">
       <div className="flex max-sm:mx-2 max-sm:flex-col max-sm:gap-6 gap-16">
@@ -55,7 +100,12 @@ const Contact = (): JSX.Element => {
           </p>
         </div>
         <div className="flex flex-col gap-14 max-sm:gap-6">
-          <div className="flex flex-col max-sm:flex-row gap-2 max-sm:justify-center items-center">
+          <motion.div
+            ref={ref1}
+            className="flex flex-col overflow-hidden max-sm:flex-row gap-2 max-sm:justify-center items-center"
+            variants={cardVariants}
+            animate={inView1 ? "onscreen" : "offscreen"}
+          >
             <span className="italic text-3xl max-w-[170px]">
               Sending Me an Email
             </span>
@@ -65,8 +115,13 @@ const Contact = (): JSX.Element => {
             >
               Here
             </Link>
-          </div>
-          <div className="flex flex-col max-sm:flex-row gap-2 max-sm:justify-center items-center">
+          </motion.div>
+          <motion.div
+            ref={ref2}
+            className="flex flex-col overflow-hidden max-sm:flex-row gap-2 max-sm:justify-center items-center"
+            variants={cardVariants2}
+            animate={inView2 ? "onscreen" : "offscreen"}
+          >
             <span className="italic text-3xl max-w-[170px]">
               Checking My Projects On
             </span>
@@ -77,9 +132,14 @@ const Contact = (): JSX.Element => {
               {" "}
               <FiGithub size={30} /> Github
             </Link>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex flex-col max-sm:flex-row h-full mt-24 max-sm:mt-12 ml-auto">
+        <motion.div
+          ref={ref3}
+          className="flex flex-col overflow-hidden max-sm:flex-row h-full mt-24 max-sm:mt-12 ml-auto"
+          variants={cardVariants3}
+          animate={inView3 ? "onscreen" : "offscreen"}
+        >
           <span className="italic text-3xl max-w-[200px]">
             Connecting With Me On
           </span>
@@ -90,13 +150,15 @@ const Contact = (): JSX.Element => {
             {" "}
             <AiFillLinkedin size={30} className=" fill-secondary" /> Linkedin
           </Link>
-        </div>
+        </motion.div>
       </div>
       <div className="flex max-sm:flex-col justify-center items-center mt-44 text-gray-700 mb-6 max-sm:mb-4">
         <span className="mr-auto max-sm:m-auto text-2xl max-sm:text-xl flex gap-3">
           Designed and Developed by <h2>Mouad Mounib</h2>
         </span>
-        <span className="text-2xl max-sm:text-xl max-sm:mt-4">Copyright &copy; 2023</span>
+        <span className="text-2xl max-sm:text-xl max-sm:mt-4">
+          Copyright &copy; 2023
+        </span>
       </div>
     </footer>
   );
