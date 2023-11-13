@@ -2,9 +2,11 @@
 
 import { BsArrowDown } from "react-icons/bs";
 import { Outfit } from "next/font/google";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import ImageHelper from "./Helpers/ImageHelper";
 import Link from "next/link";
+import gsap from "gsap";
+import SplitType from "split-type";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -14,26 +16,53 @@ const outfit = Outfit({
 const Home = () => {
   const contactMeRef = useRef<HTMLDivElement>(null); // add type to useRef and initialize to null
 
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.to(".text__bg", { duration: 1.3, scaleX: 1 });
+    tl.to(".text__bg", { duration: 1.3, scaleX: 0 });
+
+    let typeSplit = new SplitType(".landing-text", {
+      types: "lines, words, chars",
+      tagName: "span",
+    });
+    gsap.to(".char", {
+      y: 0,
+      delay: 1.2,
+      duration: 0.1,
+      ease: "power3.out",
+      stagger: 0.035,
+    });
+  }, []);
+
   function handleJumpToContactMe() {
     if (contactMeRef.current) {
-      contactMeRef.current.scrollIntoView({ behavior: "smooth" }); // scroll to the Contact Me section
+      contactMeRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
 
   return (
     <section className={` mt-32 ${outfit}`}>
-      <div className="mx-auto text-black max-w-[900px] max-sm:px-4">
-        <h3 className="capitalize text-2xl max-sm:text-center max-sm:w-full max-sm:border-r-[3px] border-[3px] p-2 pl-6 border-r-0 w-fit border-[#71C9CE]">
-          Hello, I&apos;m Mouad Mounib
-        </h3>
+      <div className="mx-auto text-black relative max-w-[900px] max-sm:px-4">
+        <div className="relative w-fit h-fit">
+          <span className="text__bg"></span>
+          <h3 className="capitalize landing-text text-2xl max-sm:text-center max-sm:w-full max-sm:border-r-[3px] border-[3px] p-2 pl-5 border-r-0 w-fit border-[#71C9CE]">
+            Hello, I&apos;m Mouad
+          </h3>
+        </div>
 
         <div className="flex flex-col">
           <div className="flex max-sm:flex-col gap-4 mt-4 text-black">
             <h1 className="mt-6 max-sm:text-7xl">&lt;Software</h1>
-            <h1 className=" max-sm:text-7xl hidden max-sm:flex">Developer /&gt;</h1>
+            <h1 className=" max-sm:text-7xl hidden max-sm:flex">
+              Developer /&gt;
+            </h1>
             <ImageHelper />
           </div>
-          <h1 className=" -mt-16 max-sm:mt-0 max-sm:hidden"> - Developer /&gt;</h1>
+          <h1 className=" -mt-16 max-sm:mt-0 max-sm:hidden">
+            {" "}
+            - Developer /&gt;
+          </h1>
         </div>
 
         <div className="flex mt-16">

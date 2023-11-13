@@ -47,7 +47,7 @@ const cardVariants2 = {
     transition: {
       type: "spring",
       duration: 1.2,
-      delay: 0.5,
+      delay: 0.4,
     },
   },
 };
@@ -67,7 +67,7 @@ const cardVariants3 = {
     transition: {
       type: "spring",
       duration: 1.2,
-      delay: 0.6,
+      delay: 1,
     },
   },
 };

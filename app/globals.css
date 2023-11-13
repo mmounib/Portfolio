@@ -56,19 +56,23 @@ h1 {
   transition: background-color 0.3s ease, all 0.3s ease, opacity 0.3s ease;
 }
 .landing-text {
-  /* position: relative; */
-  width: 100%;
-  /* overflow: hidden; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.landing-text h1 {
   /* position: absolute; */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   overflow: hidden;
   /* height: 79px; */
+}
+.text__bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transform-origin: left;
+  transform: scaleX(0);
+  background-color: #71c9ce;
+
 }
 .char {
   transform: translateY(-115px);
