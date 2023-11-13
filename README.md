@@ -11,7 +11,6 @@ Welcome to my portfolio website repository! This repository contains the code an
 - Installation
 - Usage
 - Technologies Used
-- Screenshots
 - Contact
 
 
@@ -37,14 +36,11 @@ Feel free to use this portfolio README as a template for your own portfolio or m
 
 ### Technologies Used
 
-- NextJs
+- Typescript
+- Next.js
 - Tailwind CSS
 - Framer Motion
 - GSAP
-
-### Screenshots
-
-
 
 
 ### Contact
