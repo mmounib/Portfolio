@@ -84,7 +84,7 @@ const Contact = (): JSX.Element => {
     triggerOnce: true,
   });
   return (
-    <footer className="mt-16 max-sm:mt-8 h-full">
+    <footer id="contact-section" className="mt-16 max-sm:mt-8 h-full">
       <div className="flex max-sm:mx-2 max-sm:flex-col max-sm:gap-6 gap-16">
         <div className="max-w-[55%] max-sm:max-w-full">
           <p

@@ -52,6 +52,31 @@ h1 {
   font-family: "Outfit", sans-serif;
 }
 
+.h1__text {
+  width: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.h1__hidden {
+  position: absolute;
+  width: 100%;
+  background-color: #71c9ce;
+  color: #0d0d0d;
+
+  clip-path: polygon(100% 50%, 100% 50%, 100% 50%, 100% 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+}
+
+.h1__text:hover .h1__hidden {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .transition-bg {
   transition: background-color 0.3s ease, all 0.3s ease, opacity 0.3s ease;
 }
@@ -72,17 +97,35 @@ h1 {
   transform-origin: left;
   transform: scaleX(0);
   background-color: #71c9ce;
-
 }
 .char {
   transform: translateY(-115px);
-  transition: transform .5s;
+  transition: transform 0.5s;
+}
+.text__animate {
+  font-family: "Outfit", sans-serif;
+  width: 11.5ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 2px solid; */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 li {
   text-transform: uppercase;
   /* font-family: "Noto Sans Osmanya", sans-serif; */
-  font-weight: 700;
   font-size: 18px;
   position: relative;
   transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
@@ -147,7 +190,8 @@ p {
 button {
   transition: all 0.5s ease-in-out;
   z-index: 999;
-  font-family: "Tilt Neon", sans-serif;
+  font-family: "Outfit", sans-serif;
+  /* font-family: "Tilt Neon", sans-serif; */
 }
 .btn-animate {
   position: relative;

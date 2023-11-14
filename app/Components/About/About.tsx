@@ -45,7 +45,7 @@ const About = () => {
 
   return (
     <section className="flex w-full mt-14">
-      <div className="window">
+      {/* <div className="window">
         <div className="bar">
           <div className="btns"></div>
         </div>
@@ -86,7 +86,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

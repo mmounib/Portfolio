@@ -100,13 +100,13 @@ const PageHelper = ({ projects }: { projects: Project }) => {
           </div>
         </div>
         <video
-          className="h-full w-[60%] m-auto border-2 border-gray-500 rounded-lg shadow-md"
+          className="h-full w-[60%] max-sm:w-[90%] m-auto border-2 border-gray-500 rounded-lg shadow-md"
           src="/transcendence-video.mp4"
           autoPlay
           muted
         ></video>
       </div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 max-sm:mt-6">
         {projects.images.map((image, index) => (
           <Image
             key={index}
