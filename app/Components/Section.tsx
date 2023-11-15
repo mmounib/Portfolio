@@ -11,7 +11,7 @@ const Section = () => {
   };
 
   return (
-    <section className="w-full flex flex-col items-center justify-center mt-36">
+    <section className="w-full z-0 flex flex-col items-center justify-center mt-36">
       <div className="flex w-full items-center justify-center">
         <div
           className={` w-full flex border-y-2 py-6 border-black justify-center items-center max-sm:w-full ${

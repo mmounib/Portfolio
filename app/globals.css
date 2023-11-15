@@ -588,6 +588,22 @@ label {
 .padding-animate:hover {
   @apply px-10;
 }
+
+.text__icon {
+  stroke-width: 0;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: -30px;
+}
+.pr__animate:hover .text__icon {
+  stroke: #000;
+  stroke-width: 1px;
+}
+.pr__animate:hover .text__icon:hover {
+  background-color: lightgray;
+  border-radius: 50%;
+  padding: 3px;
+}
 .h1-hide {
   display: block;
 }
