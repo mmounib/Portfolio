@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+  CSSProperties,
+} from "react";
 
 function useEventListener(
   eventName: string,
@@ -175,12 +181,14 @@ function AnimatedCursor({
     };
 
     clickables.forEach((el) => {
-      el.style.cursor = "none";
-      el.addEventListener("mouseover", handleMouseOver);
-      el.addEventListener("click", handleClick);
-      el.addEventListener("mousedown", handleMouseDown);
-      el.addEventListener("mouseup", handleMouseUp);
-      el.addEventListener("mouseout", handleMouseOut);
+      if (el instanceof HTMLElement) {
+        el.style.cursor = "none";
+        el.addEventListener("mouseover", handleMouseOver);
+        el.addEventListener("click", handleClick);
+        el.addEventListener("mousedown", handleMouseDown);
+        el.addEventListener("mouseup", handleMouseUp);
+        el.addEventListener("mouseout", handleMouseOut);
+      }
     });
 
     return () => {
@@ -194,7 +202,11 @@ function AnimatedCursor({
     };
   }, [isActive]);
 
-  const styles = {
+  const styles: {
+    cursor: CSSProperties;
+    cursorInner: CSSProperties;
+    cursorOuter: CSSProperties;
+  } = {
     cursor: {
       zIndex: 999,
       position: "fixed",
@@ -214,6 +226,7 @@ function AnimatedCursor({
     },
     cursorOuter: {
       zIndex: 999,
+
       position: "fixed",
       borderRadius: "50%",
       pointerEvents: "none" as "none",
@@ -225,10 +238,18 @@ function AnimatedCursor({
   };
 
   return (
-    <React.Fragment>
-      <div ref={cursorOuterRef} style={styles.cursorOuter} className="max-sm:hidden"></div>
-      <div ref={cursorInnerRef} style={styles.cursorInner} className="max-sm:hidden"></div>
-    </React.Fragment>
+    <>
+      <div
+        ref={cursorOuterRef}
+        style={styles.cursorOuter}
+        className="max-sm:hidden"
+      ></div>
+      <div
+        ref={cursorInnerRef}
+        style={styles.cursorInner}
+        className="max-sm:hidden"
+      ></div>
+    </>
   );
 }
 
