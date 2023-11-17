@@ -153,10 +153,10 @@ const Contact = (): JSX.Element => {
         </motion.div>
       </div>
       <div className="flex max-sm:flex-col justify-center items-center mt-44 text-gray-700 mb-6 max-sm:mb-4">
-        <span className="mr-auto max-sm:m-auto text-2xl max-sm:text-xl flex gap-3">
+        <span className="mr-auto max-sm:m-auto text-2xl max-sm:text-lg flex gap-3">
           Designed and Developed by <h2>Mouad Mounib</h2>
         </span>
-        <span className="text-2xl max-sm:text-xl max-sm:mt-4">
+        <span className="text-2xl max-sm:text-lg max-sm:mt-4">
           Copyright &copy; 2023
         </span>
       </div>

@@ -100,11 +100,18 @@ function AnimatedCursor({
   const onMouseEnter = useCallback(() => setIsVisible(true), []);
   const onMouseLeave = useCallback(() => setIsVisible(false), []);
 
-  useEventListener("mousemove", onMouseMove, document);
-  useEventListener("mousedown", onMouseDown, document);
-  useEventListener("mouseup", onMouseUp, document);
-  useEventListener("mouseenter", onMouseEnter, document);
-  useEventListener("mouseleave", onMouseLeave, document);
+  if (typeof document !== "undefined") {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEventListener("mousemove", onMouseMove, document);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEventListener("mousedown", onMouseDown, document);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEventListener("mouseup", onMouseUp, document);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEventListener("mouseenter", onMouseEnter, document);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEventListener("mouseleave", onMouseLeave, document);
+  }
 
   useEffect(() => {
     if (isActive) {

@@ -50,15 +50,15 @@ const Home = () => {
 
         <div className="flex flex-col">
           <div className="flex max-sm:flex-col gap-4 mt-4 text-black">
-            <h1 className="mt-6 max-sm:text-7xl h1__text">
-              &lt;Software <h1 className="h1__hidden">Full-Stack</h1>
+            <h1 className="mt-6 max-sm:capitalize max-sm:text-7xl text-8xl h1__text uppercase ">
+              &lt;Software <h1 className="h1__hidden tracking-normal capitalize text-9xl">Full-Stack</h1>
             </h1>
             <h1 className=" max-sm:text-7xl hidden max-sm:flex">
               Developer /&gt;
             </h1>
             <ImageHelper />
           </div>
-          <h1 className=" -mt-16 max-sm:mt-0 max-sm:hidden">
+          <h1 className=" uppercase text-8xl -mt-16 max-sm:mt-0 max-sm:hidden">
             {" "}
             - Developer /&gt;
             <h1></h1>

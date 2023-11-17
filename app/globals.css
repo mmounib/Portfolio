@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Osmanya&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -67,10 +68,80 @@ h1 {
   width: 100%;
   background-color: #71c9ce;
   color: #0d0d0d;
-
   clip-path: polygon(100% 50%, 100% 50%, 100% 50%, 100% 50%);
   transform-origin: center;
   transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+}
+.h3__hover {		
+	position: relative;	
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+	padding: 1.4rem 4rem;
+	padding-right: 3.1rem;
+	/* font-size: 1.4rem; */
+	color: black;
+  letter-spacing: .4rem;
+  border: 1px solid black;
+	text-transform: uppercase;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+  font-family: "Outfit", sans-serif;
+  /* background-color: #71c9ce; */
+}
+
+.h3__hover:before, .h3__hover:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.h3__hover:hover {
+	color: #71c9ce;
+	transition-delay: .5s;
+}
+.h3__hover:hover .text__svg {
+  stroke: #71c9ce;
+	transition-delay: .6s;
+}
+
+.h3__hover:hover:before {
+	transition-delay: 0s;
+}
+
+.h3__hover:hover:after {
+	background: black;
+	transition-delay: .35s;
+}
+
+.from-center:before {
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid black;
+	border-left: 0;
+	border-right: 0;
+}
+
+.from-center:after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: black;
+}
+
+.from-center:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+.from-center:hover:after {
+	top: 0;
+	height: 100%;
 }
 
 .h1__text:hover .h1__hidden {
@@ -125,7 +196,6 @@ h1 {
 
 li {
   text-transform: uppercase;
-  /* font-family: "Noto Sans Osmanya", sans-serif; */
   font-size: 18px;
   position: relative;
   transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
@@ -179,7 +249,9 @@ span {
   image-rendering: auto;
 }
 
-.success_div {
+.success_di.font__text {
+  /* font-family: 'Lilita One', sans-serif; */
+}v {
   display: block;
   transform: translateY(200%);
   animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
@@ -292,6 +364,9 @@ button:hover .btn-line {
 .animate-gradient {
   transform: translateY(-100%);
   animation: gradient 5s ease-in-out infinite;
+}
+.animated__image {
+  overflow: hidden;
 }
 
 @keyframes gradient {
@@ -541,39 +616,13 @@ label {
   clip-path: circle(50px);
 }
 
-.link {
-  overflow: hidden;
-  position: relative;
-  z-index: 10;
-  font-family: "Tilt Neon", sans-serif;
-}
-
-.link:after {
-  content: "";
-  position: absolute;
-  left: 0.4rem;
-  top: 0;
-  z-index: -10;
-  height: 490%;
-  width: 140%;
-  background: rgb(121, 200, 210);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
-  transform: translateX(-98%) translateY(-25%) rotate(45deg);
-}
-.link:hover {
-  color: #000;
-}
 
 .link:hover svg {
   stroke: #000;
+  transition: all .5s ease-in-out;
+  transform: translateX(2px);
 }
 
-.link:hover:after {
-  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-  transform: translateX(-9%) translateY(-25%) rotate(45deg);
-}
 .hover-link:hover {
   color: gray;
 }

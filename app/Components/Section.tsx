@@ -12,7 +12,7 @@ const Section = () => {
 
   return (
     <section className="w-full z-0 flex flex-col items-center justify-center mt-36">
-      <div className="flex w-full items-center justify-center">
+      <div className="flex w-full max-sm:flex-col items-center justify-center">
         <div
           className={` w-full flex border-y-2 py-6 border-black justify-center items-center max-sm:w-full ${
             selectedButton == "Projects" && "bg-secondary text-black"
@@ -23,7 +23,7 @@ const Section = () => {
             Projects
           </button>
         </div>
-        <span className="border-l-2 flex h-[6.3rem]  border-black"></span>
+        <span className="border-l-2 max-sm:h-[3rem] flex h-[6.3rem]  border-black"></span>
         <div
           className={`w-full flex border-y-2 border-black py-6 justify-center items-center max-sm:w-full ${
             selectedButton == "About Me" && "bg-secondary text-black"

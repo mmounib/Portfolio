@@ -63,14 +63,14 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer capitalize text-xl link bg-black rounded-[5px] text-secondary flex gap-2 items-center relative py-2 px-4"
+              className="cursor-pointer capitalize text-xl   rounded-[5px] link text-black flex gap-2 items-center relative"
             >
               Get In Touch
               <svg
                 width="13px"
                 height="10px"
                 viewBox="0 0 13 10"
-                className=" w-[20px] stroke-secondary p-1 h-[20px]"
+                className=" w-[20px] stroke-black p-1 h-[20px]"
               >
                 <path d="M1,5 L11,5"></path>
                 <polyline points="8 1 12 5 8 9"></polyline>
