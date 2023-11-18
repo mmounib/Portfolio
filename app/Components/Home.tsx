@@ -21,7 +21,6 @@ const Home = () => {
     tl.to(".text__bg", { duration: 1.3, scaleX: 1 });
     tl.to(".text__bg", { duration: 1.3, scaleX: 0 });
     tl.to(".text__animate", { delay: 2.5 });
-
     // gsap.to(".text__animate", {
     //   y: 0,
     //   delay: 1.2,

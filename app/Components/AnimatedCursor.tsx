@@ -215,14 +215,14 @@ function AnimatedCursor({
     cursorOuter: CSSProperties;
   } = {
     cursor: {
-      zIndex: 999,
+      zIndex: 1100,
       position: "fixed",
       opacity: 1,
       pointerEvents: "none" as "none",
       transition: "opacity 0.15s ease-in-out, transform 0.15s ease-in-out",
     },
     cursorInner: {
-      zIndex: 999,
+      zIndex: 1100,
       position: "fixed",
       borderRadius: "50%",
       width: "15px",
@@ -232,7 +232,7 @@ function AnimatedCursor({
       transition: "opacity 0.15s ease-in-out, transform 0.25s ease-in-out",
     },
     cursorOuter: {
-      zIndex: 999,
+      zIndex: 1100,
 
       position: "fixed",
       borderRadius: "50%",
