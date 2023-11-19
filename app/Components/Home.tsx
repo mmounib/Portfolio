@@ -2,11 +2,10 @@
 
 import { BsArrowDown } from "react-icons/bs";
 import { Outfit } from "next/font/google";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import ImageHelper from "./Helpers/ImageHelper";
 import Link from "next/link";
 import gsap from "gsap";
-import SplitType from "split-type";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -21,12 +20,25 @@ const Home = () => {
     tl.to(".text__bg", { duration: 1.3, scaleX: 1 });
     tl.to(".text__bg", { duration: 1.3, scaleX: 0 });
     tl.to(".text__animate", { delay: 2.5 });
-    // gsap.to(".text__animate", {
-    //   y: 0,
-    //   delay: 1.2,
-    //   duration: 0.1,
-    //   ease: "power3.out",
-    // });
+    gsap.fromTo(".h1__text", {
+      y: 200,
+      duration: 1.3,
+      ease: "power3.out",
+    }, {
+      y: 0,
+      duration: 1.3,
+      ease: "power3.out"
+    });
+    gsap.fromTo(".h1__text1", {
+      y: 300,
+      delay: 1.4,
+      duration: 2,
+      ease: "power3.out",
+    }, {
+      y: 0,
+      duration: 2,
+      ease: "power3.out"
+    });
   }, []);
 
   function handleJumpToContactMe() {
@@ -38,7 +50,7 @@ const Home = () => {
 
   return (
     <section className={` mt-32 ${outfit}`}>
-      <div className="mx-auto text-black relative max-w-[900px] max-sm:px-4">
+      <div className="mx-auto text-black relative max-w-[970px] max-sm:px-4">
         <div className="relative w-fit h-fit">
           {/* <span className="text__bg"></span> */}
 
@@ -48,20 +60,24 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col">
-          <div className="flex max-sm:flex-col gap-4 mt-4 text-black">
-            <h1 className="mt-6 max-sm:capitalize max-sm:text-7xl text-8xl h1__text uppercase ">
-              &lt;Software <h1 className="h1__hidden tracking-normal capitalize text-9xl">Full-Stack</h1>
-            </h1>
-            <h1 className=" max-sm:text-7xl hidden max-sm:flex">
-              Developer /&gt;
-            </h1>
+          <div className="flex max-sm:flex-col gap-4 mt-4 h-[180px]  text-black">
+            <div className="overflow-hidden">
+              <h1 className="mt-6 max-sm:capitalize overflow-hidden max-sm:text-7xl text-8xl h1__text uppercase ">
+                &lt;Software <h1 className="h1__hidden tracking-normal capitalize text-9xl">Full-Stack</h1>
+              </h1>
+              <h1 className=" max-sm:text-7xl hidden max-sm:flex">
+                Developer /&gt;
+              </h1>
+            </div>
             <ImageHelper />
           </div>
-          <h1 className=" uppercase text-8xl -mt-16 max-sm:mt-0 max-sm:hidden">
-            {" "}
-            - Developer /&gt;
-            <h1></h1>
-          </h1>
+          <div className="h-[100px] overflow-hidden">
+            <h1 className=" uppercase text-8xl h1__text1 max-sm:mt-0 max-sm:hidden">
+              {" "}
+              - Developer /&gt;
+              <h1></h1>
+            </h1>
+          </div>
         </div>
 
         <div className="flex mt-16">
