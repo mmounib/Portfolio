@@ -79,7 +79,16 @@ const Page = () => {
         x: -10,
         duration: 0.5,
         ease: "power1.out",
-      });
+      }); // const lenis = new Lenis();
+
+      // lenis.on("scroll", () => {});
+
+      // function raf(time: any) {
+      //   lenis.raf(time);
+      //   requestAnimationFrame(raf);
+      // }
+
+      // requestAnimationFrame(raf);
 
       t1.to(
         ".dot",
@@ -131,37 +140,22 @@ const Page = () => {
         3.6
       );
 
-      // t1.from(
-      //   ".imsrk2",
-      //   {
-      //     yPercent: -100,
-      //     duration: 1,
-      //     ease: "power1.out",
-      //     opacity: 0,
-      //   },
-      //   3.8
-      // );
-      // t1.to(".imsrk2", {
-      //   yPercent: 0,
-      //   duration: 1.5,
-      //   ease: "power1.out",
-      //   opacity: 1,
-      // });
       setTimeout(() => {
         setShowStarter(false);
       }, 4700);
     }
-  }, [showStarter]);
-  const lenis = new Lenis();
 
-  lenis.on("scroll", () => {});
+    const lenis = new Lenis();
 
-  function raf(time: any) {
-    lenis.raf(time);
+    lenis.on("scroll", () => {});
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
+  }, [showStarter]);
 
   return (
     <>
