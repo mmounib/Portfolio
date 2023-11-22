@@ -59,12 +59,13 @@ const About = () => {
       ".h3__hover",
       {
         x: -600,
-        duration: 2.2,
+        // duration: 2.2,
         delay: 1.8,
         ease: "power2.out",
       },
       {
         x: 0,
+        ease: "power2.out",
       }
     );
   }, []);
@@ -76,7 +77,10 @@ const About = () => {
     }
   }
   return (
-    <section className="flex max-sm:flex-col w-full gap-12 mt-16 overflow-hidden">
+    <section
+      id="about-section"
+      className="flex max-sm:flex-col w-full gap-12 mt-16 overflow-hidden"
+    >
       <div className="flex  flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[600px]">
         <div className=" overflow-hidden">
           <h1 className="text-2xl max-sm:text-lg first__animation mt-4 tracking-wider font-light capitalize">
@@ -101,7 +105,7 @@ const About = () => {
           className=" mt-auto h3__hover text-3xl max-sm:text-xl from-center"
           onClick={handleJumpToContactMe}
         >
-           Let&apos;s Talk
+          Let&apos;s Talk
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -24,7 +24,7 @@ const Navbar = () => {
         >
           <li>
             <Link
-              to=""
+              to="home-section"
               smooth={true}
               offset={-70}
               duration={500}
@@ -35,7 +35,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="About"
+              to="about-section"
               smooth={true}
               offset={-70}
               duration={500}
@@ -46,7 +46,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="projects"
+              to="projectsUpdated our homepage hero text!-section"
               spy={true}
               smooth={true}
               offset={-70}
@@ -58,7 +58,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="Contact"
+              to="contact-section"
               spy={true}
               smooth={true}
               offset={-70}

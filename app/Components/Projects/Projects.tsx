@@ -83,6 +83,7 @@ const Projects = () => {
   });
   return (
     <motion.section
+    id="projects-section"
       className="text-black mt-24 w-full max-sm:overflow-hidden"
       initial="offscreen"
       whileInView="onscreen"

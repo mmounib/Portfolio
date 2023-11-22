@@ -1,21 +1,23 @@
 "use client";
 
 import Lenis from "@studio-freight/lenis";
-import SplitType from "split-type";
 import gsap from "gsap";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
-import Section from "./Components/Section";
 import Skills from "./Components/Skills/Skills";
 import Contact from "./Components/Contact/Contact";
 import AnimatedCursor from "./Components/AnimatedCursor";
 import { useEffect, useState } from "react";
+import Section from "./Components/Helpers/Section";
 
 const Page = () => {
   const [showStarter, setShowStarter] = useState(true);
+  let rendering = 0;
 
   useEffect(() => {
-    if (showStarter) {
+    if (showStarter && rendering == 0) {
+      console.log("Entered");
+      rendering++;
       let t1 = gsap.timeline();
 
       t1.fromTo(
@@ -79,16 +81,7 @@ const Page = () => {
         x: -10,
         duration: 0.5,
         ease: "power1.out",
-      }); // const lenis = new Lenis();
-
-      // lenis.on("scroll", () => {});
-
-      // function raf(time: any) {
-      //   lenis.raf(time);
-      //   requestAnimationFrame(raf);
-      // }
-
-      // requestAnimationFrame(raf);
+      });
 
       t1.to(
         ".dot",
@@ -155,7 +148,7 @@ const Page = () => {
     }
 
     requestAnimationFrame(raf);
-  }, [showStarter]);
+  }, []);
 
   return (
     <>

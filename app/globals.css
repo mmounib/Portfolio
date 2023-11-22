@@ -5,7 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap");
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -252,9 +251,6 @@ span {
   image-rendering: auto;
 }
 
-.font__text {
-  /* font-family: 'Lilita One', sans-serif; */
-}
 .success_div {
   display: block;
   transform: translateY(200%);
@@ -267,7 +263,6 @@ button {
   transition: all 0.5s ease-in-out;
   z-index: 999;
   font-family: "Outfit", sans-serif;
-  /* font-family: "Tilt Neon", sans-serif; */
 }
 .btn-animate {
   position: relative;

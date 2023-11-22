@@ -1,7 +1,5 @@
 import AnimatedCursor from "@/app/Components/AnimatedCursor";
 import PageHelper from "@/app/Components/Helpers/PageHelper";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const page = () => {

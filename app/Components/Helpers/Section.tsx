@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Projects from "./Projects/Projects";
-import About from "./About/About";
+import Projects from "../Projects/Projects";
+import About from "../About/About";
 
 const Section = () => {
   const [open, setOpen] = useState(true);

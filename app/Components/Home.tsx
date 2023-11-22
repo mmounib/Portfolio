@@ -13,32 +13,53 @@ const outfit = Outfit({
 });
 
 const Home = () => {
-
   useEffect(() => {
     const tl = gsap.timeline();
 
     tl.to(".text__bg", { duration: 1.3, scaleX: 1 });
     tl.to(".text__bg", { duration: 1.3, scaleX: 0 });
     tl.to(".text__animate", { delay: 2.5 });
-    gsap.fromTo(".h1__text", {
-      y: 200,
-      duration: 1.3,
-      ease: "power3.out",
-    }, {
-      y: 0,
-      duration: 1.3,
-      ease: "power3.out"
-    });
-    gsap.fromTo(".h1__text1", {
-      y: 300,
-      delay: 1.4,
-      duration: 2,
-      ease: "power3.out",
-    }, {
-      y: 0,
-      duration: 2,
-      ease: "power3.out"
-    });
+    gsap.fromTo(
+      ".h1__text",
+      {
+        y: 200,
+        duration: 1.3,
+        ease: "power3.out",
+      },
+      {
+        y: 0,
+        duration: 1.3,
+        ease: "power3.out",
+      }
+    );
+    gsap.fromTo(
+      ".h1__text1",
+      {
+        y: 300,
+        delay: 1.4,
+        duration: 1.6,
+        ease: "power3.out",
+      },
+      {
+        y: 0,
+        duration: 1.6,
+        ease: "power3.out",
+      }
+    );
+    gsap.fromTo(
+      ".h1__gsap",
+      {
+        x: -200,
+        delay: 1.6,
+        duration: 2,
+        ease: "power3.out",
+      },
+      {
+        x: 0,
+        delay: 1.8,
+        ease: "power3.out",
+      }
+    );
   }, []);
 
   function handleJumpToContactMe() {
@@ -49,10 +70,9 @@ const Home = () => {
   }
 
   return (
-    <section className={` mt-32 ${outfit}`}>
+    <section id="home-section" className={` mt-32 ${outfit}`}>
       <div className="mx-auto text-black relative max-w-[970px] max-sm:px-4">
         <div className="relative w-fit h-fit">
-          {/* <span className="text__bg"></span> */}
 
           <div className="capitalize text-2xl max-sm:text-center max-sm:w-full max-sm:border-r-[3px] border-[3px] p-2 pl-5 border-r-0 w-[16ch] border-[#71C9CE]">
             <h3 className="text__animate">Hello, I&apos;m Mouad</h3>
@@ -63,7 +83,10 @@ const Home = () => {
           <div className="flex max-sm:flex-col gap-4 mt-4 h-[180px]  text-black">
             <div className="overflow-hidden">
               <h1 className="mt-6 max-sm:capitalize overflow-hidden max-sm:text-7xl text-8xl h1__text uppercase ">
-                &lt;Software <h1 className="h1__hidden tracking-normal capitalize text-9xl">Full-Stack</h1>
+                &lt;Software{" "}
+                <h1 className="h1__hidden tracking-normal capitalize text-9xl">
+                  Full-Stack
+                </h1>
               </h1>
               <h1 className=" max-sm:text-7xl hidden max-sm:flex">
                 Developer /&gt;
@@ -80,21 +103,21 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex mt-16">
+        <div className="flex mt-16 overflow-hidden">
           <div
-            className=" max-sm:hidden border-4 -mt-4 w-[170px] h-[170px] flex flex-col items-center justify-center gap-4 rounded-full border-secondary"
+            className=" max-sm:hidden overflow-hidden border-4 -mt-4 w-[170px] h-[170px] flex flex-col items-center justify-center gap-4 h1__gsap rounded-full border-secondary"
             onMouseEnter={handleJumpToContactMe}
           >
-            <h4 className="text-2xl text-center">
+            <h4 className="text-2xl text-center ">
               Contact <br /> Me
             </h4>
             <BsArrowDown size={25} className=" animate-bounce mx-auto" />
           </div>
           <div className="flex flex-col max-sm:mt-0 ml-14 max-sm:ml-0 max-sm:leading-6 gap-8">
-            <p className="max-w-[500px] max-sm:max-w-full leading-10 max-sm:leading-[2.7rem] text-2xl max-sm:text-3xl">
+            <p className="max-w-[500px] overflow-hidden max-sm:max-w-full leading-10 max-sm:leading-[2.7rem] text-2xl max-sm:text-3xl global__p">
               Turning ideas into functional, user-friendly applications.
               Proficient in both front-end and back-end technologies, I&apos;m
-              ready to bring your projects to life
+              ready to bring your projects to life.
             </p>
             <button
               type="submit"
