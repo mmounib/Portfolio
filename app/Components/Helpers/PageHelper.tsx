@@ -1,8 +1,10 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 
 import Image from "next/image";
+import gsap from "gsap";
+import { useEffect } from "react";
 
 interface Project {
   header: string;
@@ -15,6 +17,38 @@ interface Project {
 }
 
 const PageHelper = ({ projects }: { projects: Project }) => {
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      ".project__header",
+      {
+        y: 200,
+        duration: 1.3,
+        ease: "power3.out",
+      },
+      {
+        y: 0,
+        duration: 1.3,
+        ease: "power3.out",
+      }
+    );
+    gsap.fromTo(
+      ".project__subheader",
+      {
+        y: -100,
+        duration: 1.3,
+        ease: "power3.out",
+        delay: 1.2,
+      },
+      {
+        y: 0,
+        duration: 1.3,
+        delay: 1,
+        ease: "power3.out",
+      }
+    );
+  }, []);
   return (
     <section className=" bg-image bg-blend-multiply bg-gray-600 bg-cover bg-no-repeat h-full w-screen flex flex-col py-14 gap-4 text-white">
       <div className="flex gap-4 items-center justify-center px-8">
@@ -38,13 +72,17 @@ const PageHelper = ({ projects }: { projects: Project }) => {
           </svg>
           <span className="capitalize text-3xl max-sm:hidden">go back</span>
         </Link>
-        
-        <div className="flex items-center mr-auto">
-          <span className="uppercase text-8xl max-sm:text-4xl">{projects.header}</span>
-          <h3 className="capitalize text-4xl max-sm:hidden">
+
+        <div className="flex items-center mr-auto overflow-hidden">
+          <span className="uppercase text-8xl max-sm:text-4xl project__header">
+            {projects.header}
+          </span>
+          <h3 className="capitalize text-4xl project__subheader overflow-hidden max-sm:hidden">
             {" "}
             &nbsp;&nbsp;|&nbsp;{" "}
-            <span className="text-gray-400">{projects.subheader}</span>
+            <span className="text-gray-400  ">
+              {projects.subheader}
+            </span>
           </h3>
         </div>
       </div>

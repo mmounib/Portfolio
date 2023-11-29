@@ -1,9 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { gsap, ScrollTrigger } from "gsap/all";
-import { useEffect, useRef } from "react";
 const Skills = () => {
   const technologies = [
     "JavaScript",
@@ -19,7 +15,8 @@ const Skills = () => {
     "TailwindCSS",
   ];
   return (
-    <section className="my-32">
+    <section className="my-32 relative">
+      <div className="right-light max-sm:hidden"></div>
       <h1 className="w-full flex items-center justify-center h1-skill text-6xl max-sm:text-4xl max-sm:w-[95%] max-sm:mx-auto">
         My Skillset
       </h1>

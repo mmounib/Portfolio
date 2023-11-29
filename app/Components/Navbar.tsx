@@ -46,7 +46,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="projectsUpdated our homepage hero text!-section"
+              to="projects-section"
               spy={true}
               smooth={true}
               offset={-70}

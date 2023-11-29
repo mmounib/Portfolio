@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ImageHelper = () => {
   return (
-    <>
+    <div className="-mx-4">
       <div className="left-light max-sm:hidden"></div>
 
       <div className="guy-image-container max-sm:mt-12">
@@ -20,7 +20,7 @@ const ImageHelper = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

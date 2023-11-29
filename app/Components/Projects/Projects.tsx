@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { HiArrowUpRight } from "react-icons/hi2";
 
 const cardVariants = {
   offscreen: {
@@ -172,10 +171,10 @@ const Projects = () => {
           >
             <h1 className="uppercase text-5xl js-title font-extralight">
               <sup className=" text-base flex">03</sup>
-              BookMe
+              MarketHub
             </h1>
             <h1 className="text-3xl max-sm:mt-2 max-sm:text-xl font-extralight js-title text-gray-600 h1-hide">
-              Booking Application
+              Ecommerce Website
             </h1>
           </Link>
           <Link href="/projects/bookme">

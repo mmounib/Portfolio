@@ -117,6 +117,22 @@ h1 {
   background: black;
   transition-delay: 0.35s;
 }
+.right-light {
+  position: absolute;
+  right: -25rem;
+  top: 0px;
+  width: 280px;
+  height: 1350px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(84, 84, 212, 0.27) 0%,
+    rgba(84, 84, 212, 0.11) 100%
+  );
+  transform: rotate(-54deg);
+  border-radius: 155px;
+  filter: blur(99.5px);
+  z-index: 1;
+}
 
 .from-center:before {
   top: 0;

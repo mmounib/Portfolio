@@ -80,9 +80,9 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col">
-          <div className="flex max-sm:flex-col gap-4 mt-4 h-[180px]  text-black">
+          <div className="flex max-sm:flex-col mt-4 h-[185px] text-black">
             <div className="overflow-hidden">
-              <h1 className="mt-6 max-sm:capitalize overflow-hidden max-sm:text-7xl text-8xl h1__text uppercase ">
+              <h1 className="mt-6  max-sm:capitalize overflow-hidden max-sm:text-7xl text-8xl h1__text uppercase ">
                 &lt;Software{" "}
                 <h1 className="h1__hidden tracking-normal capitalize text-9xl">
                   Full-Stack
