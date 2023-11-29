@@ -18,6 +18,7 @@ const page = () => {
       "PostgreSQL",
     ],
     repositoryUrl: "https://github.com/mmounib/ft_transendence",
+    videoPlayer: "/transcendence-video.mp4",
   };
   return (
     <>

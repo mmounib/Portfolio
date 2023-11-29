@@ -14,6 +14,7 @@ interface Project {
   images: string[];
   technologies: string[];
   repositoryUrl: string;
+  videoPlayer: string;
 }
 
 const PageHelper = ({ projects }: { projects: Project }) => {
@@ -80,9 +81,7 @@ const PageHelper = ({ projects }: { projects: Project }) => {
           <h3 className="capitalize text-4xl project__subheader overflow-hidden max-sm:hidden">
             {" "}
             &nbsp;&nbsp;|&nbsp;{" "}
-            <span className="text-gray-400  ">
-              {projects.subheader}
-            </span>
+            <span className="text-gray-400  ">{projects.subheader}</span>
           </h3>
         </div>
       </div>
@@ -137,12 +136,14 @@ const PageHelper = ({ projects }: { projects: Project }) => {
             </p>
           </div>
         </div>
-        <video
-          className="h-full w-[60%] max-sm:w-[90%] m-auto border-2 border-gray-500 rounded-lg shadow-md"
-          src="/transcendence-video.mp4"
-          autoPlay
-          muted
-        ></video>
+        {projects.videoPlayer.length > 1 && (
+          <video
+            className="h-full w-[60%] max-sm:w-[90%] m-auto border-2 border-gray-500 rounded-lg shadow-md"
+            src={projects.videoPlayer}
+            autoPlay
+            muted
+          ></video>
+        )}
       </div>
       <div className="flex flex-col gap-10 max-sm:mt-6">
         {projects.images.map((image, index) => (
@@ -150,8 +151,8 @@ const PageHelper = ({ projects }: { projects: Project }) => {
             key={index}
             src={image}
             alt="screenshottranscendence"
-            width={800}
-            height={800}
+            width={1100}
+            height={1100}
             className="border-2 border-gray-500 w-[85%] h-full object-cover mx-auto rounded-lg"
           />
         ))}
