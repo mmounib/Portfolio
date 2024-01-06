@@ -1,7 +1,10 @@
-import { Link } from "react-scroll";
+"use client";
+import { Link as ReactLink } from "react-scroll";
+
 import { useRef, useState } from "react";
 import { RxHamburgerMenu as Hamburger } from "react-icons/rx";
 import { Josefin_Sans } from "next/font/google";
+import Link from "next/link";
 
 const outfit = Josefin_Sans({
   subsets: ["latin"],
@@ -13,16 +16,18 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <nav className="">
+    <nav className="max-w-[1300px] mx-auto">
       <div className="flex text-black items-center justify-around max-sm:justify-between max-sm:mx-3 mt-6 z-[999]">
         <h2 className={`text-base max-sm:text-xl`}>
-          MOUAD
-          <br></br>- MOUNIB
+          <Link href="/">
+            MOUAD
+            <br></br>- MOUNIB
+          </Link>
         </h2>
         <ul
           className={`${outfit.className} flex gap-10 items-center max-md:hidden ml-auto mr-16`}
         >
-          <li>
+          {/* <li>
             <Link
               to="home-section"
               smooth={true}
@@ -32,13 +37,13 @@ const Navbar = () => {
             >
               Home
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
-              to="about-section"
-              smooth={true}
-              offset={-70}
-              duration={500}
+              href="About"
+              // smooth={true}
+              // offset={-70}
+              // duration={500}
               className="cursor-pointer hover:text-gray-600 transition-all duration-300"
             >
               About
@@ -46,18 +51,14 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="projects-section"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
+              href="projects-section"
               className="cursor-pointer hover:text-gray-600 transition-all duration-300"
             >
               Projects
             </Link>
           </li>
           <li>
-            <Link
+            <ReactLink
               to="contact-section"
               spy={true}
               smooth={true}
@@ -75,7 +76,7 @@ const Navbar = () => {
                 <path d="M1,5 L11,5"></path>
                 <polyline points="8 1 12 5 8 9"></polyline>
               </svg>
-            </Link>
+            </ReactLink>
           </li>
         </ul>
         <div className="hidden max-sm:flex" onClick={() => setMenu(!menu)}>
@@ -83,13 +84,13 @@ const Navbar = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="w-12 h-12 m-0"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
             />
           </svg>
@@ -100,17 +101,17 @@ const Navbar = () => {
           <ul
             className={` ${outfit.className} flex flex-col items-center gap-16 text-center`}
           >
-            <li className="text-4xl">
+            {/* <li className="text-4xl">
               <Link to="">Home</Link>
+            </li> */}
+            <li className="text-4xl">
+              <Link href="About">About</Link>
             </li>
             <li className="text-4xl">
-              <Link to="About">About</Link>
+              <Link href="projects">Projects</Link>
             </li>
             <li className="text-4xl">
-              <Link to="projects">Projects</Link>
-            </li>
-            <li className="text-4xl">
-              <Link to="Contact">Get In Touch</Link>
+              <Link href="Contact">Get In Touch</Link>
             </li>
           </ul>
         </div>

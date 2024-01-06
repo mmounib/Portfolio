@@ -73,7 +73,6 @@ const Home = () => {
     <section id="home-section" className={` mt-32 ${outfit}`}>
       <div className="mx-auto text-black relative max-w-[970px] max-sm:px-4">
         <div className="relative w-fit h-fit">
-
           <div className="capitalize text-2xl max-sm:text-center max-sm:w-full max-sm:border-r-[3px] border-[3px] p-2 pl-5 border-r-0 w-[16ch] border-[#71C9CE]">
             <h3 className="text__animate">Hello, I&apos;m Mouad</h3>
           </div>
@@ -84,9 +83,9 @@ const Home = () => {
             <div className="overflow-hidden">
               <h1 className="mt-6  max-sm:capitalize overflow-hidden max-sm:text-7xl text-8xl h1__text uppercase ">
                 &lt;Software{" "}
-                <h1 className="h1__hidden tracking-normal capitalize text-9xl">
+                <p className="h1__hidden tracking-normal capitalize text-9xl">
                   Full-Stack
-                </h1>
+                </p>
               </h1>
               <h1 className=" max-sm:text-7xl hidden max-sm:flex">
                 Developer /&gt;
@@ -98,7 +97,6 @@ const Home = () => {
             <h1 className=" uppercase text-8xl h1__text1 max-sm:mt-0 max-sm:hidden">
               {" "}
               - Developer /&gt;
-              <h1></h1>
             </h1>
           </div>
         </div>

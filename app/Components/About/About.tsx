@@ -1,4 +1,5 @@
-// "use client";
+"use client";
+
 import Image from "next/image";
 import "../../Components/About.css";
 import { useEffect } from "react";
@@ -78,18 +79,18 @@ const About = () => {
   }
   return (
     <section
-      id="about-section"
-      className="flex max-sm:flex-col w-full gap-12 mt-16 overflow-hidden"
+      className="flex max-sm:flex-col max-w-[1300px] mx-auto gap-12 mt-16 overflow-hidden h-full"
     >
-      <div className="flex  flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[600px]">
-        <div className=" overflow-hidden">
+      <div className="bg-gradient"></div>
+      <div className="flex flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[750px]">
+        <div className="overflow-hidden">
           <h1 className="text-2xl max-sm:text-lg first__animation mt-4 tracking-wider font-light capitalize">
-            Hello my name is Mouad and I am Living in <span>Casablanca</span>, A
-            dedicated <span>Full Stack developer</span> with a passion for
-            creating innovative solutions that can meet the needs of the clients
-            and companies. With a strong foundation in both front-end and
-            back-end development. With this varied experience, I have developed
-            solid skills to provide solutions to your digital needs.
+            Based in Casablanca, Morocco. I am A dedicated{" "}
+            <span>Full Stack developer</span> with a passion for creating
+            innovative solutions that can meet the needs of the clients and
+            companies. With a strong foundation in both front-end and back-end
+            development. With this varied experience, I have developed solid
+            skills to provide solutions to your digital needs.
           </h1>
         </div>
         <div className="flex flex-col mt-4 max-sm:mt-2 overflow-hidden">
@@ -101,7 +102,7 @@ const About = () => {
             solutions to complex problems.
           </h1>
         </div>
-        <h3
+        {/* <h3
           className=" mt-auto h3__hover text-3xl max-sm:text-xl from-center"
           onClick={handleJumpToContactMe}
         >
@@ -120,15 +121,15 @@ const About = () => {
               d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
             />
           </svg>
-        </h3>
+        </h3> */}
       </div>
-      <div className="flex animated__image">
+      <div className="flex animated__image image__shadow faded-top faded-bottom">
         <Image
-          src="/about-image.jpg"
+          src="/animated_image.png"
           alt="AboutMEImage"
           width={450}
           height={450}
-          className="object-cover bg-cover rounded-none w-[600px] h-[600px] brightness-90 drop-shadow-lg"
+          className="object-cover bg-cover rounded-full bg-clip-border w-[400px] h-[400px] brightness-95 border-8 border-secondary opacity-60"
         />
       </div>
     </section>
