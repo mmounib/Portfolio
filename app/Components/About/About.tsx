@@ -79,8 +79,9 @@ const About = () => {
   }
   return (
     <section
-      className="flex max-sm:flex-col max-w-[1300px] mx-auto gap-12 mt-16 overflow-hidden h-full"
+      className="flex max-sm:flex-col justify-between gap-12 mt-16 overflow-hidden h-full"
     >
+
       <div className="bg-gradient"></div>
       <div className="flex flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[750px]">
         <div className="overflow-hidden">
@@ -129,7 +130,7 @@ const About = () => {
           alt="AboutMEImage"
           width={450}
           height={450}
-          className="object-cover bg-cover rounded-full bg-clip-border w-[400px] h-[400px] brightness-95 border-8 border-secondary opacity-60"
+          className="object-cover bg-cover rounded-full bg-clip-border w-[400px] h-[400px] brightness-95 border-8 border-secondary border-opacity-40 opacity-80"
         />
       </div>
     </section>

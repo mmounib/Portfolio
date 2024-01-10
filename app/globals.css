@@ -121,7 +121,7 @@ h1 {
   position: absolute;
   right: -25rem;
   top: 0px;
-  width: 280px;
+  width: 380px;
   height: 1350px;
   background-image: linear-gradient(
     180deg,
@@ -131,7 +131,7 @@ h1 {
   transform: rotate(-54deg);
   border-radius: 155px;
   filter: blur(99.5px);
-  z-index: 1;
+  z-index: 0;
 }
 
 .from-center:before {
@@ -737,10 +737,34 @@ label {
   left: -50px;
   background-color: #71c9ce;
   filter: blur(55px);
-  opacity: .5;
+  opacity: .3;
   width: 400px;
   height: 450px;
   z-index: -10;
+}
+
+.h1__stroke {
+  /* font-size: 9rem; */
+  /* letter-spacing: 6px; */
+  text-transform: uppercase;
+  position: relative;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+.h1__stroke::before {
+  content: 'MY SKILLSET';
+  z-index: -2;
+  opacity: .3;
+  font-size: 6.5rem;
+  position: absolute;
+  top: -50px;
+  left: 200px;
+  color: #71c9ce;
+  -webkit-text-fill-color: #71c9ce;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #71c9ce;
 }
 
 /* .image__shadow {
