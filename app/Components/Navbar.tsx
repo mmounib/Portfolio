@@ -64,7 +64,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer capitalize text-xl   rounded-[5px] link text-black flex gap-2 items-center relative"
+              className="cursor-pointer capitalize text-xl rounded-[5px] link text-black flex gap-2 items-center relative"
             >
               Get In Touch
               <svg

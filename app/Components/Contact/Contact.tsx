@@ -84,8 +84,9 @@ const Contact = (): JSX.Element => {
     triggerOnce: true,
   });
   return (
-    <footer id="contact-section" className="mt-16 max-sm:mt-8 h-full">
-      <div className="flex max-sm:mx-2 max-sm:flex-col max-sm:gap-6 gap-16">
+    <footer id="contact-section" className="mt-32 max-sm:mt-8 h-full relative"> 
+      <h1 className="h1__stroke z-10">Contact Me</h1>
+      <div className=" mt-24 flex max-sm:mx-2 max-sm:flex-col max-sm:gap-6 gap-16">
         <div className="max-w-[55%] max-sm:max-w-full">
           <p
             className={`${Space.className} transition-all duration-300 text-6xl js-splittext-lines leading-[4.5rem] max-sm:leading-[4.6rem] max-sm:text-4xl`}

@@ -9,15 +9,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lenis Smooth Scrolling */
+/* TailwindCSS Class Styles */
+
+.experience__style {
+  @apply flex pt-5 pb-9 px-2 b__top-stroke;
+}
+.experience__paragraph-style {
+  @apply font-light uppercase text-sm;
+}
 
 body {
   overflow-x: hidden;
   cursor: none;
-  /* position: relative; */
   z-index: 0;
 }
 
+/* Lenis Smooth Scrolling */
 html.lenis {
   height: auto;
 }
@@ -637,6 +644,10 @@ label {
   transition: all 0.5s ease-in-out;
   transform: translateX(2px);
 }
+.proj__animation:hover .proj__animation-icon {
+  transition: all 0.3s ease-in-out;
+  transform: translateX(1px);
+}
 
 .hover-link:hover {
   color: gray;
@@ -737,14 +748,14 @@ label {
   left: -50px;
   background-color: #71c9ce;
   filter: blur(55px);
-  opacity: .3;
+  opacity: 0.3;
   width: 400px;
   height: 450px;
   z-index: -10;
 }
 
 .h1__stroke {
-  /* font-size: 9rem; */
+  font-size: 6.5rem;
   /* letter-spacing: 6px; */
   text-transform: uppercase;
   position: relative;
@@ -754,41 +765,27 @@ label {
   -webkit-text-stroke-color: black;
 }
 .h1__stroke::before {
-  content: 'MY SKILLSET';
+  content: "MY SKILLSET";
   z-index: -2;
-  opacity: .3;
-  font-size: 6.5rem;
+  opacity: 0.3;
+  font-size: 5rem;
   position: absolute;
   top: -50px;
-  left: 200px;
+  left: 180px;
   color: #71c9ce;
   -webkit-text-fill-color: #71c9ce;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #71c9ce;
 }
-
-/* .image__shadow {
-  position: relative;
-  display: inline-block;
-  color: #E3FDFD;
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-collapse: separate;
-  }
+.line__thin {
+  border: solid 3px hsl(183, 49%, 63%);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
-.image__shadow.faded-top:after {
-  box-shadow: inset 0 40px 40px -16px;
+.b__top-stroke {
+  border-top: solid 1.5px hsl(0, 0%, 2%);
+  /* border-radius: 255px 0px 225px 15px/15px 225px 15px 255px; */
 }
-.image__shadow.faded-bottom:after {
-  box-shadow: inset 0 -40px 40px -16px;
+.projects__shadow-style {
+  border: 1px solid black;
+  box-shadow: 12px -10px 0px 2px rgba(0, 0, 0, 1);
 }
-.image__shadow.faded-top.faded-bottom:after {
-  box-shadow: inset 15px 60px 40px -16px, inset 5px -60px 40px -16px;
-} */

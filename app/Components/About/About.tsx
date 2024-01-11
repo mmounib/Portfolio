@@ -85,7 +85,7 @@ const About = () => {
       <div className="bg-gradient"></div>
       <div className="flex flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[750px]">
         <div className="overflow-hidden">
-          <h1 className="text-2xl max-sm:text-lg first__animation mt-4 tracking-wider font-light capitalize">
+          <h1 className="text-2xl max-sm:text-lg first__animation mt-4 tracking-wider font-light capitalize leading-9">
             Based in Casablanca, Morocco. I am A dedicated{" "}
             <span>Full Stack developer</span> with a passion for creating
             innovative solutions that can meet the needs of the clients and

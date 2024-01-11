@@ -73,7 +73,7 @@ const Home = () => {
     <section id="home-section" className={` mt-32 ${outfit}`}>
       <div className="mx-auto text-black relative max-w-[970px] max-sm:px-4">
         <div className="relative w-fit h-fit">
-          <div className="capitalize text-2xl max-sm:text-center max-sm:w-full max-sm:border-r-[3px] border-[3px] p-2 pl-5 border-r-0 w-[16ch] border-[#71C9CE]">
+          <div className="capitalize text-2xl max-sm:text-center max-sm:w-full max-sm:border-r-[3px] border-[3px] p-2 pl-5 border-r-0 w-[16ch] line__thin">
             <h3 className="text__animate">Hello, I&apos;m Mouad</h3>
           </div>
         </div>
@@ -122,7 +122,7 @@ const Home = () => {
               className="mr-auto mt-4 text-2xl relative flex items-center rounded-md px-4 py-2 text-black max-sm:bg-secondary max-sm:py-4 max-sm:px-6"
             >
               <Link href="https://drive.google.com/file/d/1iihuC8rg_6uw5lAM65lM7SaZxlQS1npn/view?usp=sharing">
-                See Resume
+                Download Resume
               </Link>
               <svg
                 width="13px"
