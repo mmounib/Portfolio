@@ -789,3 +789,42 @@ label {
   border: 1px solid black;
   box-shadow: 12px -10px 0px 2px rgba(0, 0, 0, 1);
 }
+
+
+
+.cursor {
+  top: -100px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e6acdc;
+  border-radius: 50%;
+  position: fixed;
+  box-shadow: 2px -3px 11px -1px rgba(181, 80, 135, 0.64);
+  pointer-events: none;
+  transition: all 0.1s linear, top 0ms linear, left 0ms ease-in-out;
+  z-index: 15;
+}
+.cursor-image-show {
+  width: 300px;
+  height: 300px;
+  top: auto;
+  left: auto;
+  border-radius: 0;
+  transform: translate(-40%, -50%);
+  background-size: cover;
+  transition: all 0.2s linear, top 0ms linear, left 0ms ease-in-out;
+  border: none;
+  mix-blend-mode: normal;
+  /*background-size: 100;*/
+}
+.image_reveal {
+  position: absolute;
+  inset: 0;
+  display: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+  /* background-image: url('/public/ft_transcendence.png'); */
+  /* background-color: red; */
+  pointer-events: none;
+}

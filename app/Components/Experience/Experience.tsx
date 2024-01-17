@@ -2,7 +2,7 @@ const Experience = () => {
 
     return (
         <section className="my-36 relative">
-            <h1 className="h1__stroke">Experience</h1>
+            <h1 className="h1__stroke">Curriculum vitae</h1>
             <div className="mt-20 flex flex-col w-full">
                 <div className="experience__style">
                     <p className="uppercase flex-[0.5] font-light">December 2023 - now</p>
@@ -22,7 +22,7 @@ const Experience = () => {
                     <p className="uppercase flex-[0.5] font-light">september 2018 - juin 2021</p>
                     <div className="flex flex-col flex-1 items-start gap-2">
                         <p className="experience__paragraph-style">BS Degree - English studies</p>
-                        <p className="font-light text-4xl">Hassan II University</p>
+                        <p className="font-light text-4xl">Hassan II University - Morocco</p>
                     </div>
                 </div>
             </div>
