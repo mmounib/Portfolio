@@ -1,6 +1,6 @@
 import Navbar from "./Components/Navbar";
-import "./globals.css";
 import { Acme } from "next/font/google";
+import "./globals.css";
 
 const acme = Acme({
   subsets: ["latin"],
@@ -19,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${acme.className} max-sm:cursor-default bg-primary`}>
-        <Navbar />
         {children}
       </body>
     </html>

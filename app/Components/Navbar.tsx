@@ -16,7 +16,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <nav className="max-w-[1300px] mx-auto">
+    <nav className="">
       <div className="flex text-black items-center justify-around max-sm:justify-between max-sm:mx-3 mt-6 z-[999]">
         <h2 className={`text-base max-sm:text-xl`}>
           <Link href="/">

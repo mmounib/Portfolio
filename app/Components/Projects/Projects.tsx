@@ -2,53 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import {IoIosArrowRoundForward} from "react-icons/io";
 
 const Projects = () => {
-    const cursor = useRef<HTMLDivElement| null>(null)
-    let curs = cursor!.current;
-    let attached = false;
+    const [cursor, setCurs] = useState<HTMLDivElement | null>(null);
 
-    if (curs) {
-
-    document.addEventListener("mousemove", (e) => {
-        let x = e.clientX;
-        let y = e.clientY;
-        curs!.style.left = x - 25 + "px";
-        curs!.style.top = y - 25 + "px";
-    });
-    }
-
-    let servicesImages = [
-        "url('https://assets.codepen.io/1651485/springNew.jpg')",
-        "url('https://assets.codepen.io/1651485/summerNew.jpg')",
-        "url('https://assets.codepen.io/1651485/autumnNew.png')",
-        "url('https://assets.codepen.io/1651485/winterNew.jpg')"
-    ];
-    const showImage = () => {
-        if (!attached) {
-           attached = true;
-        document.addEventListener("mouseover", (e) => {
-            curs!.classList.add("cursor-image-show");
-            curs!.style.backgroundImage = servicesImages[0];
-        });
-        }
-    }
-    const hideImage = () => {
-        attached = false;
-        document.addEventListener("mouseleave", (e) => {
-            curs!.classList.remove("cursor-image-show");
-            curs!.style.backgroundImage = "none";
-        });
-    }
     return (
         <section className="my-36 relative">
             <h1 className="h1__stroke">projects</h1>
             <div className="flex justify-center gap-16 flex-wrap mt-16">
                 <div
-                    onPointerEnter={showImage}
-                    onPointerLeave={hideImage}
                     className="projects__shadow-style flex flex-col py-6 w-[450px]"
                 >
                     <Link
@@ -67,23 +31,14 @@ const Projects = () => {
                         href="/projects/ft_transcendence"
                         className="flex items-end justify-end mr-2 mt-10 cursor-none"
                     >
-                        <p className="font-light text-base uppercase w-fit bg-[#71c9ce] py-2 px-3 flex items-center cursor-pointer proj__animation">
+                        <p className="font-light text-lg uppercase w-fit bg-black text-secondary py-2 px-3 flex items-center cursor-pointer proj__animation">
                             see more{" "}
                             <IoIosArrowRoundForward
-                                size={17}
-                                className=" fill-black proj__animation-icon"
+                                size={25}
+                                className="fill-secondary proj__animation-icon"
                             />{" "}
                         </p>
                     </Link>
-                    <div ref={cursor} className="cursor">
-                        {/*<Image*/}
-                        {/*    src={"/ft_transcendence.png"}*/}
-                        {/*    alt="Image_ss"*/}
-                        {/*    width={250}*/}
-                        {/*    height={250}*/}
-                        {/*    className="rounded-none"*/}
-                        {/*/>*/}
-                    </div>
                 </div>
                 <div className="projects__shadow-style flex flex-col w-[450px] py-6">
                     <Link
@@ -102,11 +57,11 @@ const Projects = () => {
                         href="/projects/ft_transcendence"
                         className="flex items-end justify-end mr-2 mt-10 cursor-none"
                     >
-                        <p className="font-light text-base uppercase w-fit bg-[#71c9ce] py-2 px-3 flex items-center cursor-pointer proj__animation">
+                        <p className="font-light text-lg uppercase w-fit bg-black text-secondary py-2 px-3 flex items-center cursor-pointer proj__animation">
                             see more{" "}
                             <IoIosArrowRoundForward
-                                size={17}
-                                className=" fill-black proj__animation-icon"
+                                size={25}
+                                className=" fill-secondary proj__animation-icon"
                             />{" "}
                         </p>
                     </Link>
@@ -121,18 +76,18 @@ const Projects = () => {
                             markethub
                         </h1>
                         <h1 className="text-xl max-sm:text-xl max-sm:mt-2 font-extralight tracking-wider text-gray-600 h1-hide">
-                            Ping Pong Website
+                            Ecommerce Website
                         </h1>
                     </Link>
                     <Link
                         href="/projects/ft_transcendence"
                         className="flex items-end justify-end mr-2 mt-10 cursor-none"
                     >
-                        <p className="font-light text-base uppercase w-fit bg-[#71c9ce] py-2 px-3 flex items-center cursor-pointer proj__animation">
+                        <p className="font-light text-lg uppercase w-fit bg-black text-secondary py-2 px-3 flex items-center cursor-pointer proj__animation">
                             see more{" "}
                             <IoIosArrowRoundForward
-                                size={17}
-                                className=" fill-black proj__animation-icon"
+                                size={25}
+                                className=" fill-secondary proj__animation-icon"
                             />{" "}
                         </p>
                     </Link>
@@ -154,11 +109,11 @@ const Projects = () => {
                         href="/projects/ft_transcendence"
                         className="flex items-end justify-end mr-2 mt-10 cursor-none"
                     >
-                        <p className="font-light text-base uppercase w-fit bg-[#71c9ce] py-2 px-3 flex items-center cursor-pointer proj__animation">
+                        <p className="font-light text-lg uppercase w-fit bg-black text-secondary py-2 px-3 flex items-center cursor-pointer proj__animation">
                             see more{" "}
                             <IoIosArrowRoundForward
-                                size={17}
-                                className=" fill-black proj__animation-icon"
+                                size={25}
+                                className=" fill-secondary proj__animation-icon"
                             />{" "}
                         </p>
                     </Link>

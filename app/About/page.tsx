@@ -3,6 +3,7 @@ import AnimatedCursor from "../Components/AnimatedCursor";
 import Experience from "../Components/Experience/Experience";
 import Projects from "../Components/Projects/Projects";
 import Skills from "../Components/Skills/Skills";
+import Links from "@/app/Components/Links";
 
 function page() {
   return (
@@ -13,6 +14,7 @@ function page() {
         <Skills />
         <Experience />
         <Projects />
+        <Links />
       </section>
     </>
   );
