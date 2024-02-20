@@ -1,140 +1,74 @@
-"use client";
 
+"use client";
 import Image from "next/image";
 import "../../Components/About.css";
-import { useEffect } from "react";
+import {useEffect} from "react";
 import gsap from "gsap";
+import {motion} from "framer-motion";
 
 const About = () => {
-  useEffect(() => {
-    const tl = gsap.timeline();
+    useEffect(() => {
+        const tl = gsap.timeline();
 
-    tl.fromTo(
-      ".animated__image",
-      {
-        x: 650,
-        duration: 5,
-        ease: "power4.out",
-      },
-      {
-        x: 0,
-      }
-    );
-    tl.fromTo(
-      ".first__animation",
-      {
-        y: 600,
-        duration: 2.2,
-        delay: 0.5,
-        ease: "power2.out",
-      },
-      {
-        y: 0,
-      }
-    );
-    tl.fromTo(
-      ".second__animation",
-      {
-        y: 600,
-        duration: 2.2,
-        delay: 0.7,
-        ease: "power2.out",
-      },
-      {
-        y: 0,
-      }
-    );
-    tl.fromTo(
-      ".third__animation",
-      {
-        y: 600,
-        duration: 2.2,
-        delay: 1,
-        ease: "power2.out",
-      },
-      {
-        y: 0,
-      }
-    );
-    tl.fromTo(
-      ".h3__hover",
-      {
-        x: -600,
-        // duration: 2.2,
-        delay: 1.8,
-        ease: "power2.out",
-      },
-      {
-        x: 0,
-        ease: "power2.out",
-      }
-    );
-  }, []);
+        tl.fromTo(
+            ".animated__image",
+            {
+                x: 0,
+                duration: 20,
+                ease: "power2.out",
+            },
+            {
+                x: 1000,
+                ease: "power4.inOut"
+            }
+        );
+    }, []);
 
-  function handleJumpToContactMe() {
-    const contactSection = document.getElementById("contact-section");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-  return (
-    <section
-      className="flex max-sm:flex-col justify-between gap-12 mt-16 overflow-hidden h-full"
-    >
-
-      <div className="bg-gradient"></div>
-      <div className="flex flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[750px]">
-        <div className="overflow-hidden">
-          <h1 className="text-2xl max-sm:text-lg first__animation mt-4 tracking-wider font-light capitalize leading-9">
-            Based in Casablanca, Morocco. I am A dedicated{" "}
-            <span>Full Stack developer</span> with a passion for creating
-            innovative solutions that can meet the needs of the clients and
-            companies. With a strong foundation in both front-end and back-end
-            development. With this varied experience, I have developed solid
-            skills to provide solutions to your digital needs.
-          </h1>
-        </div>
-        <div className="flex flex-col mt-4 max-sm:mt-2 overflow-hidden">
-          <h1 className="text-2xl max-sm:text-lg second__animation tracking-wider font-light capitalize">
-            I&apos;m self-motivated, passionate, and hardworking coder.
-          </h1>
-          <h1 className="text-2xl max-sm:text-lg mt-4 third__animation tracking-wider font-light capitalize">
-            I&apos;m here to build positive relationships, and find creative
-            solutions to complex problems.
-          </h1>
-        </div>
-        {/* <h3
-          className=" mt-auto h3__hover text-3xl max-sm:text-xl from-center"
-          onClick={handleJumpToContactMe}
+    return (
+        <section
+            className="flex max-sm:flex-col justify-between gap-12 mt-16 overflow-hidden h-full"
         >
-          Let&apos;s Talk
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 text__svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-            />
-          </svg>
-        </h3> */}
-      </div>
-      <div className="flex animated__image image__shadow faded-top faded-bottom">
-        <Image
-          src="/animated_image.png"
-          alt="AboutMEImage"
-          width={450}
-          height={450}
-          className="object-cover bg-cover rounded-full bg-clip-border w-[400px] h-[400px] brightness-95 border-8 border-secondary border-opacity-40 opacity-80"
-        />
-      </div>
-    </section>
-  );
+            <div className="bg-gradient"></div>
+            <div className="flex flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[750px]">
+                <div className="overflow-hidden">
+                    <h1 className="text-2xl max-sm:text-lg first__animation mt-4 tracking-wider font-light capitalize leading-9">
+                        Based in Casablanca, Morocco. I am A dedicated{" "}
+                        <span>Full Stack developer</span> with a passion for creating
+                        innovative solutions that can meet the needs of the clients and
+                        companies. With a strong foundation in both front-end and back-end
+                        development. With this varied experience, I have developed solid
+                        skills to provide solutions to your digital needs.
+                    </h1>
+                </div>
+                <div className="flex flex-col mt-4 max-sm:mt-2 overflow-hidden">
+                    <h1 className="text-2xl max-sm:text-lg second__animation tracking-wider font-light capitalize">
+                        I&apos;m self-motivated, passionate, and hardworking coder.
+                    </h1>
+                    <h1 className="text-2xl max-sm:text-lg mt-4 third__animation tracking-wider font-light capitalize">
+                        I&apos;m here to build positive relationships, and find creative
+                        solutions to complex problems.
+                    </h1>
+                </div>
+            </div>
+            <motion.div initial={{opacity: 0, scale: 0.7}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{
+                            duration: 2.8,
+
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}
+                        className="relative overflow-hidden rounded-full">
+                <Image
+                    src="/animated_image.png"
+                    alt="AboutMEImage"
+                    width={450}
+                    height={450}
+                    className="object-cover bg-cover rounded-full bg-clip-border w-[400px] h-[400px] brightness-95 border-opacity-40"
+                />
+                <div className="animated__image"></div>
+            </motion.div>
+        </section>
+    );
 };
 
 export default About;

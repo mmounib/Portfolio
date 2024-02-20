@@ -1,4 +1,5 @@
 "use client";
+
 import { Link as ReactLink } from "react-scroll";
 
 import { useRef, useState } from "react";
@@ -27,23 +28,9 @@ const Navbar = () => {
         <ul
           className={`${outfit.className} flex gap-10 items-center max-md:hidden ml-auto mr-16`}
         >
-          {/* <li>
-            <Link
-              to="home-section"
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="cursor-pointer hover:text-gray-600 transition-all duration-300"
-            >
-              Home
-            </Link>
-          </li> */}
           <li>
             <Link
               href="About"
-              // smooth={true}
-              // offset={-70}
-              // duration={500}
               className="cursor-pointer hover:text-gray-600 transition-all duration-300"
             >
               About
@@ -51,7 +38,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="projects-section"
+              href=""
               className="cursor-pointer hover:text-gray-600 transition-all duration-300"
             >
               Projects
@@ -64,7 +51,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer capitalize text-xl rounded-[5px] link text-black flex gap-2 items-center relative"
+              className="cursor-pointer capitalize text-xl rounded-[5px] link flex gap-2 items-center relative"
             >
               Get In Touch
               <svg
