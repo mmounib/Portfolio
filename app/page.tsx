@@ -35,8 +35,6 @@ const Page = () => {
                 <div className="flex max-w-[1300px] flex-col mx-auto">
                     <Navbar />
                     <Home/>
-                    <Contact/>
-                    <Links/>
                 </div>
             </div>
         </>

@@ -1,3 +1,5 @@
+'use client'
+
 import About from "../Components/About/About";
 import AnimatedCursor from "../Components/AnimatedCursor";
 import Experience from "../Components/Experience/Experience";
@@ -6,8 +8,23 @@ import Skills from "../Components/Skills/Skills";
 import Links from "@/app/Components/Links";
 import Navbar from "@/app/Components/Navbar";
 import Link from "next/link";
+import {useEffect} from "react";
+import Lenis from "@studio-freight/lenis";
 
-function page() {
+function Page() {
+    useEffect(() => {
+        const lenis = new Lenis();
+
+        lenis.on("scroll", () => {
+        });
+
+        function raf(time: any) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    }, []);
     return (
         <>
             <AnimatedCursor/>
@@ -17,7 +34,6 @@ function page() {
                 <Skills/>
                 <Experience/>
                 <Projects/>
-                <Links/>
                 <div className="box">
                     <Link
                         href="https://drive.google.com/file/d/1iihuC8rg_6uw5lAM65lM7SaZxlQS1npn/view?usp=sharing"
@@ -30,4 +46,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

@@ -1,16 +1,14 @@
-
 "use client";
+
 import Image from "next/image";
 import "../../Components/About.css";
-import {useEffect} from "react";
 import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
 import {motion} from "framer-motion";
 
 const About = () => {
-    useEffect(() => {
-        const tl = gsap.timeline();
-
-        tl.fromTo(
+    useGSAP(() => {
+        gsap.fromTo(
             ".animated__image",
             {
                 x: 0,
@@ -22,6 +20,26 @@ const About = () => {
                 ease: "power4.inOut"
             }
         );
+        gsap.from(".first__animation", {
+            opacity: 0,
+            y: 100,
+            duration: 1.5,
+            delay: 0.5,
+            ease: "power4.inOut",
+        })
+        gsap.from(".second__animation", {
+            opacity: 0,
+            duration: 1.5,
+            delay: 0.7,
+            ease: "power4.inOut",
+        })
+        gsap.from(".third__animation", {
+            opacity: 0,
+            y: 50,
+            duration: 1.5,
+            delay: 0.9,
+            ease: "power4.inOut",
+        })
     }, []);
 
     return (
@@ -50,8 +68,8 @@ const About = () => {
                     </h1>
                 </div>
             </div>
-            <motion.div initial={{opacity: 0, scale: 0.7}}
-                        animate={{opacity: 1, scale: 1}}
+            <motion.div initial={{opacity: 0}}
+                        animate={{opacity: 1}}
                         transition={{
                             duration: 2.8,
 
