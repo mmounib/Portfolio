@@ -3,7 +3,7 @@ import {FiGithub, FiLinkedin, FiMail} from "react-icons/fi";
 
 const Links = () => {
     return (
-        <footer className="flex justify-between items-center gap-8 mt-44 py-4 px-6 mb-3 border-y border-y-gray-400 max-w-[1300px] mx-auto">
+        <footer id="contact-section" className="flex justify-between items-center gap-8 mt-44 py-4 px-6 mb-3 border-y border-y-gray-400 max-w-[1300px] mx-auto">
             <div className="flex max-sm:flex-col justify-between items-center text-gray-700 w-full">
                 <span className="text-2xl max-sm:text-lg max-sm:mt-4">
                   Copyright &copy; 2024
