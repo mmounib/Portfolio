@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {FiGithub, FiLinkedin, FiMail} from "react-icons/fi";
+import {FiGithub, FiLinkedin} from "react-icons/fi";
 
 const Links = () => {
     return (

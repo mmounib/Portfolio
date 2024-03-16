@@ -85,9 +85,25 @@ h1 {
 
 .custom__header-font {
     font-family: "Outfit", sans-serif;
-    /*font-family: "Rubik Doodle Shadow", system-ui;*/
-    /*font-weight: lighter;*/
     font-style: normal;
+}
+
+.box__link {
+    position: relative;
+}
+.box__link::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    transition: 0.4s all ease;
+    background: #49b0b6;
+    inset: 0;
+    z-index: -1;
+}
+.box__link:hover:before {
+    width: 100%;
+    transition: 0.4s all ease;
 }
 
 .effect__underline {

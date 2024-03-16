@@ -72,7 +72,7 @@ const Home = () => {
                     ready to bring your projects to life.
                 </p>
                 <div className="flex flex-col gap-4 mt-auto">
-                    <h1 className="uppercase text-7xl"><i className="first__name">mouad</i> <i className="first__name">mounib</i></h1>
+                    <h1 className="uppercase text-7xl">mouad mounib</h1>
                     <button
                         type="submit"
                         className="relative border-2 border-black rounded-2xl w-full text-3xl py-2 px-9 hover:bg-black hover:text-white button__style">

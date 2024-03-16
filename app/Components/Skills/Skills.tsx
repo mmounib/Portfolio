@@ -1,21 +1,19 @@
-"use client";
-
-import {useEffect} from "react";
 import gsap from "gsap";
 import {FaReact, FaNodeJs, FaGitAlt, FaDocker} from "react-icons/fa";
 import {IoLogoJavascript} from "react-icons/io5";
-import {BiLogoTypescript} from "react-icons/bi";
-import {SiNextdotjs, SiTailwindcss, SiExpress, SiMysql} from "react-icons/si";
+import {SiNextdotjs, SiTailwindcss, SiExpress} from "react-icons/si";
 import {TbBrandTypescript, TbSql} from "react-icons/tb";
 import {IconType} from "react-icons";
+import {useGSAP} from "@gsap/react";
 
 
 type Technolgy__Type = {
     icon: IconType;
     name: string;
+    style: string,
 }[];
 const Skills = () => {
-    useEffect(() => {
+    useGSAP(() => {
         const tl = gsap.timeline();
 
         tl.fromTo(".skills", {
@@ -30,34 +28,34 @@ const Skills = () => {
     }, []);
     const technologies: Technolgy__Type = [
         {
-            icon: IoLogoJavascript, name: "JavaScript",
+            icon: IoLogoJavascript, name: "JavaScript", style: "stroke-gray-700 fill-gray-700",
         },
         {
-            icon: TbBrandTypescript, name: "Typescript",
+            icon: TbBrandTypescript, name: "Typescript", style: "stroke-gray-700",
         },
         {
-            icon: SiNextdotjs, name: "nextJs",
+            icon: SiNextdotjs, name: "NextJs",style: "stroke-gray-700",
         },
         {
-            icon: FaReact, name: "ReactJs",
+            icon: FaReact, name: "ReactJs",style: "stroke-gray-700 fill-gray-700",
         },
         {
-            icon: SiTailwindcss, name: "TailwindCSS",
+            icon: SiTailwindcss, name: "TailwindCSS",style: "stroke-gray-700",
         },
         {
-            icon: FaNodeJs, name: "NodeJs",
+            icon: FaNodeJs, name: "NodeJs",style: "stroke-gray-700 fill-gray-700",
         },
         {
-            icon: SiExpress, name: "ExpressJs",
+            icon: SiExpress, name: "ExpressJs",style: "stroke-gray-700 fill-gray-700",
         },
         {
-            icon: TbSql, name: "SQL",
+            icon: TbSql, name: "SQL",style: "stroke-gray-700",
         },
         {
-            icon: FaGitAlt, name: "Git/Github",
+            icon: FaGitAlt, name: "Git/Github",style: "stroke-gray-700 fill-gray-700",
         },
         {
-            icon: FaDocker, name: "Docker",
+            icon: FaDocker, name: "Docker",style: "stroke-gray-700 fill-gray-700",
         },
     ];
     return (
@@ -72,7 +70,7 @@ const Skills = () => {
                 {technologies.map((technology, index) => (
                     <p key={index}
                        className="text-3xl py-2 px-4 border border-gray-600 rounded-3xl flex items-center gap-2">
-                        <technology.icon size={30} className="stroke-gray-600"/>
+                        <technology.icon size={30} className={technology.style}/>
                         {technology.name}
                     </p>
                 ))}
