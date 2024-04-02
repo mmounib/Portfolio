@@ -60,9 +60,51 @@ const Projects = () => {
                 <h1 ref={ref} className="h1__stroke w-full flex">Projects</h1>
                 <motion.span className="projects h1__animate w-fit"></motion.span>
             </div>
-            <div className="mt-16 grid grid-rows-2 grid-cols-2 gap-10">
+            <div className="mt-16 grid grid-rows-2 grid-cols-2 gap-14">
                 <Link href={'https://github.com/mmounib/ft_transendence'} target="_blank"
                       className="h-[750px] row-start-1 col-start-1 relative overflow-hidden over__container grid"
+                      onMouseMove={hoveringText}>
+                    <div className="bg__project"></div>
+                    <h1 className="hoveringText">view repo</h1>
+                    <article className="h-fit self-end px-4 pb-6">
+                        <div className="flex justify-between items-center ">
+                            <h1 className="text-2xl text-white capitalize">ft_transcendence</h1>
+                            <div className="flex gap-2">
+                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Typescript</p>
+                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">ReactJs</p>
+                            </div>
+                        </div>
+                        <p className="para__hidden text-white pt-4">A Full Stack Web Application based on the Mighty
+                            Pong Game, with social media features and a
+                            leaderboard. The web application is built using Typescript and React for the frontend,
+                            and
+                            NestJS for the backend. The database is a PostgreSQL database, and the application is
+                            deployed on using Docker.</p>
+                    </article>
+                </Link>
+                <Link href={'https://github.com/mmounib/ft_transendence'} target="_blank"
+                      className="h-[750px] row-start-1 row-span-2 col-start-2 self-center relative overflow-hidden over__container grid"
+                      onMouseMove={hoveringText}>
+                    <div className="bg__project"></div>
+                    <h1 className="hoveringText">view repo</h1>
+                    <article className="h-fit self-end px-4 pb-6">
+                        <div className="flex justify-between items-center ">
+                            <h1 className="text-2xl text-white capitalize">ft_transcendence</h1>
+                            <div className="flex gap-2">
+                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Typescript</p>
+                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">ReactJs</p>
+                            </div>
+                        </div>
+                        <p className="para__hidden text-white pt-4">A Full Stack Web Application based on the Mighty
+                            Pong Game, with social media features and a
+                            leaderboard. The web application is built using Typescript and React for the frontend,
+                            and
+                            NestJS for the backend. The database is a PostgreSQL database, and the application is
+                            deployed on using Docker.</p>
+                    </article>
+                </Link>
+                <Link href={'https://github.com/mmounib/ft_transendence'} target="_blank"
+                      className="h-[750px] row-start-2 col-start-1 self-center relative overflow-hidden over__container grid"
                       onMouseMove={hoveringText}>
                     <div className="bg__project"></div>
                     <h1 className="hoveringText">view repo</h1>

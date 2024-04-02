@@ -2,27 +2,10 @@ import Image from "next/image";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {motion} from "framer-motion";
-import {IoLogoJavascript} from "react-icons/io5";
-import {TbBrandTypescript, TbSql} from "react-icons/tb";
-import {SiExpress, SiNextdotjs, SiTailwindcss} from "react-icons/si";
-import {FaDocker, FaGitAlt, FaNodeJs, FaReact} from "react-icons/fa";
-import {IconType} from "react-icons";
 import {technologies} from "@/app/types";
 
 const About = () => {
     useGSAP(() => {
-        gsap.fromTo(
-            ".animated__image",
-            {
-                x: 0,
-                duration: 20,
-                ease: "power2.out",
-            },
-            {
-                x: 1000,
-                ease: "power4.inOut"
-            }
-        );
         gsap.from(".first__animation", {
             opacity: 0,
             y: 100,
@@ -90,13 +73,13 @@ const About = () => {
 
                             ease: [0, 0.71, 0.2, 1.01]
                         }}
-                        className="relative overflow-hidden rounded-full">
+                        className="relative rounded-full">
                 <Image
                     src="/animated_image.png"
                     alt="AboutMEImage"
                     width={450}
                     height={450}
-                    className="object-cover bg-cover rounded-full bg-clip-border w-[400px] h-[400px] brightness-95 border-opacity-40"
+                    className="object-cover bg-cover rounded-none bg-clip-border w-[400px] h-[400px] brightness-95"
                 />
                 <div className="animated__image"></div>
             </motion.div>
