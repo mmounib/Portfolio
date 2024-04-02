@@ -23,7 +23,6 @@
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
-    "autoprefixer": "10.4.14",
     "emailjs-com": "^3.2.0",
     "eslint": "8.44.0",
     "eslint-config-next": "^14.0.4",
@@ -50,6 +49,9 @@
     "@types/gsap": "^3.0.0",
     "@types/locomotive-scroll": "^4.1.0",
     "@types/react-scroll": "^1.8.7",
-    "baffle": "^0.3.6"
+    "autoprefixer": "^10.4.19",
+    "baffle": "^0.3.6",
+    "postcss-nested": "^6.0.1",
+    "postcss-nesting": "^12.1.0"
   }
 }

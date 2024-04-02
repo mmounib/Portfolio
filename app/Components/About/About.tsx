@@ -1,10 +1,13 @@
-"use client";
-
 import Image from "next/image";
-import "../../Components/About.css";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {motion} from "framer-motion";
+import {IoLogoJavascript} from "react-icons/io5";
+import {TbBrandTypescript, TbSql} from "react-icons/tb";
+import {SiExpress, SiNextdotjs, SiTailwindcss} from "react-icons/si";
+import {FaDocker, FaGitAlt, FaNodeJs, FaReact} from "react-icons/fa";
+import {IconType} from "react-icons";
+import {technologies} from "@/app/types";
 
 const About = () => {
     useGSAP(() => {
@@ -66,6 +69,18 @@ const About = () => {
                         I&apos;m here to build positive relationships, and find creative
                         solutions to complex problems.
                     </h1>
+                </div>
+                <div className="mt-3">
+                    <h1 className="text-2xl font-light tracking-wide">I&apos;m good with</h1>
+                    <div className="flex flex-wrap max-sm:justify-center w-full mt-5 gap-3">
+                        {technologies.map((technology, index) => (
+                            <p key={index}
+                               className="text-lg py-2 px-4 border border-gray-600 rounded-3xl flex items-center gap-1">
+                                <technology.icon size={20} className={technology.style}/>
+                                {technology.name}
+                            </p>
+                        ))}
+                    </div>
                 </div>
             </div>
             <motion.div initial={{opacity: 0}}

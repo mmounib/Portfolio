@@ -1,5 +1,3 @@
-"use client";
-
 import {Outfit} from "next/font/google";
 import Link from "next/link";
 import gsap from "gsap";
@@ -61,8 +59,8 @@ const Home = () => {
     })
     return (
         <main className={`mt-32 ${outfit}`}>
-            <h1 className="text-7xl custom__header-font header__animation uppercase overflow-hidden">creative <h5
-                className="text-purple-700 mt-3 header__animation">software developer</h5></h1>
+            <h1 className="text-7xl custom__header-font header__animation uppercase overflow-hidden">creative <h1
+                className="text-blue-800 text-7xl mt-3 header__animation">software developer</h1></h1>
             <div className="flex justify-start items-start gap-14 mt-8 overflow-hidden">
                 <Image src="/my_image.jpg" alt="Personal Photo" width={900} height={200}
                        className="object-cover w-[250px] h-[400px] image__cover"/>
@@ -75,7 +73,7 @@ const Home = () => {
                     <h1 className="uppercase text-7xl">mouad mounib</h1>
                     <button
                         type="submit"
-                        className="relative border-2 border-black rounded-2xl w-full text-3xl py-2 px-9 hover:bg-black hover:text-white button__style">
+                        className="relative rounded-xl border-[3px] border-blue-700 w-full text-3xl py-2 px-9 bg-blue-700 text-white hover:text-blue-700 hover:bg-white button__style">
                         <Link
                             href="https://drive.google.com/file/d/1iihuC8rg_6uw5lAM65lM7SaZxlQS1npn/view?usp=sharing"
                             target="_blank">

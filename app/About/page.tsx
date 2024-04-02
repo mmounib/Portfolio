@@ -31,16 +31,8 @@ function Page() {
             <section className="max-w-[1300px] mx-auto">
                 <Navbar/>
                 <About/>
-                <Skills/>
                 <Experience/>
                 <Projects/>
-                <div className="box">
-                    <Link
-                        href="https://drive.google.com/file/d/1iihuC8rg_6uw5lAM65lM7SaZxlQS1npn/view?usp=sharing"
-                        target="_blank">
-                        See Resume
-                    </Link>
-                </div>
             </section>
         </>
     );

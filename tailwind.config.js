@@ -2,28 +2,34 @@
 
 
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-	  extend: {
-		  colors: {
-			  'primary': '#E3FDFD',
-			  'secondary': '#71C9CE'
-		  },
-		  	screens: {
-			  'custom': '1015px',
-			  'custom-layout': '850px',
-		  	},
-			backgroundImage: {
-				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'gradient-conic':
-				'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'image': "url('/ping-pong.jpg')",
-			},
+    content: [
+        './pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+        extend: {
+            colors: {
+                'primary': '#E3FDFD',
+                'secondary': '#71C9CE'
+            },
+            screens: {
+                'custom': '1015px',
+                'custom-layout': '850px',
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'gradient-conic':
+                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                'image': "url('/ping-pong.jpg')",
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [
+        "postcss-import",
+        "postcss-nested",
+        "tailwindcss",
+        "autoprefixer",
+        "tailwindcss/nesting",
+    ],
 }

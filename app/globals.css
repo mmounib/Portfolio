@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nanum+Pen+Script&family=Protest+Riot&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -91,16 +92,18 @@ h1 {
 .box__link {
     position: relative;
 }
+
 .box__link::before {
     position: absolute;
     content: "";
     width: 0;
     height: 100%;
     transition: 0.4s all ease;
-    background: #49b0b6;
+    background: #4e8efb;
     inset: 0;
     z-index: -1;
 }
+
 .box__link:hover:before {
     width: 100%;
     transition: 0.4s all ease;
@@ -268,32 +271,18 @@ h1 {
     transition: transform 0.5s;
 }
 
-.text__animate {
-    font-family: "Outfit", sans-serif;
-    width: 11.5ch;
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    /* border-right: 2px solid; */
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
 li {
-    text-transform: uppercase;
+    font-family: "IBM Plex Sans", sans-serif;
+    cursor: pointer;
     font-size: 18px;
+    padding: 6px 18px;
+    border-radius: 5px;
     position: relative;
-    transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+    transition: background-color .4s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 79, 255, 0.155);
+    }
 }
 
 span {
@@ -304,7 +293,6 @@ span {
     display: inline-block;
     margin-top: 3rem;
     font-size: 16px;
-    font-weight: 200;
     letter-spacing: 1px;
     padding: 13px 20px 13px;
     outline: 0;
@@ -969,39 +957,6 @@ label {
     background: #111;
 }
 
-.box {
-    position: fixed;
-    top: 200px;
-    left: -50px;
-    right: 0;
-    transform: rotate(90deg);
-    width: 15rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: dodgerblue;
-    color: ghostwhite;
-    text-transform: uppercase;
-    font: bold 2rem "Outfit";
-    filter: blur(20px);
-    transition: all .4s linear;
-    border-radius: 1rem;
-    text-shadow: 8px 8px 10px rgb(0, 0, 0, .5);
-}
-
-.box:hover {
-    filter: blur(0px);
-    box-shadow: 10px 10px 25px rgb(255, 255, 255, .3);
-}
-
-.box:active {
-    filter: blur(0);
-    box-shadow: 0 0 0 transparent;
-    border-radius: 0;
-    text-shadow: 8px 8px 0 rgb(0, 0, 0, .7);
-}
-
 .cursor {
     top: -100px;
     width: 50px;
@@ -1013,19 +968,6 @@ label {
     z-index: 15;
 }
 
-.cursor-image-show {
-    width: 300px;
-    height: 300px;
-    top: auto;
-    left: auto;
-    border-radius: 0;
-    transform: translate(-30%, -20%);
-    background-size: cover;
-    border: none;
-    mix-blend-mode: normal;
-    /*background-size: 100;*/
-}
-
 .image_reveal {
     position: absolute;
     inset: 0;
@@ -1033,12 +975,58 @@ label {
     width: 200px;
     height: 200px;
     border-radius: 0;
-    /* background-image: url('/public/ft_transcendence.png'); */
-    /* background-color: red; */
     pointer-events: none;
 }
 
 .image__cursor {
     width: 250px;
     height: 150px;
+}
+
+.bg__project {
+    background-image: url('/ping-pong-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.over__container:hover .bg__project {
+    transform: scale(1.0666);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/ping-pong-image.jpg');
+}
+
+.para__hidden {
+    display: none;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.over__container:hover .para__hidden {
+    display: block;
+    transform: translateY(0);
+}
+
+.hoveringText {
+    z-index: 9999;
+    position: absolute;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: #49b0b6;
+    padding: 70px 14px;
+    border-radius: 50%;
+    display: none;
+    transition: all .080s ease;
+}
+
+.over__container:hover .hoveringText {
+    display: block;
+    cursor: none;
 }

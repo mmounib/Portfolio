@@ -6,12 +6,6 @@ import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import {useGSAP} from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
-// const Space = Space_Grotesk({
-//     subsets: ["latin"],
-//     weight: ["400", "600"],
-// });
-
-
 const Contact = () => {
     useGSAP(() => {
         gsap.fromTo('.little__text', {
@@ -29,8 +23,8 @@ const Contact = () => {
         })
     })
     return (
-        <footer id="contact-section" className="mt-32 max-sm:mt-8 h-full relative">
-            <div className="flex flex-col gap-14 items-center justify-center w-full overflow-hidden">
+        <footer id="contact-section" className="mt-28 max-sm:mt-8 h-full relative">
+            <div className="flex flex-col gap-14 items-center justify-center w-full overflow-hidden py-6">
                 <div className="flex flex-col items-center gap-2 overflow-hidden">
                     <h1 className="uppercase text-lg italic tracking-wide font-light little__text overflow-hidden">want to work together?</h1>
                     <h1 className="uppercase text-8xl little__text overflow-hidden">say hi!</h1>
@@ -38,7 +32,7 @@ const Contact = () => {
 
                 <Link
                     href="mailto:mouadmounib00@gmail.com"
-                    className="text-6xl uppercase effect__underline little__text overflow-hidden"
+                    className="text-6xl uppercase effect__underline little__text"
                 >
                     mouadmounib00@gmail.com
                 </Link>
