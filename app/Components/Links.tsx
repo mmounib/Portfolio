@@ -9,7 +9,7 @@ const Links = () => {
                   Copyright &copy; 2024
                 </span>
                 <span className=" mx-auto max-sm:m-auto text-2xl max-sm:text-lg flex gap-3">
-                  Designed and Developed by <h2>Mouad Mounib</h2>
+                  Designed and Developed by <h2>Mouad</h2>
                 </span>
             </div>
             <div className="flex ml-auto gap-5">

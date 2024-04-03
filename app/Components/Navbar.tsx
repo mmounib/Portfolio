@@ -39,7 +39,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
-                            href=""
+                            href="About"
                             className="hover:text-gray-600 transition-all duration-300"
                         >
                             Works

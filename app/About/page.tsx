@@ -28,8 +28,7 @@ function Page() {
     return (
         <>
             <AnimatedCursor/>
-            <section className="max-w-[1300px] mx-auto">
-                <Navbar/>
+            <section className="">
                 <About/>
                 <Experience/>
                 <Projects/>

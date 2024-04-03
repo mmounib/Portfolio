@@ -13,8 +13,8 @@ const Contact = () => {
             ease: 'power2.out',
         }, {
             y: 0,
-            stagger: 0.455,
-            duration: .7,
+            stagger: 0.3,
+            duration: .5,
             scrollTrigger: {
                 trigger: '.little__text',
                 start: 'top 80%',

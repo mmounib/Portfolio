@@ -32,8 +32,7 @@ const Page = () => {
                 className=" bg-primary h-full max-sm:overflow-hidden w-full"
             >
                 <AnimatedCursor/>
-                <div className="flex max-w-[1300px] flex-col mx-auto">
-                    <Navbar />
+                <div className="flex flex-col">
                     <Home/>
                 </div>
             </div>

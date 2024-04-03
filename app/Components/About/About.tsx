@@ -26,6 +26,12 @@ const About = () => {
             delay: 0.9,
             ease: "power4.inOut",
         })
+        gsap.from(".tech__animation", {
+            opacity: 0,
+            duration: 1.5,
+            delay: 1.1,
+            ease: "power4.inOut",
+        })
     }, []);
 
     return (
@@ -53,7 +59,7 @@ const About = () => {
                         solutions to complex problems.
                     </h1>
                 </div>
-                <div className="mt-3">
+                <div className="mt-3 tech__animation">
                     <h1 className="text-2xl font-light tracking-wide">I&apos;m good with</h1>
                     <div className="flex flex-wrap max-sm:justify-center w-full mt-5 gap-3">
                         {technologies.map((technology, index) => (

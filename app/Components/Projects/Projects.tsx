@@ -12,22 +12,6 @@ const Projects = () => {
     const ref = useRef(null)
     const inView = useInView(ref, {once: true})
 
-    const technologies = [
-        "JavaScript",
-        "Typescript",
-        "ThreeJs",
-        "ReactJs",
-        "NodeJs",
-        "NestJs",
-        "PostgreSQL",
-    ];
-    const technologiesCar = [
-        "Typescript",
-        "NextJs",
-        "NextAuth.js",
-        "TailwindCSS",
-    ];
-
     useGSAP(() => {
         if (inView) {
             const tl = gsap.timeline();
@@ -45,7 +29,7 @@ const Projects = () => {
 
     const hoveringText = (event: any) => {
         let div = event.currentTarget;
-        let el = document.querySelector(".hoveringText")! as HTMLElement;
+        let el = div.querySelector(".hoveringText")! as HTMLElement;
         let offsetX =
             event.clientX - div.getBoundingClientRect().left - el.offsetWidth / 2;
         let offsetY =
@@ -82,17 +66,17 @@ const Projects = () => {
                             deployed on using Docker.</p>
                     </article>
                 </Link>
-                <Link href={'https://github.com/mmounib/ft_transendence'} target="_blank"
+                <Link href={'https://github.com/mmounib/Car-Showcasing-App'} target="_blank"
                       className="h-[750px] row-start-1 row-span-2 col-start-2 self-center relative overflow-hidden over__container grid"
                       onMouseMove={hoveringText}>
                     <div className="bg__project"></div>
                     <h1 className="hoveringText">view repo</h1>
                     <article className="h-fit self-end px-4 pb-6">
                         <div className="flex justify-between items-center ">
-                            <h1 className="text-2xl text-white capitalize">ft_transcendence</h1>
+                            <h1 className="text-2xl text-white capitalize">CarHub</h1>
                             <div className="flex gap-2">
                                 <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Typescript</p>
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">ReactJs</p>
+                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">NextJs</p>
                             </div>
                         </div>
                         <p className="para__hidden text-white pt-4">A Full Stack Web Application based on the Mighty
@@ -103,17 +87,17 @@ const Projects = () => {
                             deployed on using Docker.</p>
                     </article>
                 </Link>
-                <Link href={'https://github.com/mmounib/ft_transendence'} target="_blank"
+                <Link href={'https://www.mlnetworks.io/'} target="_blank"
                       className="h-[750px] row-start-2 col-start-1 self-center relative overflow-hidden over__container grid"
                       onMouseMove={hoveringText}>
                     <div className="bg__project"></div>
-                    <h1 className="hoveringText">view repo</h1>
+                    <h1 className="hoveringText">view website</h1>
                     <article className="h-fit self-end px-4 pb-6">
                         <div className="flex justify-between items-center ">
-                            <h1 className="text-2xl text-white capitalize">ft_transcendence</h1>
+                            <h1 className="text-2xl text-white capitalize">MLNetworks</h1>
                             <div className="flex gap-2">
                                 <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Typescript</p>
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">ReactJs</p>
+                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Nextjs</p>
                             </div>
                         </div>
                         <p className="para__hidden text-white pt-4">A Full Stack Web Application based on the Mighty
@@ -130,6 +114,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
-// <ProjectCards/>
