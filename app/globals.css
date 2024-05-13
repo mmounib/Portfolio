@@ -73,6 +73,11 @@ h1 {
     font-family: "Outfit", sans-serif;
 }
 
+li, .contact {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 18px;
+}
+
 .h1__text {
     width: 100%;
     -webkit-background-clip: text;
@@ -126,13 +131,11 @@ h1 {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    /*-webkit-transform: scale(0,1);*/
     transform: scale(0, 1);
 }
 
 .effect__underline:hover:after {
     opacity: 1;
-    /*-webkit-transform: scale(1);*/
     transform: scale(1);
 }
 
@@ -272,16 +275,14 @@ h1 {
 }
 
 li {
-    font-family: "IBM Plex Sans", sans-serif;
     cursor: pointer;
-    font-size: 18px;
     padding: 6px 18px;
     border-radius: 5px;
     position: relative;
     transition: background-color .4s ease-in-out;
 
     &:hover {
-        background-color: rgba(0, 79, 255, 0.155);
+        background-color: rgba(174, 185, 195, 0.6);
     }
 }
 
@@ -403,19 +404,6 @@ button {
     height: 100%;
 }
 
-svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 2;
-    stroke: rgb(0, 0, 0);
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-}
-
 .btn-line {
     position: absolute;
     bottom: 0;
@@ -464,7 +452,7 @@ button:hover .btn-line {
 @keyframes gradient {
     0% {
         transform: translateY(0%);
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 
@@ -919,11 +907,10 @@ label {
 .customized__link-style {
     border: 1px solid gray;
     border-radius: 100%;
-    padding: 12px 8px;
+    padding: 12px 10px;
     position: relative;
     color: black;
     transition: .5s;
-    z-index: 3;
     overflow: hidden;
 }
 
@@ -934,14 +921,13 @@ label {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f00;
+    z-index: -1;
     transition: .5s;
-    z-index: 2;
 }
 
 .customized__link-style:hover .icon_link {
     stroke: white;
-    z-index: 100;
+    z-index: 10;
 }
 
 .customized__link-style:hover::before {
@@ -1028,4 +1014,14 @@ label {
 .over__container:hover .hoveringText {
     display: block;
     cursor: none;
+}
+
+.card__hover:hover h1 {
+    transform: translateX(7%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact:hover svg {
+    transform: translateX(3px);
+    transition: all 0.3s ease-in-out;
 }

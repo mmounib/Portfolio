@@ -11,73 +11,50 @@ const outfit = Outfit({
 
 const Home = () => {
     useGSAP(() => {
-        gsap.fromTo('.first__name', {
-            y: 100,
+        const tl = gsap.timeline();
+        tl.fromTo('.header__animation', {
+            y: 110,
+            skewY: 10,
+            skewX: 30,
             ease: "power2.out"
         }, {
             y: 0,
-            stagger: .5,
-            duration: 1.5,
+            skewY: 0,
+            skewX: 0,
+            duration: 1.3,
             ease: 'power4.out'
         })
-        gsap.fromTo('.header__animation', {
-            y: 100,
-            ease: "power2.out"
-        }, {
-            y: 0,
-            stagger: .5,
-            duration: 1.5,
-            ease: 'power4.out'
-        })
-        gsap.fromTo('.image__cover', {
-            x: -250,
-            ease: "power2.out",
-        }, {
-            x: 0,
-            delay: 1,
-            duration: 1,
-            ease: "power4.out"
-        })
-        gsap.fromTo('.p__cover', {
-            y: 170,
+        tl.fromTo('.button__style', {
+            y: 70,
             ease: "power2.out",
         }, {
             y: 0,
-            delay: 1.1,
-            duration: 2,
-            ease: "power4.out",
-        })
-        gsap.fromTo('.button__style', {
-            x: 350,
-            ease: "power2.out",
-        }, {
-            x: 0,
-            delay: 1.2,
-            duration: 1,
-            ease: "power4.out",
+            duration: .6,
+            ease: 'power4.out'
         })
     })
     return (
-        <main className={`mt-32 ${outfit}`}>
-            <h1 className="text-7xl custom__header-font header__animation uppercase overflow-hidden">creative <h1
-                className="text-blue-800 text-7xl mt-3 header__animation">software developer</h1></h1>
-            <div className="flex justify-start items-start gap-14 mt-8 overflow-hidden">
+        <main className={`mt-32 max-sm:w-[95%] max-sm:mx-auto max-sm:mt-20 ${outfit}`}>
+            <h1 className="text-7xl max-sm:text-5xl custom__header-font flex flex-col uppercase overflow-hidden">creative <em
+                className="text-accent w-fit text-7xl max-sm:text-5xl header__animation xPercent_animation">software
+                developer</em></h1>
+            <div className="flex justify-start items-start max-sm:flex-col gap-10 max-sm:gap-7 mt-8 overflow-hidden">
                 <Image src="/my_image.jpg" alt="Personal Photo" width={900} height={200}
-                       className="object-cover w-[250px] h-[400px] image__cover"/>
-                <p className="mt-auto uppercase leading-8 font-light max-sm:leading-[2.7rem] text-2xl max-sm:text-3xl p__cover">
+                       className="object-cover w-[250px] h-[400px] brightness-90 max-sm:w-full"/>
+                <p className="mt-auto uppercase leading-9 font-light max-sm:leading-[2.2rem] text-2xl p__cover">
                     Turning ideas into functional, user-friendly applications.
                     Proficient in both front-end and back-end technologies, I&apos;m
                     ready to bring your projects to life.
                 </p>
-                <div className="flex flex-col gap-4 mt-auto">
-                    <h1 className="uppercase text-7xl">mouad mounib</h1>
+                <div className="flex flex-col max-sm:mx-auto gap-4 max-sm:gap-8 mt-auto">
+                    <h1 className="uppercase text-7xl max-sm:text-4xl">mouad mounib</h1>
                     <button
                         type="submit"
-                        className="relative rounded-xl border-[3px] border-blue-700 w-full text-3xl py-2 px-9 bg-blue-700 text-white hover:text-blue-700 hover:bg-white button__style">
+                        className="rounded-xl border-[3px] border-secondary w-full text-3xl py-2 px-9 bg-secondary text-white hover:text-secondary hover:bg-transparent button__style">
                         <Link
                             href="https://drive.google.com/file/d/1iihuC8rg_6uw5lAM65lM7SaZxlQS1npn/view?usp=sharing"
                             target="_blank">
-                            Download CV
+                            See Resume
                         </Link>
                     </button>
                 </div>

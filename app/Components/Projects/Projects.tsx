@@ -1,113 +1,66 @@
 "use client";
 
-import {useRef} from "react";
-import {motion, useInView} from "framer-motion";
 import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
-    const ref = useRef(null)
-    const inView = useInView(ref, {once: true})
-
-    useGSAP(() => {
-        if (inView) {
-            const tl = gsap.timeline();
-            tl.fromTo(".projects", {
-                width: "100%",
-                duration: 2,
-                ease: "power2.out",
-            }, {
-                width: 0,
-                delay: 0,
-                ease: "power2.out",
-            })
-        }
-    }, [inView]);
-
-    const hoveringText = (event: any) => {
-        let div = event.currentTarget;
-        let el = div.querySelector(".hoveringText")! as HTMLElement;
-        let offsetX =
-            event.clientX - div.getBoundingClientRect().left - el.offsetWidth / 2;
-        let offsetY =
-            event.clientY - div.getBoundingClientRect().top - el.offsetHeight / 2;
-        el!.style.top = offsetY + "px";
-        el!.style.left = offsetX + "px";
-    }
     return (
-        <section className="my-36 relative">
-            <div className="flex w-fit flex-col relative">
-                <h1 className="text-6xl h1__before w-[1000px] uppercase">Personal Projects</h1>
-                <h1 ref={ref} className="h1__stroke w-full flex">Projects</h1>
-                <motion.span className="projects h1__animate w-fit"></motion.span>
-            </div>
-            <div className="mt-16 grid grid-rows-2 grid-cols-2 gap-14">
-                <Link href={'https://github.com/mmounib/ft_transendence'} target="_blank"
-                      className="h-[750px] row-start-1 col-start-1 relative overflow-hidden over__container grid"
-                      onMouseMove={hoveringText}>
-                    <div className="bg__project"></div>
-                    <h1 className="hoveringText">view repo</h1>
-                    <article className="h-fit self-end px-4 pb-6">
-                        <div className="flex justify-between items-center ">
-                            <h1 className="text-2xl text-white capitalize">ft_transcendence</h1>
-                            <div className="flex gap-2">
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Typescript</p>
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">ReactJs</p>
-                            </div>
+        <section className="mt-36 max-sm:mt-20">
+            <h1 className="text-4xl max-sm:text-2xl max-sm:text-center font-extralight uppercase">Selected Projects</h1>
+            <div className="mt-8 grid grid-flow-col grid-rows-layout max-sm:grid-rows-3 gap-5">
+                <div
+                    className="col-span-3 max-sm:col-span-1 row-start-1 row-span-2 max-sm:row-span-1 card__hover">
+                    <Image src={'/laptop-1.jpg'} alt={'laptop-1'} width={900} height={30} className="object-cover"/>
+                    <div className="mt-3 flex flex-col gap-3">
+                        <div className="flex justify-between items-center">
+                            <h1 className="text-2xl font-light">CarHub</h1>
+                            <Link href="https://github.com/mmounib/Car-Showcasing-App" target="_blank"
+                                  className="contact !text-xl flex items-center gap-2">
+                                Github
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+                                </svg>
+                            </Link>
                         </div>
-                        <p className="para__hidden text-white pt-4">A Full Stack Web Application based on the Mighty
-                            Pong Game, with social media features and a
-                            leaderboard. The web application is built using Typescript and React for the frontend,
-                            and
-                            NestJS for the backend. The database is a PostgreSQL database, and the application is
-                            deployed on using Docker.</p>
-                    </article>
-                </Link>
-                <Link href={'https://github.com/mmounib/Car-Showcasing-App'} target="_blank"
-                      className="h-[750px] row-start-1 row-span-2 col-start-2 self-center relative overflow-hidden over__container grid"
-                      onMouseMove={hoveringText}>
-                    <div className="bg__project"></div>
-                    <h1 className="hoveringText">view repo</h1>
-                    <article className="h-fit self-end px-4 pb-6">
-                        <div className="flex justify-between items-center ">
-                            <h1 className="text-2xl text-white capitalize">CarHub</h1>
-                            <div className="flex gap-2">
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Typescript</p>
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">NextJs</p>
-                            </div>
+                    </div>
+                </div>
+                <div
+                    className="col-start-4 max-sm:row-start-2 max-sm:mt-8 max-sm:col-span-1 col-span-2 row-start-1 card__hover">
+                    <Image src={'/all_screen.jpg'} alt={'laptop-1'} width={900} height={30} className=""/>
+                    <div className="mt-4 flex flex-col gap-3">
+                        <div className="flex justify-between items-center">
+                            <h1 className="text-2xl font-light">Mlnetworks</h1>
+                            <Link href="https://mlnetworks.io" target="_blank"
+                                  className="contact !text-xl flex items-center gap-2">
+                                Website
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+                                </svg>
+                            </Link>
                         </div>
-                        <p className="para__hidden text-white pt-4">A Full Stack Web Application based on the Mighty
-                            Pong Game, with social media features and a
-                            leaderboard. The web application is built using Typescript and React for the frontend,
-                            and
-                            NestJS for the backend. The database is a PostgreSQL database, and the application is
-                            deployed on using Docker.</p>
-                    </article>
-                </Link>
-                <Link href={'https://www.mlnetworks.io/'} target="_blank"
-                      className="h-[750px] row-start-2 col-start-1 self-center relative overflow-hidden over__container grid"
-                      onMouseMove={hoveringText}>
-                    <div className="bg__project"></div>
-                    <h1 className="hoveringText">view website</h1>
-                    <article className="h-fit self-end px-4 pb-6">
-                        <div className="flex justify-between items-center ">
-                            <h1 className="text-2xl text-white capitalize">MLNetworks</h1>
-                            <div className="flex gap-2">
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Typescript</p>
-                                <p className="text-white text-md bg-white bg-opacity-30 rounded-full py-2 px-6">Nextjs</p>
-                            </div>
+                    </div>
+                </div>
+                <div className="col-start-1 mt-10 row-start-3 card__hover">
+                    <Image src={'/laptop-3.jpg'} alt={'laptop-1'} width={900} height={30} className=""/>
+                    <div className="mt-3 flex flex-col gap-3">
+                        <div className="flex justify-between items-center">
+                            <h1 className="text-2xl font-light">Ft_Transcendence</h1>
+                            <Link href="https://github.com/mmounib/ft_transendence" target="_blank"
+                                  className="contact !text-xl flex items-center gap-2">
+                                Github
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+                                </svg>
+                            </Link>
                         </div>
-                        <p className="para__hidden text-white pt-4">A Full Stack Web Application based on the Mighty
-                            Pong Game, with social media features and a
-                            leaderboard. The web application is built using Typescript and React for the frontend,
-                            and
-                            NestJS for the backend. The database is a PostgreSQL database, and the application is
-                            deployed on using Docker.</p>
-                    </article>
-                </Link>
+                    </div>
+                </div>
             </div>
         </section>
     );

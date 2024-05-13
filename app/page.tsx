@@ -9,6 +9,9 @@ import AnimatedCursor from "./Components/AnimatedCursor";
 import {useEffect} from "react";
 import Section from "./Components/Helpers/Section";
 import Links from "./Components/Links";
+import About from "@/app/Components/About/About";
+import Experience from "@/app/Components/Experience/Experience";
+import Projects from "@/app/Components/Projects/Projects";
 
 const Page = () => {
     useEffect(() => {
@@ -32,8 +35,10 @@ const Page = () => {
                 className=" bg-primary h-full max-sm:overflow-hidden w-full"
             >
                 <AnimatedCursor/>
-                <div className="flex flex-col">
+                <div className="flex flex-col max-sm:w-[95%] max-sm:mx-auto">
                     <Home/>
+                    <Projects/>
+                    <About/>
                 </div>
             </div>
         </>

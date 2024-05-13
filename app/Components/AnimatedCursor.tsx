@@ -228,7 +228,7 @@ function AnimatedCursor({
       width: "15px",
       height: "15px",
       pointerEvents: "none" as "none",
-      backgroundColor: `rgba(${color}, 1)`,
+      backgroundColor: `rgba(0,0,0, 1)`,
       transition: "opacity 0.15s ease-in-out, transform 0.25s ease-in-out",
     },
     cursorOuter: {
@@ -239,7 +239,7 @@ function AnimatedCursor({
       pointerEvents: "none" as "none",
       width: "15px",
       height: "15px",
-      backgroundColor: `rgba(${color}, ${outerAlpha})`,
+      backgroundColor: `rgba(0,0,0, ${outerAlpha})`,
       transition: "opacity 0.15s ease-in-out, transform 0.15s ease-in-out",
     },
   };

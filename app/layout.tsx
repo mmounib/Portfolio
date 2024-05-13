@@ -10,7 +10,7 @@ const acme = Acme({
 });
 
 export const metadata = {
-    title: "Mouad Mounib",
+    title: "Portfolio",
 };
 
 export default function RootLayout({

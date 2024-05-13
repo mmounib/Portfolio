@@ -1,6 +1,6 @@
 import {IconType} from "react-icons";
 import {IoLogoJavascript} from "react-icons/io5";
-import {TbBrandTypescript, TbSql} from "react-icons/tb";
+import {TbBrandCpp,TbBrandTypescript, TbSql} from "react-icons/tb";
 import {SiExpress, SiNextdotjs, SiTailwindcss} from "react-icons/si";
 import {FaDocker, FaGitAlt, FaNodeJs, FaReact} from "react-icons/fa";
 
@@ -36,7 +36,7 @@ export const technologies: Technolgy__Type = [
         icon: TbSql, name: "SQL", style: "stroke-blue-700",
     },
     {
-        icon: FaGitAlt, name: "Git/Github", style: "stroke-black-700 fill-orange-700",
+        icon: TbBrandCpp, name: "C++", style: "stroke-white bg-blue-700 rounded-full p-1",
     },
     {
         icon: FaDocker, name: "Docker", style: "stroke-blue-700 fill-blue-700",

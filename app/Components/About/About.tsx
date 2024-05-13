@@ -1,94 +1,74 @@
 import Image from "next/image";
-import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
-import {motion} from "framer-motion";
 import {technologies} from "@/app/types";
 
 const About = () => {
     useGSAP(() => {
-        gsap.from(".first__animation", {
-            opacity: 0,
-            y: 100,
-            duration: 1.5,
-            delay: 0.5,
-            ease: "power4.inOut",
-        })
-        gsap.from(".second__animation", {
-            opacity: 0,
-            duration: 1.5,
-            delay: 0.7,
-            ease: "power4.inOut",
-        })
-        gsap.from(".third__animation", {
-            opacity: 0,
-            y: 50,
-            duration: 1.5,
-            delay: 0.9,
-            ease: "power4.inOut",
-        })
-        gsap.from(".tech__animation", {
-            opacity: 0,
-            duration: 1.5,
-            delay: 1.1,
-            ease: "power4.inOut",
-        })
     }, []);
 
     return (
-        <section
-            className="flex max-sm:flex-col justify-between gap-12 mt-16 overflow-hidden h-full"
-        >
-            <div className="bg-gradient"></div>
-            <div className="flex flex-col overflow-hidden justify-center max-sm:px-3 items-center gap-6 max-w-[750px]">
-                <div className="overflow-hidden">
-                    <h1 className="text-2xl max-sm:text-lg first__animation mt-4 tracking-wider font-light capitalize leading-9">
-                        Based in Casablanca, Morocco. I am A dedicated{" "}
-                        <span>Full Stack developer</span> with a passion for creating
-                        innovative solutions that can meet the needs of the clients and
-                        companies. With a strong foundation in both front-end and back-end
-                        development. With this varied experience, I have developed solid
-                        skills to provide solutions to your digital needs.
-                    </h1>
+        <section className="mt-36">
+            <h1 className="text-4xl max-sm:text-2xl max-sm:text-center font-extralight uppercase">About Me</h1>
+            <div
+                className="mt-8 grid grid-cols-4 max-sm:grid-cols-0 grid-flow-row max-sm:px-2 w-full gap-6 overflow-hidden"
+            >
+                <div
+                    className="flex flex-col col-span-3 max-sm:col-span-4 max-sm:row-start-2 overflow-hidden justify-center items-center gap-6">
+                    <div className="overflow-hidden bg-bento-gradient py-14 px-12 max-sm:p-6 rounded-3xl">
+                        <h1 className="text-2xl text-gray-300 max-sm:text-lg tracking-wider font-light capitalize leading-9">
+                            Based in Casablanca, Morocco. I am A dedicated{" "}
+                            <span>Full Stack developer</span> with a passion for creating
+                            innovative solutions that can meet the needs of the clients and
+                            companies. With a strong foundation in both front-end and back-end
+                            development. I have developed solid
+                            skills to provide solutions to your digital needs.
+                        </h1>
+                    </div>
                 </div>
-                <div className="flex flex-col mt-4 max-sm:mt-2 overflow-hidden">
-                    <h1 className="text-2xl max-sm:text-lg second__animation tracking-wider font-light capitalize">
-                        I&apos;m self-motivated, passionate, and hardworking coder.
-                    </h1>
-                    <h1 className="text-2xl max-sm:text-lg mt-4 third__animation tracking-wider font-light capitalize">
-                        I&apos;m here to build positive relationships, and find creative
-                        solutions to complex problems.
-                    </h1>
+                <div
+                    className="col-start-3 col-span-2 max-sm:row-start-3 max-sm:col-span-4 py-8 px-10 max-sm:p-6 bg-bento-gradient rounded-3xl">
+                    <h1 className="text-2xl text-gray-300 font-light tracking-wide text-center">Curriculum vitae</h1>
+                    <div className="mt-10 flex gap-7 w-full">
+                        <p className="uppercase text-gray-300 flex-1 font-light">December 2023 - now</p>
+                        <span className="w-[1px] h-[70px] bg-gray-300"></span>
+                        <div className="flex flex-col flex-1 gap-2">
+                            <p className="text-gray-300 max-sm:text-sm capitalize">full stack developer intern</p>
+                            <p className="font-light text-4xl max-sm:text-2xl text-gray-300 overflow-hidden">MLNetworks</p>
+                        </div>
+                    </div>
+                    <div className="mt-7 flex gap-7 w-full">
+                        <p className="uppercase text-gray-300 flex-1 font-light">october 2021 - december 2023</p>
+                        <span className="w-[1px] h-[70px] bg-gray-300"></span>
+                        <div className="flex flex-col flex-1 gap-2">
+                            <p className="text-gray-300 max-sm:text-sm capitalize">Software Developer</p>
+                            <p className="font-light text-4xl max-sm:text-2xl text-gray-300 overflow-hidden">42 Network</p>
+                        </div>
+                    </div>
                 </div>
-                <div className="mt-3 tech__animation">
-                    <h1 className="text-2xl font-light tracking-wide">I&apos;m good with</h1>
-                    <div className="flex flex-wrap max-sm:justify-center w-full mt-5 gap-3">
+                <div
+                    className="row-start-2 max-sm:row-start-4 max-sm:col-span-4 max-sm:w-full col-start-1 col-span-2 py-8 px-6 max-sm:p-4 bg-bento-gradient rounded-3xl">
+                    <h1 className="text-2xl text-gray-300 font-light tracking-wide text-center">My Skills</h1>
+                    <div className="flex flex-wrap max-sm:justify-start w-full mt-7 gap-3">
                         {technologies.map((technology, index) => (
                             <p key={index}
-                               className="text-lg py-2 px-4 border border-gray-600 rounded-3xl flex items-center gap-1">
+                               className="text-lg max-sm:text-base text-gray-300 py-2 px-3 border border-gray-600 rounded-3xl flex items-center gap-1">
                                 <technology.icon size={20} className={technology.style}/>
                                 {technology.name}
                             </p>
                         ))}
                     </div>
                 </div>
+                <div
+                    className="row-start-1 max-sm:col-span-4 max-sm:w-full grid bg-bento-gradient col-start-4 w-full rounded-3xl">
+                    <Image
+                        src="/animated_image.png"
+                        alt="AboutMEImage"
+                        width={450}
+                        height={450}
+                        className="bg-cover rounded-full bg-clip-border justify-self-center self-center w-[230px] h-[230px] brightness-75 bg-[#AEB9C399]"
+                    />
+                </div>
             </div>
-            <motion.div initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        transition={{
-                            duration: 2.8,
-
-                            ease: [0, 0.71, 0.2, 1.01]
-                        }}
-                        className="relative rounded-full">
-                <Image
-                    src="/animated_image.png"
-                    alt="AboutMEImage"
-                    width={450}
-                    height={450}
-                    className="object-cover bg-cover rounded-none bg-clip-border w-[400px] h-[400px] brightness-95"
-                />
-                <div className="animated__image"></div>
-            </motion.div>
         </section>
     );
 };
