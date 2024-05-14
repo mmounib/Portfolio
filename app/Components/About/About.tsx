@@ -7,7 +7,7 @@ const About = () => {
     }, []);
 
     return (
-        <section className="mt-36">
+        <section id="about-section" className="mt-36">
             <h1 className="text-4xl max-sm:text-2xl max-sm:text-center font-extralight uppercase">About Me</h1>
             <div
                 className="mt-8 grid grid-cols-4 max-sm:grid-cols-0 grid-flow-row max-sm:px-2 w-full gap-6 overflow-hidden"

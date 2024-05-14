@@ -8,7 +8,7 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
     return (
-        <section className="mt-36 max-sm:mt-20">
+        <section id="projects-section" className="mt-36 max-sm:mt-20">
             <h1 className="text-4xl max-sm:text-2xl max-sm:text-center font-extralight uppercase">Selected Projects</h1>
             <div className="mt-8 grid grid-flow-col grid-rows-layout max-sm:grid-rows-3 gap-5">
                 <div
