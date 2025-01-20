@@ -3,6 +3,7 @@ import {IoLogoJavascript} from "react-icons/io5";
 import {TbBrandCpp,TbBrandTypescript, TbSql} from "react-icons/tb";
 import {SiExpress, SiNextdotjs, SiTailwindcss} from "react-icons/si";
 import {FaDocker, FaGitAlt, FaNodeJs, FaReact} from "react-icons/fa";
+import { SiDotnet } from "react-icons/si";
 
 type Technolgy__Type = {
     icon: IconType;
@@ -37,6 +38,9 @@ export const technologies: Technolgy__Type = [
     },
     {
         icon: TbBrandCpp, name: "C++", style: "stroke-white bg-blue-700 rounded-full p-1",
+    },
+    {
+        icon: SiDotnet, name: ".NET", style: "stroke-white bg-blue-700 rounded-full p-1",
     },
     {
         icon: FaDocker, name: "Docker", style: "stroke-blue-700 fill-blue-700",

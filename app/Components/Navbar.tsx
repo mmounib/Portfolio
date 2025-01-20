@@ -23,7 +23,7 @@ const Navbar = () => {
                     </Link>
                 </h2>
                 <ul
-                    className={` border-secondary border-2 rounded-lg py-2 px-6 flex gap-5 items-center max-md:hidden ml-auto`}
+                    className={`flex gap-5 items-center max-md:hidden ml-auto`}
                 >
                     <li>
                         <Link
@@ -51,7 +51,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <Link href={"#contact-section"}
-                      className="bg-secondary rounded-md text-white py-3.5 px-6 contact ml-6 max-sm:ml-0 max-sm:px-5 hover:bg-opacity-90">Contact
+                      className="font-bold text-black border-b-4 border-secondary contact ml-6 max-sm:ml-0 max-sm:px-5 hover:bg-opacity-90">Contact
                     Me</Link>
             </div>
         </nav>

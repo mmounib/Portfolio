@@ -28,8 +28,16 @@ const About = () => {
                 <div
                     className="col-start-3 col-span-2 max-sm:row-start-3 max-sm:col-span-4 py-8 px-10 max-sm:p-6 bg-bento-gradient rounded-3xl">
                     <h1 className="text-2xl text-gray-300 font-light tracking-wide text-center">Curriculum vitae</h1>
+                    <div className="mt-7 flex gap-7 w-full">
+                        <p className="uppercase text-gray-300 flex-1 font-light">November 2024 - present</p>
+                        <span className="w-[1px] h-[70px] bg-gray-300"></span>
+                        <div className="flex flex-col flex-1 gap-2">
+                            <p className="text-gray-300 max-sm:text-sm capitalize">Web Developer / Project Manager</p>
+                            <p className="font-light text-4xl max-sm:text-2xl text-gray-300 overflow-hidden">Upwork</p>
+                        </div>
+                    </div>
                     <div className="mt-10 flex gap-7 w-full">
-                        <p className="uppercase text-gray-300 flex-1 font-light">December 2023 - now</p>
+                        <p className="uppercase text-gray-300 flex-1 font-light">December 2023 - July 2024</p>
                         <span className="w-[1px] h-[70px] bg-gray-300"></span>
                         <div className="flex flex-col flex-1 gap-2">
                             <p className="text-gray-300 max-sm:text-sm capitalize">full stack developer intern</p>
@@ -40,7 +48,7 @@ const About = () => {
                         <p className="uppercase text-gray-300 flex-1 font-light">october 2021 - december 2023</p>
                         <span className="w-[1px] h-[70px] bg-gray-300"></span>
                         <div className="flex flex-col flex-1 gap-2">
-                            <p className="text-gray-300 max-sm:text-sm capitalize">Software Developer</p>
+                            <p className="text-gray-300 max-sm:text-sm capitalize">Software Engineer</p>
                             <p className="font-light text-4xl max-sm:text-2xl text-gray-300 overflow-hidden">42 Network</p>
                         </div>
                     </div>

@@ -75,7 +75,7 @@ h1 {
 
 li, .contact {
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 18px;
+    font-size: 23px;
 }
 
 .h1__text {
@@ -277,12 +277,11 @@ li, .contact {
 li {
     cursor: pointer;
     padding: 6px 18px;
-    border-radius: 5px;
     position: relative;
-    transition: background-color .4s ease-in-out;
+    transition: color .4s ease-in-out;
 
     &:hover {
-        background-color: rgba(174, 185, 195, 0.6);
+        color: rgba(0, 0, 0, 0.7);
     }
 }
 
