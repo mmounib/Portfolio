@@ -37,7 +37,7 @@ const Home = () => {
         <main className={`mt-28 max-sm:w-[95%] max-sm:mx-auto max-sm:mt-20 ${outfit}`}>
             <h1 className="text-7xl max-sm:text-5xl custom__header-font flex flex-col uppercase overflow-hidden">Software engineer</h1>
             <div className="flex justify-start items-start max-sm:flex-col gap-10 max-sm:gap-7 mt-8 overflow-hidden">
-                <Image src="/my_image.jpg" alt="Personal Photo" width={900} height={200}
+                <Image src="/p-photo.jpg" alt="Personal Photo" width={900} height={200}
                        className="object-cover w-[250px] h-[400px] brightness-90 max-sm:w-full"/>
                 <p className="mt-auto uppercase leading-9 font-light max-sm:leading-[2.2rem] text-2xl p__cover">
                     Aspiring software engineer who loves to solve complex problems and create elegant solutions through code.
